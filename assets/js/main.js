@@ -12,8 +12,8 @@ var datevalue = ""
 function filterBy(date) {
     var filters = ["==", "date", date]
     datevalue = dates[date] - 1
-    map.setFilter("poitimebased", filters)
-    map.setFilter("testtest", filters)
+
+    map.setFilter("poiallclicks", filters)
     console.log(datevalue)
     document.getElementById("date").textContent = "Date: June " + datevalue.toString(10)
 }
@@ -36,14 +36,14 @@ map.on("load", function () {
             .then(function (data) {
                 var poigeojson1 = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
 
-                var testtest = GeoJSON.parse(data[1], { Point: ["Latitude", "Longitude"] })
+                var poiallclicks = GeoJSON.parse(data[1], { Point: ["Latitude", "Longitude"] })
                 console.log(poigeojson1)
-                console.log(testtest)
+                console.log(poiallclicks)
 
-                testtest.features = testtest.features.map(function (d) {
+                poiallclicks.features = poiallclicks.features.map(function (d) {
                     d.properties.date = new Date(d.properties.clickTimes).getDate()
 
-                    const counts = testtest.features.reduce((accumulatedCounts, feature) => {
+                    const counts = poiallclicks.features.reduce((accumulatedCounts, feature) => {
                         const alert = feature.properties.poiName
 
                         if (!alert) return accumulatedCounts
@@ -59,9 +59,9 @@ map.on("load", function () {
                     return d
                 })
 
-                map.getSource("poisearches1").setData(poigeojson1)
+                map.getSource("poi_rank_sorted_clicks").setData(poigeojson1)
 
-                map.getSource("testtest").setData(testtest)
+                map.getSource("poiallclicks").setData(poiallclicks)
             })
             .catch(function (error) {
                 // if there's an error, log it
@@ -69,7 +69,7 @@ map.on("load", function () {
             })
     }, 2000)
 
-    map.addSource("poisearches1", {
+    map.addSource("poi_rank_sorted_clicks", {
         type: "geojson",
         data: url,
         cluster: true,
@@ -77,11 +77,11 @@ map.on("load", function () {
         clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
     })
 
-    map.addSource("testtest", { type: "geojson", data: url2 })
+    map.addSource("poiallclicks", { type: "geojson", data: url2 })
     map.addLayer({
-        id: "testtest",
+        id: "poiallclicks",
         type: "circle",
-        source: "testtest",
+        source: "poiallclicks",
 
         paint: {
             "circle-opacity": 0.75,
@@ -93,7 +93,7 @@ map.on("load", function () {
     map.addLayer({
         id: "poi1",
         type: "circle",
-        source: "poisearches1",
+        source: "poi_rank_sorted_clicks",
         filter: ["has", "point_count"],
         paint: {
             "circle-opacity": 0.75,
@@ -105,7 +105,7 @@ map.on("load", function () {
     map.addLayer({
         id: "cluster-count",
         type: "symbol",
-        source: "poisearches1",
+        source: "poi_rank_sorted_clicks",
         filter: ["has", "point_count"],
         layout: {
             "text-field": ["to-number", ["get", "count"], {}],
@@ -117,7 +117,7 @@ map.on("load", function () {
     map.addLayer({
         id: "unclustered-point",
         type: "circle",
-        source: "poisearches1",
+        source: "poi_rank_sorted_clicks",
         filter: ["!", ["has", "point_count"]],
         paint: {
             "circle-opacity": 0.55,
@@ -298,9 +298,9 @@ map.on("idle", function () {
         }
     }
 
-    if (map.getLayer("testtest")) {
+    if (map.getLayer("poiallclicks")) {
         // Enumerate ids of the layers.
-        var toggleableLayerIds = ["testtest"]
+        var toggleableLayerIds = ["poiallclicks"]
         // Set up the corresponding toggle button for each layer.
         for (var i = 0; i < toggleableLayerIds.length; i++) {
             var id = toggleableLayerIds[i]
