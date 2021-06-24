@@ -1,0 +1,226 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.04136513359845,35.115155121311545 ]
+    },
+    "properties": {
+    "poiName":"부산역 KTX",
+    "count":9,
+    "rating":11,
+    "uniqueCars":2,
+    "avgDistance":328.52,
+    "latitudesOfSearcher":",,,,37.5557833,37.5557833,37.5557833,37.5557833,37.5557833",
+    "longitudesOfSearcher":",,,,126.9741619,126.9741619,126.9741619,126.9741619,126.9741619",
+    "clickTimes":1623719966949
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.04136513359845,35.115155121311545 ]
+    },
+    "properties": {
+    "poiName":"부산역KTX",
+    "count":7,
+    "rating":8,
+    "uniqueCars":1,
+    "avgDistance":0,
+    "latitudesOfSearcher":",,,,,,",
+    "longitudesOfSearcher":",,,,,,",
+    "clickTimes":1623716348654
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.05285768024623,37.05652610398829 ]
+    },
+    "properties": {
+    "poiName":"서정리역",
+    "count":6,
+    "rating":7,
+    "uniqueCars":1,
+    "avgDistance":55.95,
+    "latitudesOfSearcher":"37.5557833,37.5557833,37.5557833,37.5557833,37.5557833,37.5557833",
+    "longitudesOfSearcher":"126.9741619,126.9741619,126.9741619,126.9741619,126.9741619,126.9741619",
+    "clickTimes":1623723154476
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.79068951867521,35.13761568814516 ]
+    },
+    "properties": {
+    "poiName":"광주송정역 KTX",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":269.39,
+    "latitudesOfSearcher":"37.5557833,37.5557833",
+    "longitudesOfSearcher":"126.9741619,126.9741619",
+    "clickTimes":1623719778342
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.99953720904887,37.26651784032583 ]
+    },
+    "properties": {
+    "poiName":"수원역",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":32.24,
+    "latitudesOfSearcher":"37.5557833,37.5557833",
+    "longitudesOfSearcher":"126.9741619,126.9741619",
+    "clickTimes":1623724523084
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.07805320248008,34.934569699689746 ]
+    },
+    "properties": {
+    "poiName":"삼천포여자고등학교",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":50.2,
+    "latitudesOfSearcher":"35.2722216",
+    "longitudesOfSearcher":"128.444424",
+    "clickTimes":1623724398280
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.0630304608494,37.08415319211781 ]
+    },
+    "properties": {
+    "poiName":"송탄한일아파트",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":53.03,
+    "latitudesOfSearcher":"37.5557833",
+    "longitudesOfSearcher":"126.9741619",
+    "clickTimes":1623725530006
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90784371457994,35.15701577067375 ]
+    },
+    "properties": {
+    "poiName":"스위트40",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":149.9,
+    "latitudesOfSearcher":"35.1908981",
+    "longitudesOfSearcher":"128.5565788",
+    "clickTimes":1623724009153
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.92336800508201,37.55342091433704 ]
+    },
+    "properties": {
+    "poiName":"어바웃9홍대입구 본점",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":4.49,
+    "latitudesOfSearcher":"37.5557833",
+    "longitudesOfSearcher":"126.9741619",
+    "clickTimes":1623724552984
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.5280708782375,35.45540280640125 ]
+    },
+    "properties": {
+    "poiName":"오시우연",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":62.67,
+    "latitudesOfSearcher":"35.1746636",
+    "longitudesOfSearcher":"129.1269776",
+    "clickTimes":1623719657066
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.4508200250566,37.449423875659704 ]
+    },
+    "properties": {
+    "poiName":"인천국제공항제1여객터미널",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":47.66,
+    "latitudesOfSearcher":"37.5557833",
+    "longitudesOfSearcher":"126.9741619",
+    "clickTimes":1623724092492
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.07179700955749,37.512107687070966 ]
+    },
+    "properties": {
+    "poiName":"잠실종합운동장잠실야구장",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":9.88,
+    "latitudesOfSearcher":"37.5557833",
+    "longitudesOfSearcher":"126.9741619",
+    "clickTimes":1623724707203
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.96848368272185,37.54271512851119 ]
+    },
+    "properties": {
+    "poiName":"지진옥외대피소 돌모루어린이공원",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":1.48,
+    "latitudesOfSearcher":"37.5552628",
+    "longitudesOfSearcher":"126.9741758",
+    "clickTimes":1623723707073
+    }
+  }
+]
+}

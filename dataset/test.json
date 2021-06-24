@@ -1,0 +1,2172 @@
+[
+    {
+        "poiName": "기장 전시장",
+        "Latitude": 35.18803392536938,
+        "Longitude": 129.21232586726546,
+        "clickTimes": 1624259032154,
+        "latitudesOfSearcher": 37.517475,
+        "longitudesOfSearcher": 126.9291638,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "기장군" }, { "name": "기장읍" }, { "name": "시랑리" }], "postalCode": "46084", "state": "부산", "stateCode": "26", "street": "기장군 기장읍 기장해안로 98" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.21232586726546, 35.18803392536938],
+            [126.9291638, 37.517475]
+        ]
+    },
+    {
+        "poiName": "해운대주유소",
+        "Latitude": 35.16324997879565,
+        "Longitude": 129.1794444154948,
+        "clickTimes": 1624259096394,
+        "latitudesOfSearcher": 37.517475,
+        "longitudesOfSearcher": 126.9291638,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "해운대구" }, { "name": "" }, { "name": "중동" }], "country": "KR", "house": "375", "postalCode": "48114", "state": "부산", "stateCode": "26", "street": "좌동순환로", "landLotNo": "1520-15" },
+        "poiCategoryID": "poiCategoryId:7285",
+        "linestringattempt": [
+            [129.1794444154948, 35.16324997879565],
+            [126.9291638, 37.517475]
+        ]
+    },
+    {
+        "poiName": "서울역",
+        "Latitude": 37.55485547706485,
+        "Longitude": 126.97058879770339,
+        "clickTimes": 1624259277214,
+        "latitudesOfSearcher": 37.517507,
+        "longitudesOfSearcher": 126.929157,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "봉래동2가" }], "country": "KR", "house": "405", "postalCode": "04509", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "122-11" },
+        "poiCategoryID": "poiCategoryId:6118",
+        "linestringattempt": [
+            [126.97058879770339, 37.55485547706485],
+            [126.929157, 37.517507]
+        ]
+    },
+    {
+        "poiName": "서울역",
+        "Latitude": 37.55485547706485,
+        "Longitude": 126.97058879770339,
+        "clickTimes": 1624259281952,
+        "latitudesOfSearcher": 37.517507,
+        "longitudesOfSearcher": 126.929157,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "봉래동2가" }], "country": "KR", "house": "405", "postalCode": "04509", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "122-11" },
+        "poiCategoryID": "poiCategoryId:6118",
+        "linestringattempt": [
+            [126.97058879770339, 37.55485547706485],
+            [126.929157, 37.517507]
+        ]
+    },
+    {
+        "poiName": "해운대주유소",
+        "Latitude": 35.16324997879565,
+        "Longitude": 129.1794444154948,
+        "clickTimes": 1624259518532,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "해운대구" }, { "name": "" }, { "name": "중동" }], "country": "KR", "house": "375", "postalCode": "48114", "state": "부산", "stateCode": "26", "street": "좌동순환로", "landLotNo": "1520-15" },
+        "poiCategoryID": "poiCategoryId:7285",
+        "linestringattempt": [
+            [129.1794444154948, 35.16324997879565],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "양산시청",
+        "Latitude": 35.33503339625895,
+        "Longitude": 129.03712715953588,
+        "clickTimes": 1624259685737,
+        "latitudesOfSearcher": 35.172532,
+        "longitudesOfSearcher": 129.1313794,
+        "poiAddress": { "areas": [{ "name": "양산시" }, { "name": "" }, { "name": "" }, { "name": "남부동" }], "house": "39", "state": "경상남도", "street": "중앙로", "landLotNo": "505" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.03712715953588, 35.33503339625895],
+            [129.1313794, 35.172532]
+        ]
+    },
+    {
+        "poiName": "서오산분기점오성방향",
+        "Latitude": 37.172102741897106,
+        "Longitude": 126.99717217124999,
+        "clickTimes": 1624259897901,
+        "latitudesOfSearcher": 37.1791424,
+        "longitudesOfSearcher": 126.9847868,
+        "poiAddress": { "areas": [{ "name": "화성시" }, { "name": "" }, { "name": "정남면" }, { "name": "용수리" }], "country": "KR", "postalCode": "18512", "state": "경기", "stateCode": "41", "street": "평택파주고속도로" },
+        "poiCategoryID": "poiCategoryId:6092",
+        "linestringattempt": [
+            [126.99717217124999, 37.172102741897106],
+            [126.9847868, 37.1791424]
+        ]
+    },
+    {
+        "poiName": "CU Cheongsol Beonyeong Branch",
+        "Latitude": 37.306658271700144,
+        "Longitude": 126.99151379987597,
+        "clickTimes": 1624260265374,
+        "latitudesOfSearcher": 37.5174817,
+        "longitudesOfSearcher": 126.929181,
+        "poiAddress": { "areas": [{ "name": "Suwon-si" }, { "name": "Jangan-gu" }, { "name": "" }, { "name": "Jeongja-dong" }], "country": "KR", "house": "83", "postalCode": "16337", "state": "Gyeonggi", "stateCode": "41", "street": "Pajang-ro", "landLotNo": "535-12" },
+        "poiCategoryID": "poiCategoryId:20021",
+        "linestringattempt": [
+            [126.99151379987597, 37.306658271700144],
+            [126.929181, 37.5174817]
+        ]
+    },
+    {
+        "poiName": "서오산분기점",
+        "Latitude": 37.17646937817335,
+        "Longitude": 126.99840003624558,
+        "clickTimes": 1624260296598,
+        "latitudesOfSearcher": 37.1705171,
+        "longitudesOfSearcher": 126.9972854,
+        "poiAddress": { "areas": [{ "name": "오산시" }, { "name": "" }, { "name": "" }, { "name": "서랑동" }], "country": "KR", "postalCode": "18100", "state": "경기", "stateCode": "41", "street": "수도권제2순환고속도로" },
+        "poiCategoryID": "poiCategoryId:6092",
+        "linestringattempt": [
+            [126.99840003624558, 37.17646937817335],
+            [126.9972854, 37.1705171]
+        ]
+    },
+    {
+        "poiName": "전기차충전소롯데마트창원중앙점",
+        "Latitude": 35.22505268454552,
+        "Longitude": 128.6803693883121,
+        "clickTimes": 1624260418033,
+        "latitudesOfSearcher": 35.2236484,
+        "longitudesOfSearcher": 128.6872493,
+        "poiAddress": { "areas": [{ "name": "창원시" }, { "name": "성산구" }, { "name": "" }, { "name": "중앙동" }], "country": "KR", "house": "123", "postalCode": "51515", "state": "경남", "street": "중앙대로", "landLotNo": "92" },
+        "poiCategoryID": "chargingStation",
+        "linestringattempt": [
+            [128.6803693883121, 35.22505268454552],
+            [128.6872493, 35.2236484]
+        ]
+    },
+    {
+        "poiName": "한국도심공항수락터미널",
+        "Latitude": 37.67884159460664,
+        "Longitude": 127.05353049561381,
+        "clickTimes": 1624260468706,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "노원구" }, { "name": "" }, { "name": "상계동" }], "country": "KR", "house": "30", "postalCode": "01604", "state": "서울", "stateCode": "11", "street": "동일로243길", "landLotNo": "1138-20" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [127.05353049561381, 37.67884159460664],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "한국도심공항터미널",
+        "Latitude": 37.5095138233155,
+        "Longitude": 127.0595305133611,
+        "clickTimes": 1624260568163,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강남구" }, { "name": "" }, { "name": "삼성동" }], "country": "KR", "house": "22", "postalCode": "06164", "state": "서울", "stateCode": "11", "street": "테헤란로87길", "landLotNo": "159-6" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [127.0595305133611, 37.5095138233155],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "신성정밀",
+        "Latitude": 37.13263303041458,
+        "Longitude": 126.99756377376616,
+        "clickTimes": 1624260775488,
+        "latitudesOfSearcher": 37.1791421,
+        "longitudesOfSearcher": 126.9872916,
+        "poiAddress": { "areas": [{ "name": "화성시" }, { "name": "" }, { "name": "정남면" }, { "name": "귀래리" }], "country": "KR", "house": "272", "postalCode": "18523", "state": "경기", "stateCode": "41", "street": "내향안길", "landLotNo": "178-1" },
+        "poiCategoryID": "poiCategoryId:6169",
+        "linestringattempt": [
+            [126.99756377376616, 37.13263303041458],
+            [126.9872916, 37.1791421]
+        ]
+    },
+    {
+        "poiName": "인천국제공항탑승동",
+        "Latitude": 37.455966621637344,
+        "Longitude": 126.44499158486724,
+        "clickTimes": 1624260912459,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "운서동" }], "country": "KR", "house": "272", "postalCode": "22382", "state": "인천", "stateCode": "28", "street": "공항로", "landLotNo": "2840" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [126.44499158486724, 37.455966621637344],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "서울역도심공항터미널",
+        "Latitude": 37.554761096835136,
+        "Longitude": 126.97061662562191,
+        "clickTimes": 1624261034640,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "봉래동2가" }], "country": "KR", "house": "405", "postalCode": "04509", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "122-11" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [126.97061662562191, 37.554761096835136],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "한국도심공항터미널",
+        "Latitude": 37.5095138233155,
+        "Longitude": 127.0595305133611,
+        "clickTimes": 1624261089133,
+        "latitudesOfSearcher": 37.5195546,
+        "longitudesOfSearcher": 126.9323559,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강남구" }, { "name": "" }, { "name": "삼성동" }], "country": "KR", "house": "22", "postalCode": "06164", "state": "서울", "stateCode": "11", "street": "테헤란로87길", "landLotNo": "159-6" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [127.0595305133611, 37.5095138233155],
+            [126.9323559, 37.5195546]
+        ]
+    },
+    {
+        "poiName": "수원시청",
+        "Latitude": 37.26368333213031,
+        "Longitude": 127.02870271168649,
+        "clickTimes": 1624261486696,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "수원시" }, { "name": "팔달구" }, { "name": "" }, { "name": "인계동" }], "country": "KR", "house": "241", "postalCode": "16490", "state": "경기", "stateCode": "41", "street": "효원로", "landLotNo": "1111" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.02870271168649, 37.26368333213031],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "대우주유소",
+        "Latitude": 37.46270273812115,
+        "Longitude": 127.03770831227303,
+        "clickTimes": 1624263106473,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "서초구" }, { "name": "" }, { "name": "양재동" }], "country": "KR", "house": "173", "postalCode": "06771", "state": "서울", "stateCode": "11", "street": "양재대로", "landLotNo": "216" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [127.03770831227303, 37.46270273812115],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "한림대학교한강성심병원",
+        "Latitude": 37.52338050864637,
+        "Longitude": 126.91035266965628,
+        "clickTimes": 1624263430212,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "영등포구" }, { "name": "" }, { "name": "영등포동7가" }], "country": "KR", "house": "55", "postalCode": "07247", "state": "서울", "stateCode": "11", "street": "버드나루로", "landLotNo": "94-17" },
+        "poiCategoryID": "poiCategoryId:6218",
+        "linestringattempt": [
+            [126.91035266965628, 37.52338050864637],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "원주유소",
+        "Latitude": 37.53101382404566,
+        "Longitude": 126.8311887793243,
+        "clickTimes": 1624263479462,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "양천구" }, { "name": "" }, { "name": "신월동" }], "country": "KR", "house": "408", "postalCode": "07915", "state": "서울", "stateCode": "11", "street": "남부순환로", "landLotNo": "199-5" },
+        "poiCategoryID": "poiCategoryId:7269",
+        "linestringattempt": [
+            [126.8311887793243, 37.53101382404566],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "고봉민김밥인울산공업탑점",
+        "Latitude": 35.53319441154599,
+        "Longitude": 129.31024996563792,
+        "clickTimes": 1624263572233,
+        "latitudesOfSearcher": 35.4571167,
+        "longitudesOfSearcher": 129.2825859,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남구" }, { "name": "" }, { "name": "신정동" }], "country": "KR", "house": "21", "postalCode": "44678", "state": "울산", "stateCode": "31", "street": "삼산로", "landLotNo": "673-11" },
+        "poiCategoryID": "restaurant",
+        "linestringattempt": [
+            [129.31024996563792, 35.53319441154599],
+            [129.2825859, 35.4571167]
+        ]
+    },
+    {
+        "poiName": "63빌딩",
+        "Latitude": 37.519828006625175,
+        "Longitude": 126.94025200791657,
+        "clickTimes": 1624265415930,
+        "latitudesOfSearcher": 37.3811911,
+        "longitudesOfSearcher": 126.6620719,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "영등포구" }, { "name": "" }, { "name": "" }], "country": "대한민국", "house": "50", "state": "서울특별시", "street": "63로" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [126.94025200791657, 37.519828006625175],
+            [126.6620719, 37.3811911]
+        ]
+    },
+    {
+        "poiName": "경포해수욕장",
+        "Latitude": 37.80645833350718,
+        "Longitude": 128.90694530680776,
+        "clickTimes": 1624271506096,
+        "latitudesOfSearcher": 37.5174776,
+        "longitudesOfSearcher": 126.9291363,
+        "poiAddress": { "areas": [{ "name": "강릉시" }, { "name": "" }, { "name": "" }, { "name": "안현동" }], "state": "강원도" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [128.90694530680776, 37.80645833350718],
+            [126.9291363, 37.5174776]
+        ]
+    },
+    {
+        "poiName": "센텀사이언스파크",
+        "Latitude": 35.1740694232285,
+        "Longitude": 129.12620273418725,
+        "clickTimes": 1624272381351,
+        "latitudesOfSearcher": 35.1744783,
+        "longitudesOfSearcher": 129.1270201,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "해운대구" }, { "name": "" }, { "name": "우동" }], "country": "KR", "house": "79", "postalCode": "48058", "state": "부산", "stateCode": "26", "street": "센텀중앙로", "landLotNo": "1463-1" },
+        "poiCategoryID": "poiCategoryId:6200",
+        "linestringattempt": [
+            [129.12620273418725, 35.1740694232285],
+            [129.1270201, 35.1744783]
+        ]
+    },
+    {
+        "poiName": "전기차충전소갈산동행정복지센터점",
+        "Latitude": 37.376183308660984,
+        "Longitude": 126.96612501516938,
+        "clickTimes": 1624320667507,
+        "latitudesOfSearcher": 37.4726476,
+        "longitudesOfSearcher": 127.0619532,
+        "poiAddress": { "areas": [{ "name": "안양시" }, { "name": "동안구" }, { "name": "" }, { "name": "호계동" }], "country": "KR", "house": "30", "postalCode": "14106", "state": "경기", "stateCode": "41", "street": "흥안대로223번길", "landLotNo": "1118" },
+        "poiCategoryID": "chargingStation",
+        "linestringattempt": [
+            [126.96612501516938, 37.376183308660984],
+            [127.0619532, 37.4726476]
+        ]
+    },
+    {
+        "poiName": "김포국제공항국제선",
+        "Latitude": 37.56608052179217,
+        "Longitude": 126.80122498422861,
+        "clickTimes": 1624320710403,
+        "latitudesOfSearcher": 37.468148,
+        "longitudesOfSearcher": 127.0664035,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강서구" }, { "name": "" }, { "name": "방화동" }], "country": "KR", "house": "38", "postalCode": "07505", "state": "서울", "stateCode": "11", "street": "하늘길", "landLotNo": "886" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [126.80122498422861, 37.56608052179217],
+            [127.0664035, 37.468148]
+        ]
+    },
+    {
+        "poiName": "김포국제공항국제선",
+        "Latitude": 37.56608052179217,
+        "Longitude": 126.80122498422861,
+        "clickTimes": 1624320726559,
+        "latitudesOfSearcher": 37.4662262,
+        "longitudesOfSearcher": 127.0683115,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강서구" }, { "name": "" }, { "name": "방화동" }], "country": "KR", "house": "38", "postalCode": "07505", "state": "서울", "stateCode": "11", "street": "하늘길", "landLotNo": "886" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [126.80122498422861, 37.56608052179217],
+            [127.0683115, 37.4662262]
+        ]
+    },
+    {
+        "poiName": "김포국제공항국제선",
+        "Latitude": 37.56608052179217,
+        "Longitude": 126.80122498422861,
+        "clickTimes": 1624320900419,
+        "latitudesOfSearcher": 37.7092515,
+        "longitudesOfSearcher": 127.0396219,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강서구" }, { "name": "" }, { "name": "방화동" }], "country": "KR", "house": "38", "postalCode": "07505", "state": "서울", "stateCode": "11", "street": "하늘길", "landLotNo": "886" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [126.80122498422861, 37.56608052179217],
+            [127.0396219, 37.7092515]
+        ]
+    },
+    {
+        "poiName": "김포국제공항국제선",
+        "Latitude": 37.56608052179217,
+        "Longitude": 126.80122498422861,
+        "clickTimes": 1624321005478,
+        "latitudesOfSearcher": 37.71663,
+        "longitudesOfSearcher": 127.0265069,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강서구" }, { "name": "" }, { "name": "방화동" }], "country": "KR", "house": "38", "postalCode": "07505", "state": "서울", "stateCode": "11", "street": "하늘길", "landLotNo": "886" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [126.80122498422861, 37.56608052179217],
+            [127.0265069, 37.71663]
+        ]
+    },
+    {
+        "poiName": "에이원주유소",
+        "Latitude": 37.58035272359848,
+        "Longitude": 126.77958332933486,
+        "clickTimes": 1624321234759,
+        "latitudesOfSearcher": 37.6003518,
+        "longitudesOfSearcher": 126.7808773,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "계양구" }, { "name": "" }, { "name": "하야동" }], "country": "KR", "house": "583", "postalCode": "21009", "state": "인천", "stateCode": "28", "street": "벌말로", "landLotNo": "35-5" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [126.77958332933486, 37.58035272359848],
+            [126.7808773, 37.6003518]
+        ]
+    },
+    {
+        "poiName": "초당주유소",
+        "Latitude": 37.258797185495496,
+        "Longitude": 127.16105832718313,
+        "clickTimes": 1624321474700,
+        "latitudesOfSearcher": 37.2914301,
+        "longitudesOfSearcher": 127.1174911,
+        "poiAddress": { "areas": [{ "name": "용인시" }, { "name": "기흥구" }, { "name": "" }, { "name": "중동" }], "country": "KR", "house": "179", "postalCode": "16995", "state": "경기", "stateCode": "41", "street": "동백죽전대로", "landLotNo": "1039" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [127.16105832718313, 37.258797185495496],
+            [127.1174911, 37.2914301]
+        ]
+    },
+    {
+        "poiName": "삼동주유소",
+        "Latitude": 34.809677666053176,
+        "Longitude": 127.98112772405148,
+        "clickTimes": 1624322387875,
+        "latitudesOfSearcher": 35.1744783,
+        "longitudesOfSearcher": 129.1270201,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "344", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "삼이로", "landLotNo": "1195-1" },
+        "poiCategoryID": "poiCategoryId:7285",
+        "linestringattempt": [
+            [127.98112772405148, 34.809677666053176],
+            [129.1270201, 35.1744783]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624322601180,
+        "latitudesOfSearcher": 34.8092616,
+        "longitudesOfSearcher": 127.9804373,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9804373, 34.8092616]
+        ]
+    },
+    {
+        "poiName": "성동 서비스센터",
+        "Latitude": 37.54282392561436,
+        "Longitude": 127.06401089206338,
+        "clickTimes": 1624323402152,
+        "latitudesOfSearcher": 37.5555045,
+        "longitudesOfSearcher": 126.9740347,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "성동구" }, { "name": "" }, { "name": "성수동2가" }], "postalCode": "04798", "state": "서울", "stateCode": "11", "street": "서울시 성동구 동일로 117" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [127.06401089206338, 37.54282392561436],
+            [126.9740347, 37.5555045]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624323740716,
+        "latitudesOfSearcher": 34.8085175,
+        "longitudesOfSearcher": 127.9738353,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9738353, 34.8085175]
+        ]
+    },
+    {
+        "poiName": "센텀그린타워  기타지역건물  ★ 4.5/5",
+        "Latitude": 35.17461558803916,
+        "Longitude": 129.12696867249906,
+        "clickTimes": 1624323941946,
+        "latitudesOfSearcher": 37.5175049,
+        "longitudesOfSearcher": 126.929149,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "해운대구" }, { "name": "" }, { "name": "우동" }], "house": "78", "state": "부산광역시", "street": "센텀중앙로", "landLotNo": "1462" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.12696867249906, 35.17461558803916],
+            [126.929149, 37.5175049]
+        ]
+    },
+    {
+        "poiName": "국립민속박물관",
+        "Latitude": 37.581683518365026,
+        "Longitude": 126.97894982993603,
+        "clickTimes": 1624330957417,
+        "latitudesOfSearcher": 37.381028,
+        "longitudesOfSearcher": 126.6619223,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "종로구" }, { "name": "" }, { "name": "세종로" }], "house": "161", "state": "서울특별시", "street": "사직로", "landLotNo": "1-1" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [126.97894982993603, 37.581683518365026],
+            [126.6619223, 37.381028]
+        ]
+    },
+    {
+        "poiName": "샛강역 서울9호선",
+        "Latitude": 37.51720966771245,
+        "Longitude": 126.92853913642466,
+        "clickTimes": 1624331040543,
+        "latitudesOfSearcher": 37.381028,
+        "longitudesOfSearcher": 126.6619223,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "영등포구" }, { "name": "" }, { "name": "여의도동" }], "house": "166", "state": "서울특별시", "street": "의사당대로", "landLotNo": "5-6" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [126.92853913642466, 37.51720966771245],
+            [126.6619223, 37.381028]
+        ]
+    },
+    {
+        "poiName": "용산가족공원",
+        "Latitude": 37.522263787686825,
+        "Longitude": 126.98337220586836,
+        "clickTimes": 1624331160884,
+        "latitudesOfSearcher": 37.3809624,
+        "longitudesOfSearcher": 126.6618704,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "용산구" }, { "name": "" }, { "name": "용산동6가" }], "country": "KR", "house": "185", "postalCode": "04383", "state": "서울", "stateCode": "11", "street": "서빙고로", "landLotNo": "68-90" },
+        "poiCategoryID": "poiCategoryId:6160",
+        "linestringattempt": [
+            [126.98337220586836, 37.522263787686825],
+            [126.6618704, 37.3809624]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624332412647,
+        "latitudesOfSearcher": 34.8094295,
+        "longitudesOfSearcher": 127.9810666,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9810666, 34.8094295]
+        ]
+    },
+    {
+        "poiName": "전기차충전소내린천휴게소서울방향",
+        "Latitude": 37.915297178551555,
+        "Longitude": 128.28622221015394,
+        "clickTimes": 1624336852820,
+        "latitudesOfSearcher": 37.5550395,
+        "longitudesOfSearcher": 126.9739721,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "인제군" }, { "name": "상남면" }, { "name": "하남리" }], "country": "KR", "house": "117", "postalCode": "24665", "state": "강원", "stateCode": "42", "street": "서울양양고속도로", "landLotNo": "348" },
+        "poiCategoryID": "chargingStation",
+        "linestringattempt": [
+            [128.28622221015394, 37.915297178551555],
+            [126.9739721, 37.5550395]
+        ]
+    },
+    {
+        "poiName": "사평로주유소",
+        "Latitude": 37.50329436734319,
+        "Longitude": 127.02151942066848,
+        "clickTimes": 1624339311585,
+        "latitudesOfSearcher": 37.5160627,
+        "longitudesOfSearcher": 126.9802569,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "서초구" }, { "name": "" }, { "name": "서초동" }], "country": "KR", "house": "350", "postalCode": "06609", "state": "서울", "stateCode": "11", "street": "사평대로", "landLotNo": "1302" },
+        "poiCategoryID": "poiCategoryId:7269",
+        "linestringattempt": [
+            [127.02151942066848, 37.50329436734319],
+            [126.9802569, 37.5160627]
+        ]
+    },
+    {
+        "poiName": "서울스퀘어빌딩",
+        "Latitude": 37.55555000156164,
+        "Longitude": 126.97374156676233,
+        "clickTimes": 1624339320551,
+        "latitudesOfSearcher": 37.5160791,
+        "longitudesOfSearcher": 126.9829759,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "남대문로5가" }], "country": "KR", "house": "416", "postalCode": "04637", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "541" },
+        "poiCategoryID": "poiCategoryId:6200",
+        "linestringattempt": [
+            [126.97374156676233, 37.55555000156164],
+            [126.9829759, 37.5160791]
+        ]
+    },
+    {
+        "poiName": "부산역 KTX",
+        "Latitude": 35.11515478603542,
+        "Longitude": 129.04136479832232,
+        "clickTimes": 1624339688703,
+        "latitudesOfSearcher": 37.5563441,
+        "longitudesOfSearcher": 126.9736825,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "동구" }, { "name": "" }, { "name": "초량동" }], "house": "206", "state": "부산광역시", "street": "중앙대로", "landLotNo": "1187-1" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.04136479832232, 35.11515478603542],
+            [126.9736825, 37.5563441]
+        ]
+    },
+    {
+        "poiName": "충주주유소창원방향",
+        "Latitude": 37.020997228100896,
+        "Longitude": 127.83915001899004,
+        "clickTimes": 1624339925104,
+        "latitudesOfSearcher": 37.5338126,
+        "longitudesOfSearcher": 127.0309074,
+        "poiAddress": { "areas": [{ "name": "충주시" }, { "name": "" }, { "name": "중앙탑면" }, { "name": "용전리" }], "country": "KR", "house": "231-1", "postalCode": "27448", "state": "충북", "stateCode": "43", "street": "중부내륙고속도로", "landLotNo": "산 50-3" },
+        "poiCategoryID": "poiCategoryId:16320",
+        "linestringattempt": [
+            [127.83915001899004, 37.020997228100896],
+            [127.0309074, 37.5338126]
+        ]
+    },
+    {
+        "poiName": "충주주유소양평방향",
+        "Latitude": 37.02414723113179,
+        "Longitude": 127.83746383152902,
+        "clickTimes": 1624339998615,
+        "latitudesOfSearcher": 37.518313,
+        "longitudesOfSearcher": 127.0660761,
+        "poiAddress": { "areas": [{ "name": "충주시" }, { "name": "" }, { "name": "중앙탑면" }, { "name": "용전리" }], "country": "KR", "house": "230-1", "postalCode": "27448", "state": "충북", "stateCode": "43", "street": "중부내륙고속도로", "landLotNo": "380-4" },
+        "poiCategoryID": "poiCategoryId:16320",
+        "linestringattempt": [
+            [127.83746383152902, 37.02414723113179],
+            [127.0660761, 37.518313]
+        ]
+    },
+    {
+        "poiName": "전기차충전소충주휴게소마산방향",
+        "Latitude": 37.0218915771693,
+        "Longitude": 127.8379833418876,
+        "clickTimes": 1624340009955,
+        "latitudesOfSearcher": 37.5180935,
+        "longitudesOfSearcher": 127.0726781,
+        "poiAddress": { "areas": [{ "name": "충주시" }, { "name": "" }, { "name": "중앙탑면" }, { "name": "용전리" }], "country": "KR", "house": "231", "postalCode": "27448", "state": "충북", "stateCode": "43", "street": "중부내륙고속도로", "landLotNo": "산 50-3" },
+        "poiCategoryID": "poiCategoryId:6326",
+        "linestringattempt": [
+            [127.8379833418876, 37.0218915771693],
+            [127.0726781, 37.5180935]
+        ]
+    },
+    {
+        "poiName": "임진각평화누리",
+        "Latitude": 37.892283322289586,
+        "Longitude": 126.7436055187136,
+        "clickTimes": 1624340050617,
+        "latitudesOfSearcher": 37.5550395,
+        "longitudesOfSearcher": 126.9739721,
+        "poiAddress": { "areas": [{ "name": "파주시" }, { "name": "" }, { "name": "문산읍" }, { "name": "마정리" }], "country": "KR", "postalCode": "10808", "state": "경기", "stateCode": "41", "landLotNo": "618-13" },
+        "poiCategoryID": "poiCategoryId:6160",
+        "linestringattempt": [
+            [126.7436055187136, 37.892283322289586],
+            [126.9739721, 37.5550395]
+        ]
+    },
+    {
+        "poiName": "차헤어살롱",
+        "Latitude": 37.547938311472535,
+        "Longitude": 126.95436906069517,
+        "clickTimes": 1624341231774,
+        "latitudesOfSearcher": 37.5501123,
+        "longitudesOfSearcher": 126.9548782,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "마포구" }, { "name": "" }, { "name": "공덕동" }], "country": "KR", "house": "156", "postalCode": "04211", "state": "서울", "stateCode": "11", "street": "마포대로", "landLotNo": "475" },
+        "poiCategoryID": "poiCategoryId:6182",
+        "linestringattempt": [
+            [126.95436906069517, 37.547938311472535],
+            [126.9548782, 37.5501123]
+        ]
+    },
+    {
+        "poiName": "탐앤탐스충주하휴게소점",
+        "Latitude": 37.02221662737429,
+        "Longitude": 127.83715001307428,
+        "clickTimes": 1624341414117,
+        "latitudesOfSearcher": 37.2402177,
+        "longitudesOfSearcher": 127.5546066,
+        "poiAddress": { "areas": [{ "name": "충주시" }, { "name": "" }, { "name": "중앙탑면" }, { "name": "용전리" }], "country": "KR", "house": "231", "postalCode": "27448", "state": "충북", "stateCode": "43", "street": "중부내륙고속도로", "landLotNo": "산 50-3" },
+        "poiCategoryID": "poiCategoryId:16138",
+        "linestringattempt": [
+            [127.83715001307428, 37.02221662737429],
+            [127.5546066, 37.2402177]
+        ]
+    },
+    {
+        "poiName": "조선팰리스서울강남럭셔리컬렉션호텔",
+        "Latitude": 37.50310828909278,
+        "Longitude": 127.04161377623677,
+        "clickTimes": 1624344127949,
+        "latitudesOfSearcher": 37.5025015,
+        "longitudesOfSearcher": 127.0429693,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강남구" }, { "name": "" }, { "name": "역삼동" }], "country": "KR", "postalCode": "06142", "state": "서울", "stateCode": "11", "street": "언주로93길" },
+        "poiCategoryID": "poiCategoryId:6202",
+        "linestringattempt": [
+            [127.04161377623677, 37.50310828909278],
+            [127.0429693, 37.5025015]
+        ]
+    },
+    {
+        "poiName": "위워크타워",
+        "Latitude": 37.50241108238697,
+        "Longitude": 127.04354722984135,
+        "clickTimes": 1624344595735,
+        "latitudesOfSearcher": 37.5025015,
+        "longitudesOfSearcher": 127.0429693,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강남구" }, { "name": "" }, { "name": "역삼동" }], "country": "KR", "house": "302", "postalCode": "06210", "state": "서울", "stateCode": "11", "street": "테헤란로", "landLotNo": "706" },
+        "poiCategoryID": "poiCategoryId:6200",
+        "linestringattempt": [
+            [127.04354722984135, 37.50241108238697],
+            [127.0429693, 37.5025015]
+        ]
+    },
+    {
+        "poiName": "농협중앙회365영업부지점",
+        "Latitude": 37.565866615623236,
+        "Longitude": 126.96746377274394,
+        "clickTimes": 1624345097247,
+        "latitudesOfSearcher": 37.5668716,
+        "longitudesOfSearcher": 126.967627,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "충정로1가" }], "country": "KR", "house": "120", "postalCode": "04517", "state": "서울", "stateCode": "11", "street": "통일로", "landLotNo": "85" },
+        "poiCategoryID": "poiCategoryId:16186",
+        "linestringattempt": [
+            [126.96746377274394, 37.565866615623236],
+            [126.967627, 37.5668716]
+        ]
+    },
+    {
+        "poiName": "바른식당",
+        "Latitude": 35.09531943127513,
+        "Longitude": 128.99043132551014,
+        "clickTimes": 1624348005378,
+        "latitudesOfSearcher": 35.0813649,
+        "longitudesOfSearcher": 128.9896587,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "사하구" }, { "name": "" }, { "name": "괴정동" }], "country": "KR", "house": "50", "postalCode": "49387", "state": "부산", "stateCode": "26", "street": "사하로141번길", "landLotNo": "530-19" },
+        "poiCategoryID": "restaurant",
+        "linestringattempt": [
+            [128.99043132551014, 35.09531943127513],
+            [128.9896587, 35.0813649]
+        ]
+    },
+    {
+        "poiName": "감삼역",
+        "Latitude": 35.854258267208934,
+        "Longitude": 128.5479388386011,
+        "clickTimes": 1624348775188,
+        "latitudesOfSearcher": 35.846806,
+        "longitudesOfSearcher": 128.5372816,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "달서구" }, { "name": "" }, { "name": "감삼동" }], "country": "KR", "house": "1665", "postalCode": "42641", "state": "대구", "stateCode": "27", "street": "달구벌대로", "landLotNo": "305" },
+        "poiCategoryID": "poiCategoryId:6238",
+        "linestringattempt": [
+            [128.5479388386011, 35.854258267208934],
+            [128.5372816, 35.846806]
+        ]
+    },
+    {
+        "poiName": "감삼역",
+        "Latitude": 35.854258267208934,
+        "Longitude": 128.5479388386011,
+        "clickTimes": 1624348896847,
+        "latitudesOfSearcher": 35.8442096,
+        "longitudesOfSearcher": 128.5371529,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "달서구" }, { "name": "" }, { "name": "감삼동" }], "country": "KR", "house": "1665", "postalCode": "42641", "state": "대구", "stateCode": "27", "street": "달구벌대로", "landLotNo": "305" },
+        "poiCategoryID": "poiCategoryId:6238",
+        "linestringattempt": [
+            [128.5479388386011, 35.854258267208934],
+            [128.5371529, 35.8442096]
+        ]
+    },
+    {
+        "poiName": "한남 전시장 - 서비스센터",
+        "Latitude": 37.5408099219203,
+        "Longitude": 127.00392186641693,
+        "clickTimes": 1624348939869,
+        "latitudesOfSearcher": 37.5344608,
+        "longitudesOfSearcher": 126.9937454,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "용산구" }, { "name": "" }, { "name": "한남동" }], "postalCode": "04417", "state": "서울", "stateCode": "11", "street": "용산구 한남대로 142" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [127.00392186641693, 37.5408099219203],
+            [126.9937454, 37.5344608]
+        ]
+    },
+    {
+        "poiName": "서울스퀘어빌딩",
+        "Latitude": 37.55555000156164,
+        "Longitude": 126.97374156676233,
+        "clickTimes": 1624349322814,
+        "latitudesOfSearcher": 35.8512349,
+        "longitudesOfSearcher": 128.5404025,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "남대문로5가" }], "country": "KR", "house": "416", "postalCode": "04637", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "541" },
+        "poiCategoryID": "poiCategoryId:6200",
+        "linestringattempt": [
+            [126.97374156676233, 37.55555000156164],
+            [128.5404025, 35.8512349]
+        ]
+    },
+    {
+        "poiName": "신평역",
+        "Latitude": 35.095269391313195,
+        "Longitude": 128.96060273051262,
+        "clickTimes": 1624354634053,
+        "latitudesOfSearcher": 35.094499,
+        "longitudesOfSearcher": 128.9602837,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "사하구" }, { "name": "" }, { "name": "신평동" }], "country": "KR", "house": "140", "postalCode": "49429", "state": "부산", "stateCode": "26", "street": "하신번영로", "landLotNo": "646" },
+        "poiCategoryID": "poiCategoryId:6238",
+        "linestringattempt": [
+            [128.96060273051262, 35.095269391313195],
+            [128.9602837, 35.094499]
+        ]
+    },
+    {
+        "poiName": "생토침대가좌점",
+        "Latitude": 37.48961769975722,
+        "Longitude": 126.67144998908043,
+        "clickTimes": 1624354677678,
+        "latitudesOfSearcher": 35.0961273,
+        "longitudesOfSearcher": 128.9596632,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "서구" }, { "name": "" }, { "name": "가좌동" }], "country": "KR", "house": "56", "postalCode": "22838", "state": "인천", "stateCode": "28", "street": "가정로", "landLotNo": "561-12" },
+        "poiCategoryID": "poiCategoryId:6230",
+        "linestringattempt": [
+            [126.67144998908043, 37.48961769975722],
+            [128.9596632, 35.0961273]
+        ]
+    },
+    {
+        "poiName": "이천아트홀",
+        "Latitude": 37.27113040164113,
+        "Longitude": 127.43420259095728,
+        "clickTimes": 1624357755954,
+        "latitudesOfSearcher": 37.5180585,
+        "longitudesOfSearcher": 126.9299747,
+        "poiAddress": { "areas": [{ "name": "이천시" }, { "name": "" }, { "name": "" }, { "name": "중리동" }], "country": "KR", "house": "40", "postalCode": "17379", "state": "경기", "stateCode": "41", "street": "부악로", "landLotNo": "490" },
+        "poiCategoryID": "poiCategoryId:6340",
+        "linestringattempt": [
+            [127.43420259095728, 37.27113040164113],
+            [126.9299747, 37.5180585]
+        ]
+    },
+    {
+        "poiName": "부산광역시청",
+        "Latitude": 35.17974900081754,
+        "Longitude": 129.0749892219901,
+        "clickTimes": 1624409183164,
+        "latitudesOfSearcher": 37.562136,
+        "longitudesOfSearcher": 126.9979578,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "연제구" }, { "name": "" }, { "name": "연산동" }], "house": "1001", "state": "부산광역시", "street": "중앙대로", "landLotNo": "1000" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.0749892219901, 35.17974900081754],
+            [126.9979578, 37.562136]
+        ]
+    },
+    {
+        "poiName": "상암주유소",
+        "Latitude": 37.57919157855213,
+        "Longitude": 126.85988053679466,
+        "clickTimes": 1624412079378,
+        "latitudesOfSearcher": 37.5550173,
+        "longitudesOfSearcher": 126.9739974,
+        "poiAddress": { "areas": [{ "name": "고양시" }, { "name": "덕양구" }, { "name": "" }, { "name": "덕은동" }], "country": "KR", "house": "38", "postalCode": "10543", "state": "경기", "stateCode": "41", "street": "자유로", "landLotNo": "425-28" },
+        "poiCategoryID": "poiCategoryId:7267",
+        "linestringattempt": [
+            [126.85988053679466, 37.57919157855213],
+            [126.9739974, 37.5550173]
+        ]
+    },
+    {
+        "poiName": "다모은정주상복합아파트",
+        "Latitude": 37.6301805395633,
+        "Longitude": 126.83233609423041,
+        "clickTimes": 1624412586703,
+        "latitudesOfSearcher": 37.5551648,
+        "longitudesOfSearcher": 126.9739547,
+        "poiAddress": { "areas": [{ "name": "고양시" }, { "name": "덕양구" }, { "name": "" }, { "name": "화정동" }], "country": "KR", "house": "32-37", "postalCode": "10503", "state": "경기", "stateCode": "41", "street": "화중로", "landLotNo": "1000-5" },
+        "poiCategoryID": "poiCategoryId:6367",
+        "linestringattempt": [
+            [126.83233609423041, 37.6301805395633],
+            [126.9739547, 37.5551648]
+        ]
+    },
+    {
+        "poiName": "고양휴게소문산방향",
+        "Latitude": 37.63078881427646,
+        "Longitude": 126.85223607346416,
+        "clickTimes": 1624413646968,
+        "latitudesOfSearcher": 37.5593907,
+        "longitudesOfSearcher": 126.9715709,
+        "poiAddress": { "areas": [{ "name": "고양시" }, { "name": "덕양구" }, { "name": "" }, { "name": "성사동" }], "country": "KR", "house": "52", "postalCode": "10481", "state": "경기", "stateCode": "41", "street": "수원문산고속도로", "landLotNo": "97" },
+        "poiCategoryID": "poiCategoryId:6104",
+        "linestringattempt": [
+            [126.85223607346416, 37.63078881427646],
+            [126.9715709, 37.5593907]
+        ]
+    },
+    {
+        "poiName": "안성시청",
+        "Latitude": 37.00804442167282,
+        "Longitude": 127.27972503751516,
+        "clickTimes": 1624414092459,
+        "latitudesOfSearcher": 37.5174773,
+        "longitudesOfSearcher": 126.9291438,
+        "poiAddress": { "areas": [{ "name": "안성시" }, { "name": "" }, { "name": "" }, { "name": "봉산동" }], "country": "KR", "house": "25", "postalCode": "17586", "state": "경기", "stateCode": "41", "street": "시청길", "landLotNo": "31-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.27972503751516, 37.00804442167282],
+            [126.9291438, 37.5174773]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624414874323,
+        "latitudesOfSearcher": 34.8094241,
+        "longitudesOfSearcher": 127.9811417,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9811417, 34.8094241]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624415164610,
+        "latitudesOfSearcher": 35.1744778,
+        "longitudesOfSearcher": 129.1270232,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [129.1270232, 35.1744778]
+        ]
+    },
+    {
+        "poiName": "고양휴게소문산방향",
+        "Latitude": 37.63078881427646,
+        "Longitude": 126.85223607346416,
+        "clickTimes": 1624415560146,
+        "latitudesOfSearcher": 37.5762776,
+        "longitudesOfSearcher": 126.8636614,
+        "poiAddress": { "areas": [{ "name": "고양시" }, { "name": "덕양구" }, { "name": "" }, { "name": "성사동" }], "country": "KR", "house": "52", "postalCode": "10481", "state": "경기", "stateCode": "41", "street": "수원문산고속도로", "landLotNo": "97" },
+        "poiCategoryID": "poiCategoryId:6104",
+        "linestringattempt": [
+            [126.85223607346416, 37.63078881427646],
+            [126.8636614, 37.5762776]
+        ]
+    },
+    {
+        "poiName": "배스킨라빈스31용산이마트점",
+        "Latitude": 37.52931112423539,
+        "Longitude": 126.96532496251166,
+        "clickTimes": 1624419964150,
+        "latitudesOfSearcher": 37.5332342,
+        "longitudesOfSearcher": 126.9513665,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "용산구" }, { "name": "" }, { "name": "한강로3가" }], "country": "KR", "house": "55", "postalCode": "04377", "state": "서울", "stateCode": "11", "street": "한강대로23길", "landLotNo": "40-999" },
+        "poiCategoryID": "poiCategoryId:20024",
+        "linestringattempt": [
+            [126.96532496251166, 37.52931112423539],
+            [126.9513665, 37.5332342]
+        ]
+    },
+    {
+        "poiName": "부산광역시청",
+        "Latitude": 35.17974900081754,
+        "Longitude": 129.0749892219901,
+        "clickTimes": 1624422769642,
+        "latitudesOfSearcher": 35.7184525,
+        "longitudesOfSearcher": 129.1927403,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "연제구" }, { "name": "" }, { "name": "연산동" }], "house": "1001", "state": "부산광역시", "street": "중앙대로", "landLotNo": "1000" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.0749892219901, 35.17974900081754],
+            [129.1927403, 35.7184525]
+        ]
+    },
+    {
+        "poiName": "구산주유소",
+        "Latitude": 37.57535551674664,
+        "Longitude": 127.19425829127431,
+        "clickTimes": 1624422794422,
+        "latitudesOfSearcher": 37.5471253,
+        "longitudesOfSearcher": 127.21123,
+        "poiAddress": { "areas": [{ "name": "하남시" }, { "name": "" }, { "name": "" }, { "name": "망월동" }], "country": "KR", "house": "316", "postalCode": "12902", "state": "경기", "stateCode": "41", "street": "미사대로", "landLotNo": "835" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [127.19425829127431, 37.57535551674664],
+            [127.21123, 37.5471253]
+        ]
+    },
+    {
+        "poiName": "하이파이브용호점",
+        "Latitude": 35.23844721727073,
+        "Longitude": 128.6842269077897,
+        "clickTimes": 1624422815762,
+        "latitudesOfSearcher": 35.7158671,
+        "longitudesOfSearcher": 129.1920191,
+        "poiAddress": { "areas": [{ "name": "창원시" }, { "name": "의창구" }, { "name": "" }, { "name": "용호동" }], "country": "KR", "house": "122", "postalCode": "51429", "state": "경남", "street": "용호로", "landLotNo": "25-10" },
+        "poiCategoryID": "poiCategoryId:17155",
+        "linestringattempt": [
+            [128.6842269077897, 35.23844721727073],
+            [129.1920191, 35.7158671]
+        ]
+    },
+    {
+        "poiName": "미사리경정장조정카누경기장주차장",
+        "Latitude": 37.55901658907533,
+        "Longitude": 127.2064610850066,
+        "clickTimes": 1624422935379,
+        "latitudesOfSearcher": 37.5587383,
+        "longitudesOfSearcher": 127.2055608,
+        "poiAddress": { "areas": [{ "name": "하남시" }, { "name": "" }, { "name": "" }, { "name": "신장동" }], "country": "KR", "house": "505", "postalCode": "12900", "state": "경기", "stateCode": "41", "street": "미사대로", "landLotNo": "281" },
+        "poiCategoryID": "parkingSpace",
+        "linestringattempt": [
+            [127.2064610850066, 37.55901658907533],
+            [127.2055608, 37.5587383]
+        ]
+    },
+    {
+        "poiName": "구산주유소",
+        "Latitude": 37.57535551674664,
+        "Longitude": 127.19425829127431,
+        "clickTimes": 1624422959624,
+        "latitudesOfSearcher": 37.5615236,
+        "longitudesOfSearcher": 127.202365,
+        "poiAddress": { "areas": [{ "name": "하남시" }, { "name": "" }, { "name": "" }, { "name": "망월동" }], "country": "KR", "house": "316", "postalCode": "12902", "state": "경기", "stateCode": "41", "street": "미사대로", "landLotNo": "835" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [127.19425829127431, 37.57535551674664],
+            [127.202365, 37.5615236]
+        ]
+    },
+    {
+        "poiName": "울산 전시장-인증 중고차 울산 전시장",
+        "Latitude": 35.53489292040467,
+        "Longitude": 129.3165129236877,
+        "clickTimes": 1624425266520,
+        "latitudesOfSearcher": 35.638105,
+        "longitudesOfSearcher": 129.1596015,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남구" }, { "name": "" }, { "name": "달동" }], "postalCode": "44691", "state": "울산", "stateCode": "31", "street": "남구 삼산로 83" },
+        "poiCategoryID": "evDealers",
+        "linestringattempt": [
+            [129.3165129236877, 35.53489292040467],
+            [129.1596015, 35.638105]
+        ]
+    },
+    {
+        "poiName": "카린",
+        "Latitude": 35.08900551125407,
+        "Longitude": 129.06196106225252,
+        "clickTimes": 1624425460429,
+        "latitudesOfSearcher": 35.6500983,
+        "longitudesOfSearcher": 129.1643294,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "영도구" }, { "name": "" }, { "name": "청학동" }], "country": "KR", "house": "16", "postalCode": "49084", "state": "부산", "stateCode": "26", "street": "청학동로", "landLotNo": "148-121" },
+        "poiCategoryID": "poiCategoryId:16138",
+        "linestringattempt": [
+            [129.06196106225252, 35.08900551125407],
+            [129.1643294, 35.6500983]
+        ]
+    },
+    {
+        "poiName": "홍탕창원성산점",
+        "Latitude": 35.24329581297934,
+        "Longitude": 128.6609769333154,
+        "clickTimes": 1624425566881,
+        "latitudesOfSearcher": 35.1174732,
+        "longitudesOfSearcher": 129.1086565,
+        "poiAddress": { "areas": [{ "name": "창원시" }, { "name": "성산구" }, { "name": "" }, { "name": "반지동" }], "country": "KR", "house": "17", "postalCode": "51417", "state": "경남", "street": "반송로", "landLotNo": "37-9" },
+        "poiCategoryID": "restaurant",
+        "linestringattempt": [
+            [128.6609769333154, 35.24329581297934],
+            [129.1086565, 35.1174732]
+        ]
+    },
+    {
+        "poiName": "힐튼호텔 부산",
+        "Latitude": 35.19795239903033,
+        "Longitude": 129.22806909307837,
+        "clickTimes": 1624259000084,
+        "latitudesOfSearcher": 37.517475,
+        "longitudesOfSearcher": 126.9291638,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "기장군" }, { "name": "기장읍" }, { "name": "시랑리" }], "house": "268-32", "state": "부산광역시", "street": "기장해안로", "landLotNo": "704-1" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.22806909307837, 35.19795239903033],
+            [126.9291638, 37.517475]
+        ]
+    },
+    {
+        "poiName": "Parc 1",
+        "Latitude": 37.526113763451576,
+        "Longitude": 126.92837770096958,
+        "clickTimes": 1624259106160,
+        "latitudesOfSearcher": 37.5186325,
+        "longitudesOfSearcher": 126.9308712,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "Yeongdeungpo-gu" }, { "name": "" }, { "name": "Yeouido-dong" }], "country": "KR", "house": "108", "postalCode": "07335", "state": "Seoul", "stateCode": "11", "street": "Yeoui-daero", "landLotNo": "22" },
+        "poiCategoryID": "poiCategoryId:6200",
+        "linestringattempt": [
+            [126.92837770096958, 37.526113763451576],
+            [126.9308712, 37.5186325]
+        ]
+    },
+    {
+        "poiName": "서울역",
+        "Latitude": 37.55485547706485,
+        "Longitude": 126.97058879770339,
+        "clickTimes": 1624259286725,
+        "latitudesOfSearcher": 37.517507,
+        "longitudesOfSearcher": 126.929157,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "봉래동2가" }], "country": "KR", "house": "405", "postalCode": "04509", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "122-11" },
+        "poiCategoryID": "poiCategoryId:6118",
+        "linestringattempt": [
+            [126.97058879770339, 37.55485547706485],
+            [126.929157, 37.517507]
+        ]
+    },
+    {
+        "poiName": "만석한식부페",
+        "Latitude": 37.17817333526909,
+        "Longitude": 126.98700550943613,
+        "clickTimes": 1624259935088,
+        "latitudesOfSearcher": 37.1791325,
+        "longitudesOfSearcher": 126.9888553,
+        "poiAddress": { "areas": [{ "name": "화성시" }, { "name": "" }, { "name": "정남면" }, { "name": "괘랑리" }], "country": "KR", "house": "645", "postalCode": "18516", "state": "경기", "stateCode": "41", "street": "만년로", "landLotNo": "265-1" },
+        "poiCategoryID": "restaurant",
+        "linestringattempt": [
+            [126.98700550943613, 37.17817333526909],
+            [126.9888553, 37.1791325]
+        ]
+    },
+    {
+        "poiName": "Samseong",
+        "Latitude": 37.51015889458358,
+        "Longitude": 127.04598192125559,
+        "clickTimes": 1624259984082,
+        "latitudesOfSearcher": 37.5161076,
+        "longitudesOfSearcher": 126.9957013,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "Gangnam-gu" }, { "name": "" }, { "name": "Samseong-dong" }], "house": "418", "postalCode": "06153", "state": "Seoul", "stateCode": "11", "street": "Bongeunsa-ro" },
+        "poiCategoryID": "evDealers",
+        "linestringattempt": [
+            [127.04598192125559, 37.51015889458358],
+            [126.9957013, 37.5161076]
+        ]
+    },
+    {
+        "poiName": "CU Cheongsol Beonyeong Branch",
+        "Latitude": 37.306658271700144,
+        "Longitude": 126.99151379987597,
+        "clickTimes": 1624260066150,
+        "latitudesOfSearcher": 37.5174817,
+        "longitudesOfSearcher": 126.929181,
+        "poiAddress": { "areas": [{ "name": "Suwon-si" }, { "name": "Jangan-gu" }, { "name": "" }, { "name": "Jeongja-dong" }], "country": "KR", "house": "83", "postalCode": "16337", "state": "Gyeonggi", "stateCode": "41", "street": "Pajang-ro", "landLotNo": "535-12" },
+        "poiCategoryID": "poiCategoryId:20021",
+        "linestringattempt": [
+            [126.99151379987597, 37.306658271700144],
+            [126.929181, 37.5174817]
+        ]
+    },
+    {
+        "poiName": "서오산분기점오성방향",
+        "Latitude": 37.172102741897106,
+        "Longitude": 126.99717217124999,
+        "clickTimes": 1624260276889,
+        "latitudesOfSearcher": 37.1733507,
+        "longitudesOfSearcher": 126.997106,
+        "poiAddress": { "areas": [{ "name": "화성시" }, { "name": "" }, { "name": "정남면" }, { "name": "용수리" }], "country": "KR", "postalCode": "18512", "state": "경기", "stateCode": "41", "street": "평택파주고속도로" },
+        "poiCategoryID": "poiCategoryId:6092",
+        "linestringattempt": [
+            [126.99717217124999, 37.172102741897106],
+            [126.997106, 37.1733507]
+        ]
+    },
+    {
+        "poiName": "서오산분기점서수원방향",
+        "Latitude": 37.179147228598595,
+        "Longitude": 126.99025265872478,
+        "clickTimes": 1624260501809,
+        "latitudesOfSearcher": 37.1791421,
+        "longitudesOfSearcher": 126.9872916,
+        "poiAddress": { "areas": [{ "name": "화성시" }, { "name": "" }, { "name": "정남면" }, { "name": "괘랑리" }], "country": "KR", "postalCode": "18516", "state": "경기", "stateCode": "41", "street": "수도권제2순환고속도로" },
+        "poiCategoryID": "poiCategoryId:6092",
+        "linestringattempt": [
+            [126.99025265872478, 37.179147228598595],
+            [126.9872916, 37.1791421]
+        ]
+    },
+    {
+        "poiName": "인천국제공항탑승동",
+        "Latitude": 37.455966621637344,
+        "Longitude": 126.44499158486724,
+        "clickTimes": 1624260762855,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "운서동" }], "country": "KR", "house": "272", "postalCode": "22382", "state": "인천", "stateCode": "28", "street": "공항로", "landLotNo": "2840" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [126.44499158486724, 37.455966621637344],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "전기차충전소돌담위에흑돼지점",
+        "Latitude": 33.477941611781716,
+        "Longitude": 126.36834436096251,
+        "clickTimes": 1624260780611,
+        "latitudesOfSearcher": 37.5174773,
+        "longitudesOfSearcher": 126.9291438,
+        "poiAddress": { "areas": [{ "name": "제주시" }, { "name": "" }, { "name": "애월읍" }, { "name": "신엄리" }], "country": "KR", "house": "608", "postalCode": "63047", "state": "제주", "stateCode": "49", "street": "애월해안로", "landLotNo": "963-3" },
+        "poiCategoryID": "chargingStation",
+        "linestringattempt": [
+            [126.36834436096251, 33.477941611781716],
+            [126.9291438, 37.5174773]
+        ]
+    },
+    {
+        "poiName": "서오산분기점오성방향",
+        "Latitude": 37.172102741897106,
+        "Longitude": 126.99717217124999,
+        "clickTimes": 1624260934390,
+        "latitudesOfSearcher": 37.1767526,
+        "longitudesOfSearcher": 126.9954713,
+        "poiAddress": { "areas": [{ "name": "화성시" }, { "name": "" }, { "name": "정남면" }, { "name": "용수리" }], "country": "KR", "postalCode": "18512", "state": "경기", "stateCode": "41", "street": "평택파주고속도로" },
+        "poiCategoryID": "poiCategoryId:6092",
+        "linestringattempt": [
+            [126.99717217124999, 37.172102741897106],
+            [126.9954713, 37.1767526]
+        ]
+    },
+    {
+        "poiName": "서오산분기점",
+        "Latitude": 37.17646937817335,
+        "Longitude": 126.99840003624558,
+        "clickTimes": 1624262879821,
+        "latitudesOfSearcher": 37.179142,
+        "longitudesOfSearcher": 126.9872915,
+        "poiAddress": { "areas": [{ "name": "오산시" }, { "name": "" }, { "name": "" }, { "name": "서랑동" }], "country": "KR", "postalCode": "18100", "state": "경기", "stateCode": "41", "street": "수도권제2순환고속도로" },
+        "poiCategoryID": "poiCategoryId:6092",
+        "linestringattempt": [
+            [126.99840003624558, 37.17646937817335],
+            [126.9872915, 37.179142]
+        ]
+    },
+    {
+        "poiName": "한국도심공항수락터미널",
+        "Latitude": 37.67884159460664,
+        "Longitude": 127.05353049561381,
+        "clickTimes": 1624263219359,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "노원구" }, { "name": "" }, { "name": "상계동" }], "country": "KR", "house": "30", "postalCode": "01604", "state": "서울", "stateCode": "11", "street": "동일로243길", "landLotNo": "1138-20" },
+        "poiCategoryID": "poiCategoryId:6172",
+        "linestringattempt": [
+            [127.05353049561381, 37.67884159460664],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "양평동공영주차장",
+        "Latitude": 37.539619440212846,
+        "Longitude": 126.89041379839182,
+        "clickTimes": 1624263519489,
+        "latitudesOfSearcher": 37.167432,
+        "longitudesOfSearcher": 126.998189,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "영등포구" }, { "name": "" }, { "name": "양평동5가" }], "country": "KR", "postalCode": "07204", "state": "서울", "stateCode": "11" },
+        "poiCategoryID": "poiCategoryId:6272",
+        "linestringattempt": [
+            [126.89041379839182, 37.539619440212846],
+            [126.998189, 37.167432]
+        ]
+    },
+    {
+        "poiName": "원아주차장",
+        "Latitude": 37.58378326892853,
+        "Longitude": 126.91988876089454,
+        "clickTimes": 1624264060700,
+        "latitudesOfSearcher": 36.9696221,
+        "longitudesOfSearcher": 127.1159282,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "은평구" }, { "name": "" }, { "name": "응암동" }], "country": "KR", "postalCode": "03481", "state": "서울", "stateCode": "11", "street": "가좌로7나길", "landLotNo": "270-22" },
+        "poiCategoryID": "parkingSpot",
+        "linestringattempt": [
+            [126.91988876089454, 37.58378326892853],
+            [127.1159282, 36.9696221]
+        ]
+    },
+    {
+        "poiName": "경포해수욕장",
+        "Latitude": 37.80645833350718,
+        "Longitude": 128.90694530680776,
+        "clickTimes": 1624271156347,
+        "latitudesOfSearcher": 37.5174776,
+        "longitudesOfSearcher": 126.9291363,
+        "poiAddress": { "areas": [{ "name": "강릉시" }, { "name": "" }, { "name": "" }, { "name": "안현동" }], "state": "강원도" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [128.90694530680776, 37.80645833350718],
+            [126.9291363, 37.5174776]
+        ]
+    },
+    {
+        "poiName": "경포해수욕장",
+        "Latitude": 37.80645833350718,
+        "Longitude": 128.90694530680776,
+        "clickTimes": 1624271558214,
+        "latitudesOfSearcher": 37.5174776,
+        "longitudesOfSearcher": 126.9291363,
+        "poiAddress": { "areas": [{ "name": "강릉시" }, { "name": "" }, { "name": "" }, { "name": "안현동" }], "state": "강원도" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [128.90694530680776, 37.80645833350718],
+            [126.9291363, 37.5174776]
+        ]
+    },
+    {
+        "poiName": "경포해수욕장",
+        "Latitude": 37.80645833350718,
+        "Longitude": 128.90694530680776,
+        "clickTimes": 1624271670443,
+        "latitudesOfSearcher": 37.5174776,
+        "longitudesOfSearcher": 126.9291363,
+        "poiAddress": { "areas": [{ "name": "강릉시" }, { "name": "" }, { "name": "" }, { "name": "안현동" }], "state": "강원도" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [128.90694530680776, 37.80645833350718],
+            [126.9291363, 37.5174776]
+        ]
+    },
+    {
+        "poiName": "에이원주유소",
+        "Latitude": 37.58035272359848,
+        "Longitude": 126.77958332933486,
+        "clickTimes": 1624321193881,
+        "latitudesOfSearcher": 37.6021294,
+        "longitudesOfSearcher": 126.7839108,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "계양구" }, { "name": "" }, { "name": "하야동" }], "country": "KR", "house": "583", "postalCode": "21009", "state": "인천", "stateCode": "28", "street": "벌말로", "landLotNo": "35-5" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [126.77958332933486, 37.58035272359848],
+            [126.7839108, 37.6021294]
+        ]
+    },
+    {
+        "poiName": "Dungine",
+        "Latitude": 37.28964108042419,
+        "Longitude": 127.12160772643983,
+        "clickTimes": 1624321317755,
+        "latitudesOfSearcher": 37.2771423,
+        "longitudesOfSearcher": 127.1038555,
+        "poiAddress": { "areas": [{ "name": "Yongin-si" }, { "name": "Giheung-gu" }, { "name": "" }, { "name": "Eonnam-dong" }], "country": "KR", "house": "102", "postalCode": "16961", "state": "Gyeonggi", "stateCode": "41", "street": "Giheung-ro 116beon-gil", "landLotNo": "500" },
+        "poiCategoryID": "restaurant",
+        "linestringattempt": [
+            [127.12160772643983, 37.28964108042419],
+            [127.1038555, 37.2771423]
+        ]
+    },
+    {
+        "poiName": "잇토우스시",
+        "Latitude": 37.24431158043444,
+        "Longitude": 127.19114625826478,
+        "clickTimes": 1624321486416,
+        "latitudesOfSearcher": 37.2913934,
+        "longitudesOfSearcher": 127.1179405,
+        "poiAddress": { "areas": [{ "name": "용인시" }, { "name": "처인구" }, { "name": "" }, { "name": "역북동" }], "country": "KR", "house": "102-3", "postalCode": "17046", "state": "경기", "stateCode": "41", "street": "성산로", "landLotNo": "303-16" },
+        "poiCategoryID": "restaurant",
+        "linestringattempt": [
+            [127.19114625826478, 37.24431158043444],
+            [127.1179405, 37.2913934]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624322796141,
+        "latitudesOfSearcher": 34.8085175,
+        "longitudesOfSearcher": 127.9738997,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9738997, 34.8085175]
+        ]
+    },
+    {
+        "poiName": "송파 서비스센터",
+        "Latitude": 37.48602697625756,
+        "Longitude": 127.11650792509317,
+        "clickTimes": 1624322966301,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "송파구" }, { "name": "" }, { "name": "문정동" }], "postalCode": "05836", "state": "서울", "stateCode": "11", "street": "송파구 정의로 8길 6" },
+        "poiCategoryID": "evDealers",
+        "linestringattempt": [
+            [127.11650792509317, 37.48602697625756],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "피엔에스알앤디센터",
+        "Latitude": 37.485344437882304,
+        "Longitude": 127.1147137787193,
+        "clickTimes": 1624323000412,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "송파구" }, { "name": "" }, { "name": "문정동" }], "country": "KR", "house": "13", "postalCode": "05835", "state": "서울", "stateCode": "11", "street": "정의로7길", "landLotNo": "639-5" },
+        "poiCategoryID": "poiCategoryId:6169",
+        "linestringattempt": [
+            [127.1147137787193, 37.485344437882304],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "하이엠솔루텍문정점",
+        "Latitude": 37.48515265993774,
+        "Longitude": 127.1169694326818,
+        "clickTimes": 1624323013392,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "송파구" }, { "name": "" }, { "name": "문정동" }], "country": "KR", "house": "25", "postalCode": "05836", "state": "서울", "stateCode": "11", "street": "법원로11길", "landLotNo": "645" },
+        "poiCategoryID": "poiCategoryId:6169",
+        "linestringattempt": [
+            [127.1169694326818, 37.48515265993774],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "대전대학교한방병원",
+        "Latitude": 37.485655490309,
+        "Longitude": 127.11627767421305,
+        "clickTimes": 1624323018322,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "송파구" }, { "name": "" }, { "name": "문정동" }], "country": "KR", "house": "28", "postalCode": "05836", "state": "서울", "stateCode": "11", "street": "법원로11길", "landLotNo": "640-10" },
+        "poiCategoryID": "poiCategoryId:6100",
+        "linestringattempt": [
+            [127.11627767421305, 37.485655490309],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "성동 서비스센터",
+        "Latitude": 37.54282392561436,
+        "Longitude": 127.06401089206338,
+        "clickTimes": 1624323036909,
+        "latitudesOfSearcher": 37.5555045,
+        "longitudesOfSearcher": 126.9740347,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "성동구" }, { "name": "" }, { "name": "성수동2가" }], "postalCode": "04798", "state": "서울", "stateCode": "11", "street": "서울시 성동구 동일로 117" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [127.06401089206338, 37.54282392561436],
+            [126.9740347, 37.5555045]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624323134354,
+        "latitudesOfSearcher": 34.8092813,
+        "longitudesOfSearcher": 127.9805006,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9805006, 34.8092813]
+        ]
+    },
+    {
+        "poiName": "성수 서비스센터",
+        "Latitude": 37.537983041256666,
+        "Longitude": 127.06137092784047,
+        "clickTimes": 1624323372608,
+        "latitudesOfSearcher": 37.5555045,
+        "longitudesOfSearcher": 126.9740347,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "성동구" }, { "name": "" }, { "name": "성수동2가" }], "postalCode": "04786", "state": "서울", "stateCode": "11", "street": "성동구 동일로 55" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [127.06137092784047, 37.537983041256666],
+            [126.9740347, 37.5555045]
+        ]
+    },
+    {
+        "poiName": "성수 서비스센터",
+        "Latitude": 37.5379828736186,
+        "Longitude": 127.06137092784047,
+        "clickTimes": 1624323390526,
+        "latitudesOfSearcher": 37.5555045,
+        "longitudesOfSearcher": 126.9740347,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "성동구" }, { "name": "" }, { "name": "성수동2가" }], "postalCode": "04786", "state": "서울", "stateCode": "11", "street": "성동구 동일로 55" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [127.06137092784047, 37.5379828736186],
+            [126.9740347, 37.5555045]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624324796411,
+        "latitudesOfSearcher": 34.8094442,
+        "longitudesOfSearcher": 127.9809901,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9809901, 34.8094442]
+        ]
+    },
+    {
+        "poiName": "삼동주유소",
+        "Latitude": 34.809677666053176,
+        "Longitude": 127.98112772405148,
+        "clickTimes": 1624324820286,
+        "latitudesOfSearcher": 34.8094015,
+        "longitudesOfSearcher": 127.9816387,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "344", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "삼이로", "landLotNo": "1195-1" },
+        "poiCategoryID": "poiCategoryId:7285",
+        "linestringattempt": [
+            [127.98112772405148, 34.809677666053176],
+            [127.9816387, 34.8094015]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624325165196,
+        "latitudesOfSearcher": 34.8264951,
+        "longitudesOfSearcher": 127.9927706,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9927706, 34.8264951]
+        ]
+    },
+    {
+        "poiName": "센텀그린타워  기타지역건물  ★ 4.5/5",
+        "Latitude": 35.17461558803916,
+        "Longitude": 129.12696867249906,
+        "clickTimes": 1624327836042,
+        "latitudesOfSearcher": 37.5175005,
+        "longitudesOfSearcher": 126.9291762,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "해운대구" }, { "name": "" }, { "name": "우동" }], "house": "78", "state": "부산광역시", "street": "센텀중앙로", "landLotNo": "1462" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.12696867249906, 35.17461558803916],
+            [126.9291762, 37.5175005]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624331961535,
+        "latitudesOfSearcher": 35.1744776,
+        "longitudesOfSearcher": 129.1270231,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [129.1270231, 35.1744776]
+        ]
+    },
+    {
+        "poiName": "봄꽃길서울안양천제방",
+        "Latitude": 37.503455467522144,
+        "Longitude": 126.8728750012815,
+        "clickTimes": 1624335968650,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "구로구" }, { "name": "" }, { "name": "구로동" }], "country": "KR", "postalCode": "08214", "state": "서울", "stateCode": "11" },
+        "poiCategoryID": "poiCategoryId:6298",
+        "linestringattempt": [
+            [126.8728750012815, 37.503455467522144],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "부민병원",
+        "Latitude": 37.556833270937204,
+        "Longitude": 126.85088876634836,
+        "clickTimes": 1624336135413,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "강서구" }, { "name": "" }, { "name": "등촌동" }], "country": "KR", "house": "389", "postalCode": "07590", "state": "서울", "stateCode": "11", "street": "공항대로", "landLotNo": "657" },
+        "poiCategoryID": "poiCategoryId:6218",
+        "linestringattempt": [
+            [126.85088876634836, 37.556833270937204],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "안국주유소",
+        "Latitude": 37.54926382564008,
+        "Longitude": 126.91263330169022,
+        "clickTimes": 1624336175911,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "마포구" }, { "name": "" }, { "name": "합정동" }], "country": "KR", "house": "33", "postalCode": "04027", "state": "서울", "stateCode": "11", "street": "양화로", "landLotNo": "383-4" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [126.91263330169022, 37.54926382564008],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "서울스퀘어",
+        "Latitude": 37.55557003431022,
+        "Longitude": 126.97375556454062,
+        "clickTimes": 1624336189206,
+        "latitudesOfSearcher": 37.7713229,
+        "longitudesOfSearcher": 126.927983,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "남대문로5가" }], "house": "416", "state": "서울특별시", "street": "한강대로" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [126.97375556454062, 37.55557003431022],
+            [126.927983, 37.7713229]
+        ]
+    },
+    {
+        "poiName": "성거읍복지회관",
+        "Latitude": 36.869383016601205,
+        "Longitude": 127.20074999146163,
+        "clickTimes": 1624336622313,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "천안시" }, { "name": "서북구" }, { "name": "성거읍" }, { "name": "천흥리" }], "country": "KR", "house": "16", "postalCode": "31044", "state": "충남", "stateCode": "44", "street": "천흥1길", "landLotNo": "493-4" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.20074999146163, 36.869383016601205],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "샛강역",
+        "Latitude": 37.51716113649309,
+        "Longitude": 126.92853326909244,
+        "clickTimes": 1624337244223,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "영등포구" }, { "name": "" }, { "name": "여의도동" }], "country": "KR", "house": "166", "postalCode": "07324", "state": "서울", "stateCode": "11", "street": "의사당대로", "landLotNo": "5-6" },
+        "poiCategoryID": "poiCategoryId:6238",
+        "linestringattempt": [
+            [126.92853326909244, 37.51716113649309],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "수원시청",
+        "Latitude": 37.26368333213031,
+        "Longitude": 127.02870271168649,
+        "clickTimes": 1624337546925,
+        "latitudesOfSearcher": 37.5174722,
+        "longitudesOfSearcher": 126.9291611,
+        "poiAddress": { "areas": [{ "name": "수원시" }, { "name": "팔달구" }, { "name": "" }, { "name": "인계동" }], "country": "KR", "house": "241", "postalCode": "16490", "state": "경기", "stateCode": "41", "street": "효원로", "landLotNo": "1111" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.02870271168649, 37.26368333213031],
+            [126.9291611, 37.5174722]
+        ]
+    },
+    {
+        "poiName": "강릉시청",
+        "Latitude": 37.752105463296175,
+        "Longitude": 128.87591382488608,
+        "clickTimes": 1624337638094,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "강릉시" }, { "name": "" }, { "name": "" }, { "name": "홍제동" }], "country": "KR", "house": "33", "postalCode": "25522", "state": "강원", "stateCode": "42", "street": "강릉대로", "landLotNo": "1001" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [128.87591382488608, 37.752105463296175],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "서울스퀘어빌딩",
+        "Latitude": 37.55555000156164,
+        "Longitude": 126.97374156676233,
+        "clickTimes": 1624337729702,
+        "latitudesOfSearcher": 37.5174708,
+        "longitudesOfSearcher": 126.9291552,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "남대문로5가" }], "country": "KR", "house": "416", "postalCode": "04637", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "541" },
+        "poiCategoryID": "poiCategoryId:6200",
+        "linestringattempt": [
+            [126.97374156676233, 37.55555000156164],
+            [126.9291552, 37.5174708]
+        ]
+    },
+    {
+        "poiName": "임진각빌딩",
+        "Latitude": 37.506332974880934,
+        "Longitude": 127.10830003023148,
+        "clickTimes": 1624338159993,
+        "latitudesOfSearcher": 37.5550395,
+        "longitudesOfSearcher": 126.9739721,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "송파구" }, { "name": "" }, { "name": "송파동" }], "country": "KR", "house": "385", "postalCode": "05626", "state": "서울", "stateCode": "11", "street": "백제고분로", "landLotNo": "19-8" },
+        "poiCategoryID": "poiCategoryId:-29290",
+        "linestringattempt": [
+            [127.10830003023148, 37.506332974880934],
+            [126.9739721, 37.5550395]
+        ]
+    },
+    {
+        "poiName": "서울스퀘어빌딩",
+        "Latitude": 37.55555000156164,
+        "Longitude": 126.97374156676233,
+        "clickTimes": 1624339554713,
+        "latitudesOfSearcher": 37.5205133,
+        "longitudesOfSearcher": 126.9974191,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "남대문로5가" }], "country": "KR", "house": "416", "postalCode": "04637", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "541" },
+        "poiCategoryID": "poiCategoryId:6200",
+        "linestringattempt": [
+            [126.97374156676233, 37.55555000156164],
+            [126.9974191, 37.5205133]
+        ]
+    },
+    {
+        "poiName": "전기차충전소충주휴게소마산방향",
+        "Latitude": 37.0218915771693,
+        "Longitude": 127.8379833418876,
+        "clickTimes": 1624339976924,
+        "latitudesOfSearcher": 37.5321903,
+        "longitudesOfSearcher": 127.0367946,
+        "poiAddress": { "areas": [{ "name": "충주시" }, { "name": "" }, { "name": "중앙탑면" }, { "name": "용전리" }], "country": "KR", "house": "231", "postalCode": "27448", "state": "충북", "stateCode": "43", "street": "중부내륙고속도로", "landLotNo": "산 50-3" },
+        "poiCategoryID": "poiCategoryId:6326",
+        "linestringattempt": [
+            [127.8379833418876, 37.0218915771693],
+            [127.0367946, 37.5321903]
+        ]
+    },
+    {
+        "poiName": "전기차충전소충주휴게소마산방향",
+        "Latitude": 37.0218915771693,
+        "Longitude": 127.8379833418876,
+        "clickTimes": 1624341346528,
+        "latitudesOfSearcher": 37.2437385,
+        "longitudesOfSearcher": 127.5178366,
+        "poiAddress": { "areas": [{ "name": "충주시" }, { "name": "" }, { "name": "중앙탑면" }, { "name": "용전리" }], "country": "KR", "house": "231", "postalCode": "27448", "state": "충북", "stateCode": "43", "street": "중부내륙고속도로", "landLotNo": "산 50-3" },
+        "poiCategoryID": "poiCategoryId:6326",
+        "linestringattempt": [
+            [127.8379833418876, 37.0218915771693],
+            [127.5178366, 37.2437385]
+        ]
+    },
+    {
+        "poiName": "KB국민은행365명동역점",
+        "Latitude": 37.56165378727019,
+        "Longitude": 126.98616522364318,
+        "clickTimes": 1624343544292,
+        "latitudesOfSearcher": 37.5581916,
+        "longitudesOfSearcher": 126.9813988,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "충무로2가" }], "country": "KR", "house": "20", "postalCode": "04537", "state": "서울", "stateCode": "11", "street": "명동8가길", "landLotNo": "63-6" },
+        "poiCategoryID": "poiCategoryId:7383",
+        "linestringattempt": [
+            [126.98616522364318, 37.56165378727019],
+            [126.9813988, 37.5581916]
+        ]
+    },
+    {
+        "poiName": "부산역 KTX",
+        "Latitude": 35.115155121311545,
+        "Longitude": 129.04136513359845,
+        "clickTimes": 1624343778246,
+        "latitudesOfSearcher": 37.5582306,
+        "longitudesOfSearcher": 126.9813214,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "동구" }, { "name": "" }, { "name": "초량동" }], "house": "206", "state": "부산광역시", "street": "중앙대로" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.04136513359845, 35.115155121311545],
+            [126.9813214, 37.5582306]
+        ]
+    },
+    {
+        "poiName": "서울스퀘어주차장",
+        "Latitude": 37.55563449114561,
+        "Longitude": 126.97389931418002,
+        "clickTimes": 1624344293146,
+        "latitudesOfSearcher": 37.5583382,
+        "longitudesOfSearcher": 126.9812729,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "남대문로5가" }], "house": "416", "state": "서울특별시", "street": "한강대로", "landLotNo": "541" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [126.97389931418002, 37.55563449114561],
+            [126.9812729, 37.5583382]
+        ]
+    },
+    {
+        "poiName": "감삼역",
+        "Latitude": 35.854258267208934,
+        "Longitude": 128.5479388386011,
+        "clickTimes": 1624348839387,
+        "latitudesOfSearcher": 35.8459048,
+        "longitudesOfSearcher": 128.5372923,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "달서구" }, { "name": "" }, { "name": "감삼동" }], "country": "KR", "house": "1665", "postalCode": "42641", "state": "대구", "stateCode": "27", "street": "달구벌대로", "landLotNo": "305" },
+        "poiCategoryID": "poiCategoryId:6238",
+        "linestringattempt": [
+            [128.5479388386011, 35.854258267208934],
+            [128.5372923, 35.8459048]
+        ]
+    },
+    {
+        "poiName": "주니어캠퍼스워크숍",
+        "Latitude": 37.46194719336927,
+        "Longitude": 126.48546377196908,
+        "clickTimes": 1624349420927,
+        "latitudesOfSearcher": 37.5527902,
+        "longitudesOfSearcher": 126.9726954,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "운서동" }], "country": "KR", "house": "136", "postalCode": "22379", "state": "인천", "stateCode": "28", "street": "공항동로", "landLotNo": "3194" },
+        "poiCategoryID": "poiCategoryId:6298",
+        "linestringattempt": [
+            [126.48546377196908, 37.46194719336927],
+            [126.9726954, 37.5527902]
+        ]
+    },
+    {
+        "poiName": "삼각지역서울6호선",
+        "Latitude": 37.53569159656763,
+        "Longitude": 126.97381658479571,
+        "clickTimes": 1624349882903,
+        "latitudesOfSearcher": 37.5505827,
+        "longitudesOfSearcher": 126.9722019,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "용산구" }, { "name": "" }, { "name": "한강로1가" }], "country": "KR", "house": "185", "postalCode": "04375", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "228-1" },
+        "poiCategoryID": "poiCategoryId:6238",
+        "linestringattempt": [
+            [126.97381658479571, 37.53569159656763],
+            [126.9722019, 37.5505827]
+        ]
+    },
+    {
+        "poiName": "삼각지역서울6호선",
+        "Latitude": 37.53569159656763,
+        "Longitude": 126.97381658479571,
+        "clickTimes": 1624350337345,
+        "latitudesOfSearcher": 37.5525327,
+        "longitudesOfSearcher": 126.9726096,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "용산구" }, { "name": "" }, { "name": "한강로1가" }], "country": "KR", "house": "185", "postalCode": "04375", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "228-1" },
+        "poiCategoryID": "poiCategoryId:6238",
+        "linestringattempt": [
+            [126.97381658479571, 37.53569159656763],
+            [126.9726096, 37.5525327]
+        ]
+    },
+    {
+        "poiName": "이천아트홀",
+        "Latitude": 37.27113048546016,
+        "Longitude": 127.43420267477632,
+        "clickTimes": 1624357792597,
+        "latitudesOfSearcher": 37.5214193,
+        "longitudesOfSearcher": 126.9353958,
+        "poiAddress": { "areas": [{ "name": "이천시" }, { "name": "" }, { "name": "" }, { "name": "중리동" }], "country": "KR", "house": "40", "postalCode": "17379", "state": "경기", "stateCode": "41", "street": "부악로", "landLotNo": "490" },
+        "poiCategoryID": "poiCategoryId:6340",
+        "linestringattempt": [
+            [127.43420267477632, 37.27113048546016],
+            [126.9353958, 37.5214193]
+        ]
+    },
+    {
+        "poiName": "피스",
+        "Latitude": 37.27134162560105,
+        "Longitude": 127.43418876081705,
+        "clickTimes": 1624357797576,
+        "latitudesOfSearcher": 37.5218729,
+        "longitudesOfSearcher": 126.9361252,
+        "poiAddress": { "areas": [{ "name": "이천시" }, { "name": "" }, { "name": "" }, { "name": "중리동" }], "country": "KR", "house": "40", "postalCode": "17379", "state": "경기", "stateCode": "41", "street": "부악로", "landLotNo": "490" },
+        "poiCategoryID": "poiCategoryId:16138",
+        "linestringattempt": [
+            [127.43418876081705, 37.27134162560105],
+            [126.9361252, 37.5218729]
+        ]
+    },
+    {
+        "poiName": "우보설렁탕",
+        "Latitude": 36.45767943933606,
+        "Longitude": 127.12159439921379,
+        "clickTimes": 1624357798329,
+        "latitudesOfSearcher": 35.1450279,
+        "longitudesOfSearcher": 128.968981,
+        "poiAddress": { "areas": [{ "name": "공주시" }, { "name": "" }, { "name": "" }, { "name": "교동" }], "country": "KR", "house": "130", "postalCode": "32542", "state": "충남", "stateCode": "44", "street": "봉황로", "landLotNo": "108-11" },
+        "poiCategoryID": "restaurant",
+        "linestringattempt": [
+            [127.12159439921379, 36.45767943933606],
+            [128.968981, 35.1450279]
+        ]
+    },
+    {
+        "poiName": "사내카페코웨이점",
+        "Latitude": 37.56157910451293,
+        "Longitude": 126.9709712639451,
+        "clickTimes": 1624359565093,
+        "latitudesOfSearcher": 37.5524871,
+        "longitudesOfSearcher": 126.9726096,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "순화동" }], "country": "KR", "house": "88", "postalCode": "04511", "state": "서울", "stateCode": "11", "street": "서소문로", "landLotNo": "7" },
+        "poiCategoryID": "poiCategoryId:16138",
+        "linestringattempt": [
+            [126.9709712639451, 37.56157910451293],
+            [126.9726096, 37.5524871]
+        ]
+    },
+    {
+        "poiName": "퀴즈노스서브서울스퀘어점",
+        "Latitude": 37.55517767742276,
+        "Longitude": 126.97376109659672,
+        "clickTimes": 1624406789190,
+        "latitudesOfSearcher": 37.5174773,
+        "longitudesOfSearcher": 126.9291438,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "남대문로5가" }], "country": "KR", "house": "416", "postalCode": "04637", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "541" },
+        "poiCategoryID": "poiCategoryId:20343",
+        "linestringattempt": [
+            [126.97376109659672, 37.55517767742276],
+            [126.9291438, 37.5174773]
+        ]
+    },
+    {
+        "poiName": "북카페마브",
+        "Latitude": 37.47909908182919,
+        "Longitude": 126.86484748497605,
+        "clickTimes": 1624407572914,
+        "latitudesOfSearcher": 37.5174773,
+        "longitudesOfSearcher": 126.9291438,
+        "poiAddress": { "areas": [{ "name": "광명시" }, { "name": "" }, { "name": "" }, { "name": "철산동" }], "country": "KR", "house": "20", "postalCode": "14234", "state": "경기", "stateCode": "41", "street": "시청로", "landLotNo": "222-1" },
+        "poiCategoryID": "poiCategoryId:16138",
+        "linestringattempt": [
+            [126.86484748497605, 37.47909908182919],
+            [126.9291438, 37.5174773]
+        ]
+    },
+    {
+        "poiName": "서울톨게이트수지방향",
+        "Latitude": 37.36522497609258,
+        "Longitude": 127.10340826772153,
+        "clickTimes": 1624409258957,
+        "latitudesOfSearcher": 37.5590129,
+        "longitudesOfSearcher": 127.0037943,
+        "poiAddress": { "areas": [{ "name": "성남시" }, { "name": "분당구" }, { "name": "" }, { "name": "궁내동" }], "country": "KR", "house": "240", "postalCode": "13550", "state": "경기", "stateCode": "41", "street": "대왕판교로", "landLotNo": "184-20" },
+        "poiCategoryID": "poiCategoryId:3575",
+        "linestringattempt": [
+            [127.10340826772153, 37.36522497609258],
+            [127.0037943, 37.5590129]
+        ]
+    },
+    {
+        "poiName": "안성시청",
+        "Latitude": 37.00804442167282,
+        "Longitude": 127.27972503751516,
+        "clickTimes": 1624414058559,
+        "latitudesOfSearcher": 37.5174773,
+        "longitudesOfSearcher": 126.9291438,
+        "poiAddress": { "areas": [{ "name": "안성시" }, { "name": "" }, { "name": "" }, { "name": "봉산동" }], "country": "KR", "house": "25", "postalCode": "17586", "state": "경기", "stateCode": "41", "street": "시청길", "landLotNo": "31-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.27972503751516, 37.00804442167282],
+            [126.9291438, 37.5174773]
+        ]
+    },
+    {
+        "poiName": "서울스퀘어빌딩",
+        "Latitude": 37.55555000156164,
+        "Longitude": 126.97374156676233,
+        "clickTimes": 1624414789904,
+        "latitudesOfSearcher": 37.5551915,
+        "longitudesOfSearcher": 126.9740898,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "남대문로5가" }], "country": "KR", "house": "416", "postalCode": "04637", "state": "서울", "stateCode": "11", "street": "한강대로", "landLotNo": "541" },
+        "poiCategoryID": "poiCategoryId:6200",
+        "linestringattempt": [
+            [126.97374156676233, 37.55555000156164],
+            [126.9740898, 37.5551915]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624414905233,
+        "latitudesOfSearcher": 34.8094241,
+        "longitudesOfSearcher": 127.9811417,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9811417, 34.8094241]
+        ]
+    },
+    {
+        "poiName": "시문리회관",
+        "Latitude": 34.80921657755971,
+        "Longitude": 127.98204998485744,
+        "clickTimes": 1624415205109,
+        "latitudesOfSearcher": 34.8085336,
+        "longitudesOfSearcher": 127.9763888,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남해군" }, { "name": "삼동면" }, { "name": "영지리" }], "country": "KR", "house": "2", "postalCode": "52443", "state": "경남", "stateCode": "48", "street": "봉화로531번길", "landLotNo": "1157-3" },
+        "poiCategoryID": "poiCategoryId:6470",
+        "linestringattempt": [
+            [127.98204998485744, 34.80921657755971],
+            [127.9763888, 34.8085336]
+        ]
+    },
+    {
+        "poiName": "샘뜰두부집",
+        "Latitude": 37.88650659844279,
+        "Longitude": 126.76024912856519,
+        "clickTimes": 1624416126984,
+        "latitudesOfSearcher": 37.6267807,
+        "longitudesOfSearcher": 126.8547696,
+        "poiAddress": { "areas": [{ "name": "파주시" }, { "name": "" }, { "name": "문산읍" }, { "name": "마정리" }], "country": "KR", "house": "227", "postalCode": "10818", "state": "경기", "stateCode": "41", "street": "사목로", "landLotNo": "686-10" },
+        "poiCategoryID": "restaurant",
+        "linestringattempt": [
+            [126.76024912856519, 37.88650659844279],
+            [126.8547696, 37.6267807]
+        ]
+    },
+    {
+        "poiName": "서울톨게이트판교방향",
+        "Latitude": 37.36522497609258,
+        "Longitude": 127.10340826772153,
+        "clickTimes": 1624416881219,
+        "latitudesOfSearcher": 35.149736,
+        "longitudesOfSearcher": 129.0863906,
+        "poiAddress": { "areas": [{ "name": "성남시" }, { "name": "분당구" }, { "name": "" }, { "name": "궁내동" }], "country": "KR", "postalCode": "13557", "state": "경기", "stateCode": "41", "street": "대왕판교로" },
+        "poiCategoryID": "poiCategoryId:3575",
+        "linestringattempt": [
+            [127.10340826772153, 37.36522497609258],
+            [129.0863906, 35.149736]
+        ]
+    },
+    {
+        "poiName": "구산주유소",
+        "Latitude": 37.57535551674664,
+        "Longitude": 127.19425829127431,
+        "clickTimes": 1624422850438,
+        "latitudesOfSearcher": 37.5510298,
+        "longitudesOfSearcher": 127.2144859,
+        "poiAddress": { "areas": [{ "name": "하남시" }, { "name": "" }, { "name": "" }, { "name": "망월동" }], "country": "KR", "house": "316", "postalCode": "12902", "state": "경기", "stateCode": "41", "street": "미사대로", "landLotNo": "835" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [127.19425829127431, 37.57535551674664],
+            [127.2144859, 37.5510298]
+        ]
+    },
+    {
+        "poiName": "부산광역시청",
+        "Latitude": 35.17974908463657,
+        "Longitude": 129.07498930580914,
+        "clickTimes": 1624423247291,
+        "latitudesOfSearcher": 37.532294,
+        "longitudesOfSearcher": 126.9532981,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "연제구" }, { "name": "" }, { "name": "연산동" }], "house": "1001", "state": "부산광역시", "street": "중앙대로", "landLotNo": "1000" },
+        "poiCategoryID": "poiCategoryId:0",
+        "linestringattempt": [
+            [129.07498930580914, 35.17974908463657],
+            [126.9532981, 37.532294]
+        ]
+    },
+    {
+        "poiName": "시청커피",
+        "Latitude": 35.41675552725792,
+        "Longitude": 127.39110192283988,
+        "clickTimes": 1624423252718,
+        "latitudesOfSearcher": 35.6544965,
+        "longitudesOfSearcher": 129.1700187,
+        "poiAddress": { "areas": [{ "name": "남원시" }, { "name": "" }, { "name": "" }, { "name": "도통동" }], "country": "KR", "house": "36-3", "postalCode": "55738", "state": "전북", "street": "시청동로", "landLotNo": "515-10" },
+        "poiCategoryID": "poiCategoryId:16138",
+        "linestringattempt": [
+            [127.39110192283988, 35.41675552725792],
+            [129.1700187, 35.6544965]
+        ]
+    },
+    {
+        "poiName": "카페오뜨",
+        "Latitude": 35.152766313403845,
+        "Longitude": 129.11758253350854,
+        "clickTimes": 1624423459808,
+        "latitudesOfSearcher": 35.626809,
+        "longitudesOfSearcher": 129.1561713,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "수영구" }, { "name": "" }, { "name": "광안동" }], "country": "KR", "house": "209", "postalCode": "48303", "state": "부산", "stateCode": "26", "street": "광안해변로", "landLotNo": "196-1" },
+        "poiCategoryID": "poiCategoryId:16138",
+        "linestringattempt": [
+            [129.11758253350854, 35.152766313403845],
+            [129.1561713, 35.626809]
+        ]
+    },
+    {
+        "poiName": "전기차충전소부산시부경대학교점",
+        "Latitude": 35.11598610319197,
+        "Longitude": 129.08905833028257,
+        "clickTimes": 1624423515555,
+        "latitudesOfSearcher": 35.8571218,
+        "longitudesOfSearcher": 129.2242275,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "남구" }, { "name": "" }, { "name": "용당동" }], "country": "KR", "house": "365", "postalCode": "48547", "state": "부산", "stateCode": "26", "street": "신선로", "landLotNo": "251" },
+        "poiCategoryID": "chargingStation",
+        "linestringattempt": [
+            [129.08905833028257, 35.11598610319197],
+            [129.2242275, 35.8571218]
+        ]
+    },
+    {
+        "poiName": "동성주유소",
+        "Latitude": 35.24125272408128,
+        "Longitude": 128.6346972361207,
+        "clickTimes": 1624423546136,
+        "latitudesOfSearcher": 35.8576396,
+        "longitudesOfSearcher": 129.2281663,
+        "poiAddress": { "areas": [{ "name": "창원시" }, { "name": "의창구" }, { "name": "" }, { "name": "팔용동" }], "country": "KR", "house": "306", "postalCode": "51391", "state": "경남", "street": "사화로", "landLotNo": "39-18" },
+        "poiCategoryID": "poiCategoryId:7269",
+        "linestringattempt": [
+            [128.6346972361207, 35.24125272408128],
+            [129.2281663, 35.8576396]
+        ]
+    },
+    {
+        "poiName": "인천공항중학교",
+        "Latitude": 37.49774160794914,
+        "Longitude": 126.48415552452207,
+        "clickTimes": 1624424483834,
+        "latitudesOfSearcher": 37.4950377,
+        "longitudesOfSearcher": 126.4850623,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "운서동" }], "country": "KR", "house": "49", "postalCode": "22368", "state": "인천", "stateCode": "28", "street": "영종대로27번길", "landLotNo": "2747-8" },
+        "poiCategoryID": "poiCategoryId:6292",
+        "linestringattempt": [
+            [126.48415552452207, 37.49774160794914],
+            [126.4850623, 37.4950377]
+        ]
+    },
+    {
+        "poiName": "초량주유소",
+        "Latitude": 35.12358329258859,
+        "Longitude": 129.04460549354553,
+        "clickTimes": 1624426047705,
+        "latitudesOfSearcher": 35.1299745,
+        "longitudesOfSearcher": 129.056687,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "동구" }, { "name": "" }, { "name": "초량동" }], "country": "KR", "house": "302", "postalCode": "48730", "state": "부산", "stateCode": "26", "street": "중앙대로", "landLotNo": "1158-2" },
+        "poiCategoryID": "poiCategoryId:7281",
+        "linestringattempt": [
+            [129.04460549354553, 35.12358329258859],
+            [129.056687, 35.1299745]
+        ]
+    },
+    {
+        "poiName": "민주공원",
+        "Latitude": 35.11072218418121,
+        "Longitude": 129.02811661362648,
+        "clickTimes": 1624426078930,
+        "latitudesOfSearcher": 35.1329581,
+        "longitudesOfSearcher": 129.0521958,
+        "poiAddress": { "areas": [{ "name": "" }, { "name": "중구" }, { "name": "" }, { "name": "영주동" }], "country": "KR", "house": "19", "postalCode": "48901", "state": "부산", "stateCode": "26", "street": "민주공원길", "landLotNo": "218-21" },
+        "poiCategoryID": "poiCategoryId:6160",
+        "linestringattempt": [
+            [129.02811661362648, 35.11072218418121],
+            [129.0521958, 35.1329581]
+        ]
+    }
+]

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<!-- import necessary files  -->
+
+<head>
+  <meta charset="utf-8">
+  <title>Map Visualization of POI Online Searches</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/geojson/0.5.0/geojson.min.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
+  <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+  <script
+    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+
+</head>
+
+<!-- start of html body elements  -->
+
+<body>
+  <script type='text/javascript' src='assets/js/main.js'></script>
+  <div id="map"></div>
+  <nav id="menu"></nav>
+  <ul id="buttons">
+    <li id="button-en" class="button"><span>English</span></li>
+    <li id="button-ko" class="button"><span>한글</li>
+    <li id="button-de" class="button"><span>Deutsche</span></li>
+  </ul>
+
+
+  <div class="map-overlay top">
+    <div class="map-overlay-inner">
+      <h2>Online POI Search Visualization (Test Drive)</h2>
+      <label id="date"></label>
+      <input id="slider" type="range" class="rs-range" min="0" max="31" step="1" value="0">
+      <div class="box-minmax">
+        <span>June 1st</span><span>June 30th</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-overlay-bottom">
+    <div class="map-overlay-inner">
+
+      <div class="bar"></div>
+      <div class="box-minmax">
+        <span>0</span>
+        <span>10</span>
+        <span>20</span>
+        <span>30</span>
+        <span>40</span>
+        <span>50</span>
+      </div>
+      <div>POI Search Count</div>
+
+    </div>
+  </div>
+
+  <div id="legend" class="map-legend">
+    <div class="bar"></div>
+    <div>Search Counts</div>
+  </div>
+
+  <!-- end of html body elements  -->
+  <!-- import main javascript file for data visualization, must be imported after html body elements are loaded -->
+  <script type='text/javascript' src='assets/js/main.js'></script>
+
+</body>
+
+</html>

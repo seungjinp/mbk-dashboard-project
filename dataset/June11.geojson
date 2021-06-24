@@ -1,0 +1,634 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90824336372316,37.583152363076806 ]
+    },
+    "properties": {
+    "poiName":"집",
+    "count":6,
+    "rating":8,
+    "uniqueCars":2,
+    "avgDistance":8.93,
+    "latitudesOfSearcher":"37.5557824,37.5558817,37.5556763,37.5552379,35.0534132,35.1602407",
+    "longitudesOfSearcher":"126.973882,126.9748039,126.9747525,126.9750805,128.9707369,129.0354669",
+    "clickTimes":1623373762377
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.6645839177072,38.059779815375805 ]
+    },
+    "properties": {
+    "poiName":"양양국제공항",
+    "count":5,
+    "rating":6,
+    "uniqueCars":1,
+    "avgDistance":163.63,
+    "latitudesOfSearcher":"37.5174764,37.5164682,37.5174764,37.5189893,37.5161838",
+    "longitudesOfSearcher":"126.929144,126.9398901,126.929144,126.9315616,126.9383836",
+    "clickTimes":1623373615376
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.72998771630228,37.881255839020014 ]
+    },
+    "properties": {
+    "poiName":"춘천시청",
+    "count":5,
+    "rating":6,
+    "uniqueCars":1,
+    "avgDistance":80.87,
+    "latitudesOfSearcher":"37.5174764,37.5174764,37.5141646,37.5174764,37.5174764",
+    "longitudesOfSearcher":"126.929144,126.929144,126.9563471,126.929144,126.929144",
+    "clickTimes":1623375803021
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.89665316790342,37.795071601867676 ]
+    },
+    "properties": {
+    "poiName":"경포대",
+    "count":4,
+    "rating":5,
+    "uniqueCars":1,
+    "avgDistance":175.93,
+    "latitudesOfSearcher":"37.5174679,37.5174679,37.5174679,37.5174679",
+    "longitudesOfSearcher":"126.9291532,126.9291532,126.9291532,126.9291532",
+    "clickTimes":1623370983191
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.33084369078279,36.128357481211424 ]
+    },
+    "properties": {
+    "poiName":"구미역",
+    "count":4,
+    "rating":5,
+    "uniqueCars":1,
+    "avgDistance":198.41,
+    "latitudesOfSearcher":"37.5174764,37.5174764,37.5174764,37.5159901",
+    "longitudesOfSearcher":"126.929144,126.929144,126.929144,126.9374092",
+    "clickTimes":1623373507530
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.93989850766957,35.17478188499808 ]
+    },
+    "properties": {
+    "poiName":"김해국제공항",
+    "count":4,
+    "rating":5,
+    "uniqueCars":1,
+    "avgDistance":16.87,
+    "latitudesOfSearcher":"35.1748105,35.1748105,35.1748105,35.1778798",
+    "longitudesOfSearcher":"129.1261903,129.1261903,129.1261903,129.1235687",
+    "clickTimes":1623399275764
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97067907080054,37.5544314365834 ]
+    },
+    "properties": {
+    "poiName":"Seoul Station KTX",
+    "count":3,
+    "rating":4,
+    "uniqueCars":1,
+    "avgDistance":5.5,
+    "latitudesOfSearcher":"37.5174779,37.5174779,37.5174779",
+    "longitudesOfSearcher":"126.9291776,126.9291776,126.9291776",
+    "clickTimes":1623392581542
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97375556454062,37.55557003431022 ]
+    },
+    "properties": {
+    "poiName":"서울스퀘어",
+    "count":3,
+    "rating":5,
+    "uniqueCars":2,
+    "avgDistance":21.72,
+    "latitudesOfSearcher":"37.8961915,37.5973258,37.6011355",
+    "longitudesOfSearcher":"127.2019473,126.7856394,126.9788392",
+    "clickTimes":1623386251133
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.09817972034216,37.51109833829105 ]
+    },
+    "properties": {
+    "poiName":"롯데월드",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":14.93,
+    "latitudesOfSearcher":"37.5174764,37.5174764",
+    "longitudesOfSearcher":"126.929144,126.929144",
+    "clickTimes":1623373642537
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.22369058988988,37.5454137660563 ]
+    },
+    "properties": {
+    "poiName":"스타필드하남",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":26.12,
+    "latitudesOfSearcher":"37.5174764,37.5180301",
+    "longitudesOfSearcher":"126.929144,126.9299301",
+    "clickTimes":1623373823821
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.04627550393343,35.18120317719877 ]
+    },
+    "properties": {
+    "poiName":"원가네 본점",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":1.82,
+    "latitudesOfSearcher":"35.1507169,35.1809146",
+    "longitudesOfSearcher":"129.0578756,129.0471919",
+    "clickTimes":1623378320427
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.04136513359845,35.115155121311545 ]
+    },
+    "properties": {
+    "poiName":"부산역 KTX",
+    "count":2,
+    "rating":4,
+    "uniqueCars":2,
+    "avgDistance":328.47,
+    "latitudesOfSearcher":"37.5551988,37.5553062",
+    "longitudesOfSearcher":"126.9739564,126.9741449",
+    "clickTimes":1623372048006
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97388187982142,37.55578243173659 ]
+    },
+    "properties": {
+    "poiName":"직장",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":3.33,
+    "latitudesOfSearcher":"37.5551644,37.5833942",
+    "longitudesOfSearcher":"126.975006,126.9082568",
+    "clickTimes":1623376413711
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.1114863269031,36.78757362999022 ]
+    },
+    "properties": {
+    "poiName":"장재마을경로당",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":86.27,
+    "latitudesOfSearcher":"37.5556241",
+    "longitudesOfSearcher":"126.9738586",
+    "clickTimes":1623399292178
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.56000416912138,35.2045813947916 ]
+    },
+    "properties": {
+    "poiName":"자산시티빌아파트  일반아파트  ★ 4.5/5",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":295.74,
+    "latitudesOfSearcher":"37.5174805",
+    "longitudesOfSearcher":"126.9291789",
+    "clickTimes":1623397864087
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.70523551292717,37.456075670197606 ]
+    },
+    "properties": {
+    "poiName":"인천광역시청",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":26.16,
+    "latitudesOfSearcher":"37.5553062",
+    "longitudesOfSearcher":"126.9741449",
+    "clickTimes":1623391815725
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97389931418002,37.55563449114561 ]
+    },
+    "properties": {
+    "poiName":"서울스퀘어주차장",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":17.23,
+    "latitudesOfSearcher":"37.5973258",
+    "longitudesOfSearcher":"126.7856394",
+    "clickTimes":1623389338031
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.94603501819074,35.94116250984371 ]
+    },
+    "properties": {
+    "poiName":"익산역 KTX",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":174.63,
+    "latitudesOfSearcher":"37.5115569",
+    "longitudesOfSearcher":"126.962028",
+    "clickTimes":1623375869459
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.10546971298754,35.8177057094872 ]
+    },
+    "properties": {
+    "poiName":"이젠의료정보컨설팅서비스  N  ★ 4.5/5",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":184.74,
+    "latitudesOfSearcher":"37.4779846",
+    "longitudesOfSearcher":"127.0279293",
+    "clickTimes":1623398838129
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.96981296874583,37.5447800103575 ]
+    },
+    "properties": {
+    "poiName":"위원.물어본.한창",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":0.09,
+    "latitudesOfSearcher":"37.5445868",
+    "longitudesOfSearcher":"126.9708092",
+    "clickTimes":1623378132351
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.98764890432358,37.55165979266167 ]
+    },
+    "properties": {
+    "poiName":"팔각정",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":42.67,
+    "latitudesOfSearcher":"37.8951646",
+    "longitudesOfSearcher":"127.2040126",
+    "clickTimes":1623386352124
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.98047030717134,37.60206688195467 ]
+    },
+    "properties": {
+    "poiName":"팔각정공원",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":8.22,
+    "latitudesOfSearcher":"37.5326717",
+    "longitudesOfSearcher":"127.0127373",
+    "clickTimes":1623390281716
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.78578711114824,37.598458640277386 ]
+    },
+    "properties": {
+    "poiName":"현대프리미엄아울렛 김포점",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":17.23,
+    "latitudesOfSearcher":"37.5559102",
+    "longitudesOfSearcher":"126.9738417",
+    "clickTimes":1623381096996
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.8799233082682,35.109735298901796 ]
+    },
+    "properties": {
+    "poiName":"에코델타",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":3.86,
+    "latitudesOfSearcher":"35.0891544",
+    "longitudesOfSearcher":"128.9140636",
+    "clickTimes":1623391001067
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.01375559903681,37.28188036009669 ]
+    },
+    "properties": {
+    "poiName":"수원화성행궁",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":26.84,
+    "latitudesOfSearcher":"37.5154326",
+    "longitudesOfSearcher":"126.9368745",
+    "clickTimes":1623374201953
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97067907080054,37.5544314365834 ]
+    },
+    "properties": {
+    "poiName":"서울역 KTX",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":326.64,
+    "latitudesOfSearcher":"35.1811818",
+    "longitudesOfSearcher":"129.1210094",
+    "clickTimes":1623408780715
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97638689540327,37.55657929927111 ]
+    },
+    "properties": {
+    "poiName":"Green Building Yeomnosang Public Parking Lot",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":6.02,
+    "latitudesOfSearcher":"37.5174779",
+    "longitudesOfSearcher":"126.9291776",
+    "clickTimes":1623392743240
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.13527693413198,37.38058892078698 ]
+    },
+    "properties": {
+    "poiName":"분당 서현 전시장",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":23.72,
+    "latitudesOfSearcher":"37.5174764",
+    "longitudesOfSearcher":"126.929144",
+    "clickTimes":1623373765757
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.98310403339565,35.177091183140874 ]
+    },
+    "properties": {
+    "poiName":"부산북부운전면허시험장",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":9.29,
+    "latitudesOfSearcher":"35.096671",
+    "longitudesOfSearcher":"128.9555952",
+    "clickTimes":1623384052572
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.00739507563412,37.96812739223242 ]
+    },
+    "properties": {
+    "poiName":"벤츠상용차서비스센터 연천서비스센터 벤츠서비스센터  ★ 4.5/5",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":54.27,
+    "latitudesOfSearcher":"37.4803441",
+    "longitudesOfSearcher":"127.0270192",
+    "clickTimes":1623398793813
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.97061793133616,35.03782929852605 ]
+    },
+    "properties": {
+    "poiName":"몰운대",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":17.46,
+    "latitudesOfSearcher":"35.1804597",
+    "longitudesOfSearcher":"129.0509796",
+    "clickTimes":1623382310955
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.86316263861954,37.629649210721254 ]
+    },
+    "properties": {
+    "poiName":"롯데아울렛 고양점",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":12.8,
+    "latitudesOfSearcher":"37.5551978",
+    "longitudesOfSearcher":"126.9739542",
+    "clickTimes":1623370524492
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.6018463782966,35.87140780873597 ]
+    },
+    "properties": {
+    "poiName":"대구광역시청",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":91.27,
+    "latitudesOfSearcher":"35.1727238",
+    "longitudesOfSearcher":"129.131226",
+    "clickTimes":1623399370067
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.62406630069017,35.85823656991124 ]
+    },
+    "properties": {
+    "poiName":"그릴5타코",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":92.06,
+    "latitudesOfSearcher":"35.1255629",
+    "longitudesOfSearcher":"129.0976983",
+    "clickTimes":1623381299180
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.85201613232493,37.630770709365606 ]
+    },
+    "properties": {
+    "poiName":"고양휴게소 파주방향",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":13.64,
+    "latitudesOfSearcher":"37.5551978",
+    "longitudesOfSearcher":"126.9739542",
+    "clickTimes":1623370470024
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.2247484344989,35.856219716370106 ]
+    },
+    "properties": {
+    "poiName":"경주시청",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":79.62,
+    "latitudesOfSearcher":"35.1583018",
+    "longitudesOfSearcher":"129.0282512",
+    "clickTimes":1623389752971
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97318668477237,37.558897817507386 ]
+    },
+    "properties": {
+    "poiName":"Namdaemun Pihyeoksangganamcheuk Public Parking Lot",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":6.02,
+    "latitudesOfSearcher":"37.5174779",
+    "longitudesOfSearcher":"126.9291776",
+    "clickTimes":1623392782384
+    }
+  }
+]
+}

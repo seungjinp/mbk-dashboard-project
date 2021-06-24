@@ -1,0 +1,991 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.90694547444582,37.806458501145244 ]
+    },
+    "properties": {
+    "poiName":"경포해수욕장",
+    "count":23,
+    "rating":25,
+    "uniqueCars":2,
+    "avgDistance":172.91,
+    "latitudesOfSearcher":"37.5175034,37.5175034,37.5175027,37.5553395,37.5553395,37.5583526,37.5583526,37.5583526,37.5584538,37.5584437,37.5584437,37.5175014,37.5553481,37.5553481,37.5553481,37.5553481,37.5553395,37.5553686,37.5583374,37.5584437,37.5584437,37.5553481,37.5553481",
+    "longitudesOfSearcher":"126.9291512,126.9291514,126.9291486,126.9741033,126.9741033,126.981474,126.981474,126.981474,126.9813353,126.9813374,126.9813374,126.9291453,126.9739107,126.9739107,126.9739107,126.9739107,126.9741033,126.9741102,126.9814922,126.9813374,126.9813374,126.9739107,126.9739107",
+    "clickTimes":1623115934393
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.04136513359845,35.115155121311545 ]
+    },
+    "properties": {
+    "poiName":"부산역 KTX",
+    "count":23,
+    "rating":27,
+    "uniqueCars":4,
+    "avgDistance":318.06,
+    "latitudesOfSearcher":"37.5552093,37.5362302,37.5182034,37.3755825,37.5369866,37.4772951,37.4729956,37.4654228,37.3495381,37.3407735,37.5553481,37.5552093,37.5224482,37.5174764,37.5346026,37.492471,37.4729956,37.4592214,37.4386248,37.431323,37.3479361,37.3447363,37.5553481",
+    "longitudesOfSearcher":"126.9738699,127.0054291,126.992169,127.1031196,127.0049141,127.0281966,127.0307565,127.0379433,127.1032697,127.1033314,126.9739107,126.9738699,127.0165737,126.929144,127.0067573,127.0225357,127.0307565,127.043808,127.0614916,127.0687663,127.10328,127.1033045,126.9739107",
+    "clickTimes":1623113495693
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.12696867249906,35.17461558803916 ]
+    },
+    "properties": {
+    "poiName":"센텀그린타워  기타지역건물  ★ 4.5/5",
+    "count":21,
+    "rating":22,
+    "uniqueCars":1,
+    "avgDistance":326.49,
+    "latitudesOfSearcher":"37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948,37.5174948",
+    "longitudesOfSearcher":"126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803,126.9291803",
+    "clickTimes":1623127246319
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97375556454062,37.55557003431022 ]
+    },
+    "properties": {
+    "poiName":"서울스퀘어",
+    "count":19,
+    "rating":23,
+    "uniqueCars":4,
+    "avgDistance":90.45,
+    "latitudesOfSearcher":"35.1962681,35.17448,37.5174764,37.5179925,37.520844,37.2720602,37.5468879,37.5174764,35.17448,37.5240061,37.546858,37.546814,37.5468403,37.5468229,37.5174764,37.5174764,37.5174764,35.1383901,35.17448",
+    "longitudesOfSearcher":"129.11512,129.1270165,126.929144,126.9298712,126.9344756,127.044732,126.9721859,126.929144,129.1270165,126.9399612,126.9721924,126.9721812,126.9722672,126.9722115,126.929144,126.929144,126.929144,129.1073671,129.1270165",
+    "clickTimes":1623117522429
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.12696867249906,35.17461558803916 ]
+    },
+    "properties": {
+    "poiName":"센텀그린타워",
+    "count":12,
+    "rating":14,
+    "uniqueCars":2,
+    "avgDistance":327.44,
+    "latitudesOfSearcher":"37.5553481,37.5553481,37.5553481,37.555222,37.5545821,37.5553221,37.5559102,37.5553481,37.5545545,37.5546979,37.5546924,37.5546576",
+    "longitudesOfSearcher":"126.9739107,126.9739107,126.9739107,126.9739822,126.974018,126.9739543,126.9738417,126.9739107,126.9740306,126.9739392,126.973947,126.9739655",
+    "clickTimes":1623135685776
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.4341759365052,36.33231282234192 ]
+    },
+    "properties": {
+    "poiName":"대전역 KTX",
+    "count":8,
+    "rating":11,
+    "uniqueCars":3,
+    "avgDistance":140.71,
+    "latitudesOfSearcher":"37.5216675,37.5174764,37.5175015,37.5400614,37.5369866,37.5553481,37.5553481,37.5553481",
+    "longitudesOfSearcher":"126.9357983,126.929144,126.9291748,126.9010297,127.0049141,126.9739107,126.9739107,126.9739107",
+    "clickTimes":1623120190678
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.15947738103569,35.15840389765799 ]
+    },
+    "properties": {
+    "poiName":"해운대해수욕장",
+    "count":5,
+    "rating":6,
+    "uniqueCars":1,
+    "avgDistance":330.62,
+    "latitudesOfSearcher":"37.555151,37.555151,37.555151,37.555151,37.555151",
+    "longitudesOfSearcher":"126.973997,126.973997,126.973997,126.973997,126.973997",
+    "clickTimes":1623127381547
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.00378281064332,37.52833069302142 ]
+    },
+    "properties": {
+    "poiName":"한남현대힐스테이트",
+    "count":5,
+    "rating":6,
+    "uniqueCars":1,
+    "avgDistance":2.22,
+    "latitudesOfSearcher":"37.5185939,37.5551415,37.5174491,37.5174458,37.5174459",
+    "longitudesOfSearcher":"127.0187451,126.9740344,127.0190765,127.0190766,127.0190847",
+    "clickTimes":1623114719136
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.14705149643123,36.80955349467695 ]
+    },
+    "properties": {
+    "poiName":"천안역",
+    "count":5,
+    "rating":7,
+    "uniqueCars":2,
+    "avgDistance":84.3,
+    "latitudesOfSearcher":"37.5551472,37.5544306,37.5551111,37.555151,37.5553481",
+    "longitudesOfSearcher":"126.9739612,126.9738499,126.9740011,126.973997,126.9739107",
+    "clickTimes":1623126612064
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.13127093575895,35.17573490738869 ]
+    },
+    "properties": {
+    "poiName":"해운대 서비스센터",
+    "count":4,
+    "rating":5,
+    "uniqueCars":1,
+    "avgDistance":0.37,
+    "latitudesOfSearcher":"35.17448,35.17448,35.1746383,35.17448",
+    "longitudesOfSearcher":"129.1270165,129.1270165,129.1289509,129.1270165",
+    "clickTimes":1623142565986
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.06664473749697,37.14473281055689 ]
+    },
+    "properties": {
+    "poiName":"오산역",
+    "count":4,
+    "rating":5,
+    "uniqueCars":1,
+    "avgDistance":46.37,
+    "latitudesOfSearcher":"37.5552093,37.5552093,37.5551886,37.5552093",
+    "longitudesOfSearcher":"126.9738699,126.9738699,126.9738956,126.9738699",
+    "clickTimes":1623113273579
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.03944898210466,37.54380100406706 ]
+    },
+    "properties": {
+    "poiName":"서울숲",
+    "count":4,
+    "rating":5,
+    "uniqueCars":1,
+    "avgDistance":10.16,
+    "latitudesOfSearcher":"37.5175074,37.5175074,37.5175074,37.5175074",
+    "longitudesOfSearcher":"126.9291554,126.9291554,126.9291554,126.9291554",
+    "clickTimes":1623136786072
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.09817972034216,37.51109833829105 ]
+    },
+    "properties": {
+    "poiName":"롯데월드",
+    "count":4,
+    "rating":5,
+    "uniqueCars":1,
+    "avgDistance":15.61,
+    "latitudesOfSearcher":"37.5174764,37.5174764,37.5174764,37.5404714",
+    "longitudesOfSearcher":"126.929144,126.929144,126.929144,126.9013489",
+    "clickTimes":1623132399599
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.22369058988988,37.5454137660563 ]
+    },
+    "properties": {
+    "poiName":"스타필드하남",
+    "count":3,
+    "rating":5,
+    "uniqueCars":2,
+    "avgDistance":24.79,
+    "latitudesOfSearcher":"37.5174764,37.5174764,37.5553481",
+    "longitudesOfSearcher":"126.929144,126.929144,126.9739107",
+    "clickTimes":1623133800639
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.26932217366993,37.950678281486034 ]
+    },
+    "properties": {
+    "poiName":"일동터널",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":39.19,
+    "latitudesOfSearcher":"37.5279436,37.7491451",
+    "longitudesOfSearcher":"127.0032883,127.1220892",
+    "clickTimes":1623116888821
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.74054687842727,37.891123266890645 ]
+    },
+    "properties": {
+    "poiName":"임진각",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":42.61,
+    "latitudesOfSearcher":"37.5553481,37.5553481",
+    "longitudesOfSearcher":"126.9739107,126.9739107",
+    "clickTimes":1623146148902
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.16306403279305,37.849796963855624 ]
+    },
+    "properties": {
+    "poiName":"조박사감자탕",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":13.65,
+    "latitudesOfSearcher":"37.9589165,37.9463922",
+    "longitudesOfSearcher":"127.2600908,127.2352767",
+    "clickTimes":1623121926255
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.4508200250566,37.449423875659704 ]
+    },
+    "properties": {
+    "poiName":"인천국제공항제1여객터미널",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":42.59,
+    "latitudesOfSearcher":"37.5257148,37.5394856",
+    "longitudesOfSearcher":"126.9432082,126.9005828",
+    "clickTimes":1623120285446
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97389931418002,37.55563449114561 ]
+    },
+    "properties": {
+    "poiName":"서울스퀘어주차장",
+    "count":2,
+    "rating":4,
+    "uniqueCars":2,
+    "avgDistance":4.09,
+    "latitudesOfSearcher":"37.5400479,37.5616329",
+    "longitudesOfSearcher":"127.0535723,126.9814213",
+    "clickTimes":1623128676153
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.10023333504796,35.185987735167146 ]
+    },
+    "properties": {
+    "poiName":"연천초등학교",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":0.69,
+    "latitudesOfSearcher":"35.178024,35.1854904",
+    "longitudesOfSearcher":"129.1073047,129.1033513",
+    "clickTimes":1623119837944
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.16204001568258,35.85046302527189 ]
+    },
+    "properties": {
+    "poiName":"전주역 KTX",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":190.3,
+    "latitudesOfSearcher":"37.5552093,37.5552093",
+    "longitudesOfSearcher":"126.9738699,126.9738699",
+    "clickTimes":1623113356125
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97423500940204,37.555343974381685 ]
+    },
+    "properties": {
+    "poiName":"조수.엄청난.석사",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":0.02,
+    "latitudesOfSearcher":"37.5553555,37.5553555",
+    "longitudesOfSearcher":"126.9739634,126.9739634",
+    "clickTimes":1623130421528
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.10256680846214,37.512573301792145 ]
+    },
+    "properties": {
+    "poiName":"롯데월드타워",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":9.57,
+    "latitudesOfSearcher":"37.5272777,37.5553515",
+    "longitudesOfSearcher":"127.0272299,126.9740703",
+    "clickTimes":1623124251677
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97229116223752,37.540589394047856 ]
+    },
+    "properties": {
+    "poiName":"직장",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":1.63,
+    "latitudesOfSearcher":"37.555151,37.555151",
+    "longitudesOfSearcher":"126.973997,126.973997",
+    "clickTimes":1623129987607
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.36720063909888,36.03871042840183 ]
+    },
+    "properties": {
+    "poiName":"더신촌S덮죽",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":86.92,
+    "latitudesOfSearcher":"35.1699846,35.3707582",
+    "longitudesOfSearcher":"129.1374566,129.2491977",
+    "clickTimes":1623117894801
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.72998771630228,37.881255839020014 ]
+    },
+    "properties": {
+    "poiName":"춘천시청",
+    "count":2,
+    "rating":4,
+    "uniqueCars":2,
+    "avgDistance":202.31,
+    "latitudesOfSearcher":"37.548878,35.1728373",
+    "longitudesOfSearcher":"126.9427859,129.1311359",
+    "clickTimes":1623132188523
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.34329939074814,36.01903634145856 ]
+    },
+    "properties": {
+    "poiName":"포항시청",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":271.45,
+    "latitudesOfSearcher":"37.555151,37.555151",
+    "longitudesOfSearcher":"126.973997,126.973997",
+    "clickTimes":1623128721253
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.0916899126023,35.25512292981148 ]
+    },
+    "properties": {
+    "poiName":"금정 전시장 - 서비스센터 - 인증 중고차 전시장",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":12.48,
+    "latitudesOfSearcher":"35.1374134,35.1512113",
+    "longitudesOfSearcher":"129.1119013,129.115245",
+    "clickTimes":1623137433427
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.06600218079984,37.2940906137228 ]
+    },
+    "properties": {
+    "poiName":"LH광교호수마을휴먼시아32단지아파트",
+    "count":2,
+    "rating":3,
+    "uniqueCars":1,
+    "avgDistance":1.22,
+    "latitudesOfSearcher":"37.2996245,37.2815947",
+    "longitudesOfSearcher":"127.0674847,127.0528077",
+    "clickTimes":1623121240534
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.56000416912138,35.2045813947916 ]
+    },
+    "properties": {
+    "poiName":"자산시티빌아파트",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":295.74,
+    "latitudesOfSearcher":"37.5174739",
+    "longitudesOfSearcher":"126.9291508",
+    "clickTimes":1623117954083
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.3839859869331,36.06438000686467 ]
+    },
+    "properties": {
+    "poiName":"환여횟집",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":13.03,
+    "latitudesOfSearcher":"35.9473093",
+    "longitudesOfSearcher":"129.3892812",
+    "clickTimes":1623121989840
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.05331516452134,37.539844661951065 ]
+    },
+    "properties": {
+    "poiName":"이마트 성수점",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":7.19,
+    "latitudesOfSearcher":"37.5553354",
+    "longitudesOfSearcher":"126.9741002",
+    "clickTimes":1623119468628
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.95007962174714,37.51001598313451 ]
+    },
+    "properties": {
+    "poiName":"집",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":5.44,
+    "latitudesOfSearcher":"37.555151",
+    "longitudesOfSearcher":"126.973997",
+    "clickTimes":1623130809354
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.1540910024196,35.15603198669851 ]
+    },
+    "properties": {
+    "poiName":"웨스틴조선호텔 부산",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":329.62,
+    "latitudesOfSearcher":"37.5175027",
+    "longitudesOfSearcher":"126.9291486",
+    "clickTimes":1623122494469
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.96425769478083,37.5297387689352 ]
+    },
+    "properties": {
+    "poiName":"용산역 KTX",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":3.38,
+    "latitudesOfSearcher":"37.5174764",
+    "longitudesOfSearcher":"126.929144",
+    "clickTimes":1623133894319
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.11801512353122,35.15262390486896 ]
+    },
+    "properties": {
+    "poiName":"Gwangalli Beach",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":324.07,
+    "latitudesOfSearcher":"37.5246419",
+    "longitudesOfSearcher":"127.0154106",
+    "clickTimes":1623132995395
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.89478429034352,37.56950570270419 ]
+    },
+    "properties": {
+    "poiName":"문화비축기지주차장",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":7.17,
+    "latitudesOfSearcher":"37.5553395",
+    "longitudesOfSearcher":"126.9741033",
+    "clickTimes":1623127788785
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97375556454062,37.55557003431022 ]
+    },
+    "properties": {
+    "poiName":"Seoul Square",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":0.73,
+    "latitudesOfSearcher":"37.5491582",
+    "longitudesOfSearcher":"126.9719531",
+    "clickTimes":1623123083573
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.0817146934569,35.18607188947499 ]
+    },
+    "properties": {
+    "poiName":"Yeonsan Junction",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":4.31,
+    "latitudesOfSearcher":"35.17448",
+    "longitudesOfSearcher":"129.1270165",
+    "clickTimes":1623120092285
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.0974153392017,35.139579735696316 ]
+    },
+    "properties": {
+    "poiName":"경성대학교",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":328.08,
+    "latitudesOfSearcher":"37.5235383",
+    "longitudesOfSearcher":"126.9390625",
+    "clickTimes":1623150118951
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.21232586726546,35.18803392536938 ]
+    },
+    "properties": {
+    "poiName":"기장 전시장",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":9.4,
+    "latitudesOfSearcher":"35.1541907",
+    "longitudesOfSearcher":"129.1175147",
+    "clickTimes":1623145752940
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.98141561821103,37.55296058021486 ]
+    },
+    "properties": {
+    "poiName":"남산도서관",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":0.7,
+    "latitudesOfSearcher":"37.5553649",
+    "longitudesOfSearcher":"126.9741312",
+    "clickTimes":1623127529627
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97062986902893,37.54014993086457 ]
+    },
+    "properties": {
+    "poiName":"남영역(서울1호선)ㅎㅎㅎㅎㅎ",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":1.72,
+    "latitudesOfSearcher":"37.5553555",
+    "longitudesOfSearcher":"126.9739634",
+    "clickTimes":1623129871246
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.59630946069956,35.87600653991103 ]
+    },
+    "properties": {
+    "poiName":"대구역",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":236.15,
+    "latitudesOfSearcher":"37.555151",
+    "longitudesOfSearcher":"126.973997",
+    "clickTimes":1623127562992
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.89445513300598,37.56910353899002 ]
+    },
+    "properties": {
+    "poiName":"따릉이대여소 문화비축기지",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":7.19,
+    "latitudesOfSearcher":"37.5553395",
+    "longitudesOfSearcher":"126.9741033",
+    "clickTimes":1623127797465
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.08155178464949,37.537777768447995 ]
+    },
+    "properties": {
+    "poiName":"래미안프리미어팰리스아파트",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":0.69,
+    "latitudesOfSearcher":"37.5321153",
+    "longitudesOfSearcher":"127.0847071",
+    "clickTimes":1623127974453
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.89404517412186,37.5710972584784 ]
+    },
+    "properties": {
+    "poiName":"문화비축기지",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":7.27,
+    "latitudesOfSearcher":"37.5553395",
+    "longitudesOfSearcher":"126.9741033",
+    "clickTimes":1623127783520
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.94219283759594,37.5597552023828 ]
+    },
+    "properties": {
+    "poiName":"신촌역",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":6.73,
+    "latitudesOfSearcher":"37.5051859",
+    "longitudesOfSearcher":"126.9752886",
+    "clickTimes":1623131401146
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.13143656216562,35.17190923914313 ]
+    },
+    "properties": {
+    "poiName":"버거킹 부산센텀시티점",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":0.49,
+    "latitudesOfSearcher":"35.17448",
+    "longitudesOfSearcher":"129.1270165",
+    "clickTimes":1623119245219
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.10891187377274,35.13462678529322 ]
+    },
+    "properties": {
+    "poiName":"부경대학교대연캠퍼스장영실관주차장",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":329.12,
+    "latitudesOfSearcher":"37.5174722",
+    "longitudesOfSearcher":"126.9291611",
+    "clickTimes":1623120027950
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 129.00506587699056,35.2154918666929 ]
+    },
+    "properties": {
+    "poiName":"부산 북구 전시장 - 서비스센터",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":11.98,
+    "latitudesOfSearcher":"35.17448",
+    "longitudesOfSearcher":"129.1270165",
+    "clickTimes":1623119303731
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.10559787228703,37.360236905515194 ]
+    },
+    "properties": {
+    "poiName":"분당 정자 전시장",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":22.54,
+    "latitudesOfSearcher":"37.5172687",
+    "longitudesOfSearcher":"126.9441863",
+    "clickTimes":1623132408202
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.04598192125559,37.51015889458358 ]
+    },
+    "properties": {
+    "poiName":"삼성 서비스센터",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":319.66,
+    "latitudesOfSearcher":"35.17448",
+    "longitudesOfSearcher":"129.1270165",
+    "clickTimes":1623132290853
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.05241117626429,37.541429763659835 ]
+    },
+    "properties": {
+    "poiName":"서울숲힐스테이트아파트",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":3.29,
+    "latitudesOfSearcher":"37.5303758",
+    "longitudesOfSearcher":"127.0869624",
+    "clickTimes":1623128024658
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.97836787439883,37.566667003557086 ]
+    },
+    "properties": {
+    "poiName":"서울특별시청",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":6.98,
+    "latitudesOfSearcher":"37.5174764",
+    "longitudesOfSearcher":"126.929144",
+    "clickTimes":1623134318339
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.61602780409157,34.89097751677036 ]
+    },
+    "properties": {
+    "poiName":"스타벅스 디큐브거제점",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":11.5,
+    "latitudesOfSearcher":"34.9598561",
+    "longitudesOfSearcher":"128.710111",
+    "clickTimes":1623120746057
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.92632623016834,37.52019027248025 ]
+    },
+    "properties": {
+    "poiName":"스타벅스 롯데캐슬여의도점  ★ 4.5/5",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":1.1,
+    "latitudesOfSearcher":"37.523083",
+    "longitudesOfSearcher":"126.9382188",
+    "clickTimes":1623137788672
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.91013616509736,37.48699743300676 ]
+    },
+    "properties": {
+    "poiName":"신성반도체  주요기업본사  ★ 4.5/5",
+    "count":1,
+    "rating":2,
+    "uniqueCars":1,
+    "avgDistance":3.78,
+    "latitudesOfSearcher":"37.5174708",
+    "longitudesOfSearcher":"126.9291574",
+    "clickTimes":1623137298703
+    }
+  }
+]
+}

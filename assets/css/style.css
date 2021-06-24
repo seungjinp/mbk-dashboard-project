@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.mapboxgl-popup {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+}
+
+.poiinfo-popup .mapboxgl-popup-content {
+    background-color: black;
+}
+
+.poiinfo-popup .mapboxgl-popup-tip {
+    border-top-color: black;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, 0.2);
+    width: 100%;
+}
+
+.button {
+    border: none;
+
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    width: 10%;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0px 20px 20px;
+
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background: #242526;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 200%;
+    background: #333333;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.button:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
+
+.legend {
+    background-color: #242526;
+    border-radius: 3px;
+    bottom: 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: white;
+    font: 16px "Open Sans", sans-serif;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+
+.legend h4 {
+    margin: 0 0 10px;
+}
+
+.legend div span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+}
+
+/* 
+attempt to add time based slider  */
+.map-overlay {
+    text-align: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    position: absolute;
+    width: 25%;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    padding: 10px;
+}
+
+.map-overlay-bottom {
+    text-align: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    position: absolute;
+    width: 25%;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    padding: 10px;
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: #242526;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.map-overlay-bottom .map-overlay-inner {
+    background-color: #242526;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.map-overlay h2 {
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    margin: 0 0 10px;
+}
+
+.map-overlay-bottom .bar {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #59a5d8, #386fa4, #133c55);
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+
+.rs-range {
+    margin-top: 29px;
+    width: 600px;
+    -webkit-appearance: none;
+}
+
+.rs-range:focus {
+    outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #fff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+}
+
+.rs-range::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #fff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+    box-shadow: none;
+    border: 0px solid #fff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 22px;
+    width: 22px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+
+.rs-range::-moz-range-thumb {
+    box-shadow: none;
+    border: 0px solid #fff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 22px;
+    width: 22px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+
+.rs-range::-moz-focus-outer {
+    border: 0;
+}
+
+.box-minmax {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* attempt to add menu toggle  */
+#menu {
+    background: #404040;
+    position: absolute;
+    z-index: 1;
+    top: 250px;
+    right: 10px;
+    border-radius: 3px;
+    width: 200px;
+
+    font-family: "Open Sans", sans-serif;
+}
+
+#menu a {
+    font-size: 13px;
+    color: #fff;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+#menu a:last-child {
+    border: none;
+}
+
+/* #menu a:hover {
+      background-color: #f8f8f8;
+      color: #404040;
+    } */
+
+#menu a.active {
+    background-color: #242526;
+    color: #ffffff;
+}
+
+#menu a.active:hover {
+    background: #333333;
+}

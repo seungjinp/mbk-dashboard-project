@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+  path {
+    stroke: white;
+    stroke-width: 0.25px;
+
+  }
+
+  .circle:hover {
+
+    stroke-width: 3px;
+  }
+</style>
+
+<body>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
+
+  <script src="https://d3js.org/d3.v6.js"></script>
+
+  <!-- Create a div where the graph will take place -->
+  <div id="my_dataviz"></div>
+
+
+
+  <script>
+
+    // set width and height of svg
+    const width = 1500
+    const height = 1000
+    const xMargin = 0,
+      yMargin = 0;
+
+    // The svg
+    const svg = d3.select("#my_dataviz")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr('transform', 'translate(' + xMargin + ', ' + yMargin + ')');
+
+    // Map and projection
+    var projection = d3.geoMercator()
+      .center([128, 36.5])
+      .scale(8000)
+      .rotate([0, 0]);
+    const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+    // Create data for circles:
+
+    var gBackground = svg.append("g"); // appended first
+    var gDataPoints = svg.append("g");
+    var gBusanVehiclePoints = svg.append("g");
+    // Load external data and boot
+    d3.json("koream.json").then(function (data) {
+
+      // Filter data
+
+
+      // Draw the map
+      gBackground
+        .selectAll("path")
+        .data(topojson.feature(data, data.objects.skorea_municipalities_2018_geo).features)
+        .join("path")
+        // .attr('fill', d => colorScale(d.properties.name))
+        .attr('fill', 'lightgray')
+        .attr("class", "province")
+        .attr("d", d3.geoPath()
+          .projection(projection)
+        )
+        // .style("stroke", "black")
+        .style("opacity", 1);
+      // .attr('transform', 'translate(' + xMargin + ', ' + yMargin + ')');
+
+
+
+    });
+
+    // Add circles:
+    d3.csv('cities.csv').then(data => {
+      console.log(data)
+
+      // create a tooltip
+      const Tooltip = d3.select("#my_dataviz")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("font-family", 'Noto Sans KR')
+        .style("opacity", 1)
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px")
+
+      // Three function that change the tooltip when user hover / move / leave a cell
+      const mouseover = function (event, d) {
+        Tooltip.style("opacity", 1)
+      }
+      var mousemove = function (event, d) {
+        Tooltip
+          .html("POI Name: " + d.poiName + "<br>" + "long: " + d.longitude + "<br>" + "lat: " + d.latitude + "<br>" + "Searched X Times: " + d.count)
+          .style("left", (event.x) * 2 + "px")
+          .style("top", (event.y) * 2 - 30 + "px")
+      }
+      var mouseleave = function (event, d) {
+        Tooltip.style("opacity", 0)
+      }
+
+
+      gDataPoints
+        .selectAll("myCircles")
+        .data(data)
+        .join("circle")
+        .attr("cx", d => {
+          return projection([d.longitude, d.latitude])[0];
+        })
+        .attr("cy", d => {
+          return projection([d.longitude, d.latitude])[1];
+        })
+        .attr("r", d => {
+          return d.count;
+        })
+        .attr("class", "circle")
+        .style("fill", "limegreen")
+        .attr("stroke", "forestgreen")
+        .attr("stroke-width", 0.25)
+        .attr("fill-opacity", 0.6)
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
+
+    });
+
+
+
+    // Add busan vehicle circles:
+    d3.csv('Busan KTX Searcher Data.csv').then(data => {
+      console.log(data)
+
+
+
+
+      gDataPoints
+        .selectAll("BusanCircles")
+        .data(data)
+        .join("circle")
+        .attr("cx", d => {
+          return projection([d.longitude, d.latitude])[0];
+        })
+        .attr("cy", d => {
+          return projection([d.longitude, d.latitude])[1];
+        })
+        .attr("r", 2)
+        .attr("class", "circle")
+        .style("fill", "cornflowerblue")
+        .attr("stroke", "royalblue")
+        .attr("stroke-width", 0.25)
+        .attr("fill-opacity", 0.6)
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var zoom = d3.zoom()
+      .scaleExtent([1, 20])
+      .on('zoom', function (event) {
+        svg.selectAll('path')
+          .attr('transform', event.transform);
+        svg.selectAll("circle")
+          .attr('transform', event.transform);
+      });
+
+    svg.call(zoom);
+  </script>
+
+
+
+</body>
+
+</html>
