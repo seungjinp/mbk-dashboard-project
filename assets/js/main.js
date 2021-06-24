@@ -7,22 +7,24 @@ var map = new mapboxgl.Map({
 })
 
 var dates = Array.from({ length: 31 }, (_, index) => index + 1)
+var datevalue = ""
 
 function filterBy(date) {
     var filters = ["==", "date", date]
-    var datevalue = dates[date] - 1
+    datevalue = dates[date] - 1
     map.setFilter("poitimebased", filters)
     map.setFilter("testtest", filters)
-
+    console.log(datevalue)
     document.getElementById("date").textContent = "Date: June " + datevalue.toString(10)
 }
+console.log(datevalue)
 
-var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/poiclicksdata"
+var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_poiclicks_ranked"
 
-var url3 = "../dataset/test.JSON"
+var url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
 map.on("load", function () {
     window.setInterval(function () {
-        Promise.all([fetch("https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/poiclicksdata"), fetch("../dataset/test.JSON")])
+        Promise.all([fetch("https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_poiclicks_ranked"), fetch("https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks")])
             .then(function (responses) {
                 // Get a JSON object from each of the responses
                 return Promise.all(
@@ -35,6 +37,7 @@ map.on("load", function () {
                 var poigeojson1 = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
 
                 var testtest = GeoJSON.parse(data[1], { Point: ["Latitude", "Longitude"] })
+                console.log(poigeojson1)
                 console.log(testtest)
 
                 testtest.features = testtest.features.map(function (d) {
@@ -46,7 +49,7 @@ map.on("load", function () {
                         if (!alert) return accumulatedCounts
                         if (!accumulatedCounts[alert]) accumulatedCounts[alert] = 0
 
-                        if (d.properties.date == 21) accumulatedCounts[alert]++
+                        if (d.properties.date == datevalue) accumulatedCounts[alert]++
 
                         return accumulatedCounts
                     }, {})
@@ -55,7 +58,7 @@ map.on("load", function () {
 
                     return d
                 })
-                console.log(testtest)
+
                 map.getSource("poisearches1").setData(poigeojson1)
 
                 map.getSource("testtest").setData(testtest)
@@ -74,7 +77,7 @@ map.on("load", function () {
         clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
     })
 
-    map.addSource("testtest", { type: "geojson", data: url3 })
+    map.addSource("testtest", { type: "geojson", data: url2 })
     map.addLayer({
         id: "testtest",
         type: "circle",
@@ -119,7 +122,7 @@ map.on("load", function () {
         paint: {
             "circle-opacity": 0.55,
             "circle-color": "limegreen",
-            "circle-radius": ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]],
+            "circle-radius": ["+", 5, ["*", 2, ["sqrt", ["to-number", ["get", "count"]]]]],
         },
     })
 })
@@ -179,33 +182,6 @@ map.on("load", function () {
         map.setLayoutProperty("natural-point-label", "text-field", ["get", "name_" + language])
         map.setLayoutProperty("natural-line-label", "text-field", ["get", "name_" + language])
         map.setLayoutProperty("waterway-label", "text-field", ["get", "name_" + language])
-    })
-
-    // //add geojson data old way
-
-    map.addSource("caricon", {
-        type: "geojson",
-        data: "dataset/Gyeongpo.geojson",
-    })
-
-    //add vehicle icons to represent searcher data
-    map.loadImage("https://upload.wikimedia.org/wikipedia/commons/8/86/Car_icon2.png", function (error, image) {
-        if (error) throw error
-
-        // Add the image to the map style.
-        map.addImage("logo", image)
-
-        // Add a layer to use the image to represent the data.
-
-        map.addLayer({
-            id: "busanmarkers",
-            type: "symbol",
-            source: "caricon", // reference the data source
-            layout: {
-                "icon-image": "logo", // reference the image
-                "icon-size": 0.5,
-            },
-        })
     })
 
     // Create a popup, but don't add it to the map yet.
@@ -272,78 +248,6 @@ map.on("load", function () {
         popup.remove()
     })
 
-    // document.getElementById("slider").addEventListener("input", function (e) {
-    //     var date = parseInt(e.target.value)
-
-    //     d3.queue()
-
-    //         .defer(d3.json, "dataset/test.json")
-    //         .await(function (error, data1) {
-    //             if (error) throw error
-
-    //             // Create a date property value based on time
-    //             // used to filter against.
-
-    //             var testgeojson = GeoJSON.parse(data1, { Point: ["Latitude", "Longitude"] })
-
-    //             //  var linetestgeojson = GeoJSON.parse(data1, { LineString: "linestringattempt" })
-    //             //  console.log(linetestgeojson)
-
-    //             testgeojson.features = testgeojson.features.map(function (d) {
-    //                 d.properties.date = new Date(d.properties.clickTimes).getDate()
-
-    //                 const counts = testgeojson.features.reduce((accumulatedCounts, feature) => {
-    //                     const alert = feature.properties.poiName
-
-    //                     if (!alert) return accumulatedCounts
-    //                     if (!accumulatedCounts[alert]) accumulatedCounts[alert] = 0
-
-    //                     if (d.properties.date == date + 1) accumulatedCounts[alert]++
-
-    //                     return accumulatedCounts
-    //                 }, {})
-
-    //                 d.properties.count = counts[d.properties.poiName]
-
-    //                 console.log(d.properties.count)
-    //                 return d
-    //             })
-
-    //             console.log(testgeojson)
-
-    //             map.addSource("poitimes", { type: "geojson", data: testgeojson })
-    //             //   map.addSource("linepoitimes", { type: "geojson", data: linetestgeojson })
-
-    //             map.addLayer({
-    //                 id: "poitimebased",
-    //                 type: "circle",
-    //                 source: "poitimes",
-    //                 paint: {
-    //                     "circle-color": "orange",
-    //                     "circle-opacity": 0.55,
-    //                     "circle-radius": ["+", 5, ["*", 5, ["get", "count"]]],
-    //                 },
-    //             })
-    //         })
-    // })
-
-    // })
-
-    // map.addLayer({
-    //     id: "route",
-    //     type: "line",
-    //     source: "linepoitimes",
-    //     layout: {
-    //         "line-cap": "round",
-    //     },
-    //     paint: {
-    //         "line-color": "white",
-    //         "line-width": 1.5,
-    //     },
-    // })
-
-    // Set filter to first date of the year
-    // 0 = January
     filterBy(0)
 
     document.getElementById("slider").addEventListener("input", function (e) {
@@ -394,9 +298,9 @@ map.on("idle", function () {
         }
     }
 
-    if (map.getLayer("poitimebased")) {
+    if (map.getLayer("testtest")) {
         // Enumerate ids of the layers.
-        var toggleableLayerIds = ["poitimebased"]
+        var toggleableLayerIds = ["testtest"]
         // Set up the corresponding toggle button for each layer.
         for (var i = 0; i < toggleableLayerIds.length; i++) {
             var id = toggleableLayerIds[i]
