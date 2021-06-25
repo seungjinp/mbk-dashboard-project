@@ -33,7 +33,7 @@ map.on("load", function () {
                 // if there's an error, log it
                 console.log(error)
             })
-    }, 2000)
+    }, 1000)
 
     // add map sources
     map.addSource("poi_rank_sorted_clicks", {
@@ -265,6 +265,63 @@ map.on("load", function () {
         }
     })
     map.on("mouseleave", "poi_rank_sorted_clicks_unclustered", function () {
+        map.getCanvas().style.cursor = ""
+        popup.remove()
+    })
+
+    map.on("mouseenter", "poi_rank_sorted_clicks_timeframe_unclustered", function (e) {
+        map.getCanvas().style.cursor = "pointer" // Change the cursor style as a UI indicator.
+
+        var coordinates = e.features[0].geometry.coordinates.slice()
+        var description = e.features[0].properties.poiName
+        var searchcounts = e.features[0].properties.count
+        var uniquecars = e.features[0].properties.uniqueCars
+        var avgdistance = e.features[0].properties.avgDistance
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
+        }
+
+        // Populate the popup and set its coordinates
+        // based on the feature found. Default language: EN
+        popup
+            .setLngLat(coordinates)
+            .setMaxWidth("1000px")
+            .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "Number of Unique Vehicles: " + uniquecars + "<br>" + "Average Distance from POI: " + avgdistance + "km")
+            .addTo(map)
+
+        //change popup content based on langauge button clicked
+        //popup content for EN
+        if (language === "en") {
+            popup
+                .setLngLat(coordinates)
+                .setMaxWidth("1000px")
+                .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "Number of Unique Vehicles: " + uniquecars + "<br>" + "Average Distance from POI: " + avgdistance + "km")
+                .addTo(map)
+        }
+
+        //popup content for KO
+        if (language === "ko") {
+            popup
+                .setLngLat(coordinates)
+                .setMaxWidth("1000px")
+                .setHTML("POI 이름: " + description + "<br>" + "누적 검색 횟수: " + searchcounts + "<br>" + "검색한 차량 숫자: " + uniquecars + "<br>" + "POI 평균 거리: " + avgdistance + "km")
+                .addTo(map)
+        }
+
+        //popup content for DE
+        if (language === "de") {
+            popup
+                .setLngLat(coordinates)
+                .setMaxWidth("1000px")
+                .setHTML("POI Name: " + description + "<br>" + "Gesamtanzahl der Suchanfragen: " + searchcounts + "<br>" + "Anzahl einzigartiger Fahrzeuge: " + uniquecars + "<br>" + "Durchschnittliche Entfernung vom POI: " + avgdistance + "km")
+                .addTo(map)
+        }
+    })
+    map.on("mouseleave", "poi_rank_sorted_clicks_timeframe_unclustered", function () {
         map.getCanvas().style.cursor = ""
         popup.remove()
     })

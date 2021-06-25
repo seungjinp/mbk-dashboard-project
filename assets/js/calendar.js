@@ -10,22 +10,23 @@ var dates = Array.from({ length: 31 }, (_, index) => index + 1)
 var datevalue = ""
 
 function filterBy(date) {
-    var filters = ["==", "date", date]
+    var filters = ["==", "Date", date]
     datevalue = dates[date] - 1
 
-    map.setFilter("poi_all_clicks_clustered", filters)
-    map.setFilter("poi_all_clicks_unclustered", filters)
-    console.log(datevalue)
+    map.setFilter("poi_all_clicks_points", filters)
+    map.setFilter("poi_all_clicks_heatmap", filters)
+
     document.getElementById("date").textContent = "Date: June " + datevalue.toString(10)
 }
-console.log(datevalue)
+
 map.resize()
 
-var url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
+var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
 
 map.on("load", function () {
+    var filterHour = ["==", ["get", "Date"]]
     window.setInterval(function () {
-        Promise.all([fetch(url2)])
+        Promise.all([fetch(url)])
             .then(function (responses) {
                 // Get a JSON object from each of the responses
                 return Promise.all(
@@ -38,15 +39,13 @@ map.on("load", function () {
                 var poi_all_clicks = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
 
                 poi_all_clicks.features = poi_all_clicks.features.map(function (d) {
-                    d.properties.date = new Date(d.properties.clickTimes).getDate()
-
                     const counts = poi_all_clicks.features.reduce((accumulatedCounts, feature) => {
                         const alert = feature.properties.poiName
 
                         if (!alert) return accumulatedCounts
                         if (!accumulatedCounts[alert]) accumulatedCounts[alert] = 0
 
-                        if (d.properties.date == datevalue) accumulatedCounts[alert]++
+                        if (d.properties.Date == datevalue) accumulatedCounts[alert]++
 
                         return accumulatedCounts
                     }, {})
@@ -62,56 +61,54 @@ map.on("load", function () {
                 // if there's an error, log it
                 console.log(error)
             })
-    }, 2000)
+    }, 500)
 
     // add map sources
 
     map.addSource("poi_all_clicks", {
         type: "geojson",
-        data: url2,
-        cluster: true,
-        clusterMaxZoom: 7, // Max zoom to cluster points on
-        clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
+        data: url,
     })
 
     // add map layers
-    map.addLayer({
-        id: "poi_all_clicks_clustered",
-        type: "circle",
-        source: "poi_all_clicks",
-        filter: ["has", "point_count"],
-
-        paint: {
-            "circle-opacity": 0.75,
-            "circle-color": ["step", ["to-number", ["get", "point_count"]], "#51bbd6", 2, "#f1f075", 3, "#f28cb1"],
-            "circle-radius": ["step", ["to-number", ["get", "point_count"]], 20, 2, 30, 3, 40],
-        },
-    })
 
     map.addLayer({
-        id: "poi_all_clicks_unclustered",
+        id: "poi_all_clicks_points",
         type: "circle",
         source: "poi_all_clicks",
-        filter: ["!", ["has", "point_count"]],
+
         paint: {
-            "circle-opacity": 0.75,
-            "circle-color": "coral",
+            "circle-opacity": ["interpolate", ["linear"], ["zoom"], 7, 0, 14, 1],
+            "circle-color": "white",
+            // "circle-stroke-color": "white",
+            // "circle-stroke-width": 1,
+            "circle-color": ["interpolate", ["linear"], ["to-number", ["get", "count"]], 0, "#b3e5fc", 10, "#03A9F4", 20, "#01579B"],
             "circle-radius": ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]],
         },
     })
-})
 
-// map.addLayer({
-//     id: "poi_rank_sorted_clicks_clustered",
-//     type: "symbol",
-//     source: "poi_rank_sorted_clicks",
-//     filter: ["has", "point_count"],
-//     layout: {
-//         "text-field": ["to-number", ["get", "count"], {}],
-//         "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-//         "text-size": 12,
-//     },
-// })
+    map.addLayer({
+        id: "poi_all_clicks_heatmap",
+        type: "heatmap",
+        source: "poi_all_clicks",
+        maxzoom: 10,
+        paint: {
+            // Increase the heatmap weight based on frequency and property magnitude
+            "heatmap-weight": ["interpolate", ["linear"], ["get", "count"], 0, 0, 6, 1],
+            // Increase the heatmap color weight weight by zoom level
+            // heatmap-intensity is a multiplier on top of heatmap-weight
+            "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 0, 1, 15, 3],
+            // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
+            // Begin color ramp at 0-stop with a 0-transparancy color
+            // to create a blur-like effect.
+            "heatmap-color": ["interpolate", ["linear"], ["heatmap-density"], 0, "rgba(33,102,172,0)", 0.2, "rgb(103,169,207)", 0.4, "rgb(209,229,240)", 0.6, "rgb(253,219,199)", 0.8, "rgb(239,138,98)", 1, "rgb(178,24,43)"],
+            // Adjust the heatmap radius by zoom level
+            "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 0, 2, 7, ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]]],
+            // Transition from heatmap to circle layer by zoom level
+            "heatmap-opacity": ["interpolate", ["linear"], ["zoom"], 7, 1, 15, 0],
+        },
+    })
+})
 
 map.on("load", function () {
     // Add the control geocoder to the map.
@@ -177,7 +174,7 @@ map.on("load", function () {
         closeOnClick: false,
     })
 
-    map.on("mouseenter", "poi_all_clicks_unclustered", function (e) {
+    map.on("mouseenter", "poi_all_clicks_points", function (e) {
         map.getCanvas().style.cursor = "pointer" // Change the cursor style as a UI indicator.
 
         var coordinates = e.features[0].geometry.coordinates.slice()
@@ -229,7 +226,7 @@ map.on("load", function () {
                 .addTo(map)
         }
     })
-    map.on("mouseleave", "poi_rank_all_clicks_unclustered", function () {
+    map.on("mouseleave", "poi_all_clicks_points", function () {
         map.getCanvas().style.cursor = ""
         popup.remove()
     })
@@ -241,83 +238,4 @@ map.on("load", function () {
 
         filterBy(dates[date])
     })
-})
-
-// After the last frame rendered before the map enters an "idle" state.
-map.on("idle", function () {
-    // If these two layers have been added to the style,
-    // add the toggle buttons.
-    if (map.getLayer("poi_all_clicks_clustered")) {
-        // Enumerate ids of the layers.
-        var toggleableLayerIds = ["poi_all_clicks_clustered"]
-        // Set up the corresponding toggle button for each layer.
-        for (var i = 0; i < toggleableLayerIds.length; i++) {
-            var id = toggleableLayerIds[i]
-            if (!document.getElementById(id)) {
-                // Create a link.
-                var link = document.createElement("a")
-                link.id = id
-                link.href = "#"
-                link.textContent = "Turn ON/OFF All Points"
-                link.className = "active"
-                // Show or hide layer when the toggle is clicked.
-                link.onclick = function (e) {
-                    var clickedLayer = this.id
-                    e.preventDefault()
-                    e.stopPropagation()
-
-                    var visibility = map.getLayoutProperty(clickedLayer, "visibility")
-
-                    // Toggle layer visibility by changing the layout object's visibility property.
-                    if (visibility === "visible") {
-                        map.setLayoutProperty(clickedLayer, "visibility", "none")
-                        this.className = ""
-                    } else {
-                        this.className = "active"
-                        map.setLayoutProperty(clickedLayer, "visibility", "visible")
-                    }
-                }
-
-                var layers = document.getElementById("menu")
-                layers.appendChild(link)
-            }
-        }
-    }
-
-    if (map.getLayer("poi_all_clicks_unclustered")) {
-        // Enumerate ids of the layers.
-        var toggleableLayerIds = ["poi_all_clicks_unclustered"]
-        // Set up the corresponding toggle button for each layer.
-        for (var i = 0; i < toggleableLayerIds.length; i++) {
-            var id = toggleableLayerIds[i]
-            if (!document.getElementById(id)) {
-                // Create a link.
-                var link = document.createElement("a")
-                link.id = id
-                link.href = "#"
-                link.textContent = "Turn ON/OFF Time-Based Points"
-                link.className = "active"
-                // Show or hide layer when the toggle is clicked.
-                link.onclick = function (e) {
-                    var clickedLayer = this.id
-                    e.preventDefault()
-                    e.stopPropagation()
-
-                    var visibility = map.getLayoutProperty(clickedLayer, "visibility")
-
-                    // Toggle layer visibility by changing the layout object's visibility property.
-                    if (visibility === "visible") {
-                        map.setLayoutProperty(clickedLayer, "visibility", "none")
-                        this.className = ""
-                    } else {
-                        this.className = "active"
-                        map.setLayoutProperty(clickedLayer, "visibility", "visible")
-                    }
-                }
-
-                var layers = document.getElementById("menu")
-                layers.appendChild(link)
-            }
-        }
-    }
 })
