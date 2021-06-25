@@ -19,7 +19,7 @@ function filterBy(date) {
     document.getElementById("date").textContent = "Date: June " + datevalue.toString(10)
 }
 console.log(datevalue)
-
+map.resize()
 var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_poiclicks_ranked"
 
 var url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
