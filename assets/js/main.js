@@ -13,7 +13,8 @@ function filterBy(date) {
     var filters = ["==", "date", date]
     datevalue = dates[date] - 1
 
-    map.setFilter("poiallclicks", filters)
+    map.setFilter("poi_all_clicks_clustered", filters)
+    map.setFilter("poi_all_clicks_unclustered", filters)
     console.log(datevalue)
     document.getElementById("date").textContent = "Date: June " + datevalue.toString(10)
 }
@@ -22,9 +23,10 @@ console.log(datevalue)
 var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_poiclicks_ranked"
 
 var url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
+var url3 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_poiclicks_ranked_2"
 map.on("load", function () {
     window.setInterval(function () {
-        Promise.all([fetch("https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_poiclicks_ranked"), fetch("https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks")])
+        Promise.all([fetch(url), fetch(url2), fetch(url3)])
             .then(function (responses) {
                 // Get a JSON object from each of the responses
                 return Promise.all(
@@ -34,16 +36,15 @@ map.on("load", function () {
                 )
             })
             .then(function (data) {
-                var poigeojson1 = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
+                var poi_clicks_sortedby_counts = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
 
-                var poiallclicks = GeoJSON.parse(data[1], { Point: ["Latitude", "Longitude"] })
-                console.log(poigeojson1)
-                console.log(poiallclicks)
+                var poi_clicks_sortedby_counts_timeframe = GeoJSON.parse(data[2], { Point: ["Latitude", "Longitude"] })
+                var poi_all_clicks = GeoJSON.parse(data[1], { Point: ["Latitude", "Longitude"] })
 
-                poiallclicks.features = poiallclicks.features.map(function (d) {
+                poi_all_clicks.features = poi_all_clicks.features.map(function (d) {
                     d.properties.date = new Date(d.properties.clickTimes).getDate()
 
-                    const counts = poiallclicks.features.reduce((accumulatedCounts, feature) => {
+                    const counts = poi_all_clicks.features.reduce((accumulatedCounts, feature) => {
                         const alert = feature.properties.poiName
 
                         if (!alert) return accumulatedCounts
@@ -58,10 +59,11 @@ map.on("load", function () {
 
                     return d
                 })
+                console.log(poi_clicks_sortedby_counts_timeframe)
+                map.getSource("poi_rank_sorted_clicks").setData(poi_clicks_sortedby_counts)
+                map.getSource("poi_rank_sorted_clicks_timeframe").setData(poi_clicks_sortedby_counts_timeframe)
 
-                map.getSource("poi_rank_sorted_clicks").setData(poigeojson1)
-
-                map.getSource("poiallclicks").setData(poiallclicks)
+                map.getSource("poi_all_clicks").setData(poi_all_clicks)
             })
             .catch(function (error) {
                 // if there's an error, log it
@@ -69,20 +71,49 @@ map.on("load", function () {
             })
     }, 2000)
 
+    // add map sources
     map.addSource("poi_rank_sorted_clicks", {
         type: "geojson",
         data: url,
         cluster: true,
-        clusterMaxZoom: 14, // Max zoom to cluster points on
+        clusterMaxZoom: 8, // Max zoom to cluster points on
+        clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
+    })
+    map.addSource("poi_all_clicks", {
+        type: "geojson",
+        data: url2,
+        cluster: true,
+        clusterMaxZoom: 7, // Max zoom to cluster points on
         clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
     })
 
-    map.addSource("poiallclicks", { type: "geojson", data: url2 })
-    map.addLayer({
-        id: "poiallclicks",
-        type: "circle",
-        source: "poiallclicks",
+    map.addSource("poi_rank_sorted_clicks_timeframe", {
+        type: "geojson",
+        data: url3,
+        cluster: true,
+        clusterMaxZoom: 8, // Max zoom to cluster points on
+        clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
+    })
 
+    // add map layers
+    map.addLayer({
+        id: "poi_all_clicks_clustered",
+        type: "circle",
+        source: "poi_all_clicks",
+        filter: ["has", "point_count"],
+
+        paint: {
+            "circle-opacity": 0.75,
+            "circle-color": ["step", ["to-number", ["get", "point_count"]], "#51bbd6", 2, "#f1f075", 3, "#f28cb1"],
+            "circle-radius": ["step", ["to-number", ["get", "point_count"]], 20, 2, 30, 3, 40],
+        },
+    })
+
+    map.addLayer({
+        id: "poi_all_clicks_unclustered",
+        type: "circle",
+        source: "poi_all_clicks",
+        filter: ["!", ["has", "point_count"]],
         paint: {
             "circle-opacity": 0.75,
             "circle-color": "coral",
@@ -91,31 +122,19 @@ map.on("load", function () {
     })
 
     map.addLayer({
-        id: "poi1",
+        id: "poi_rank_sorted_clicks_clustered",
         type: "circle",
         source: "poi_rank_sorted_clicks",
         filter: ["has", "point_count"],
         paint: {
             "circle-opacity": 0.75,
-            "circle-color": ["step", ["get", "point_count"], "#51bbd6", 100, "#f1f075", 750, "#f28cb1"],
-            "circle-radius": ["step", ["get", "point_count"], 20, 100, 30, 750, 40],
+            "circle-color": ["step", ["get", "point_count"], "#51bbd6", 50, "#f1f075", 100, "#f28cb1"],
+            "circle-radius": ["step", ["get", "point_count"], 20, 50, 30, 100, 40],
         },
     })
 
     map.addLayer({
-        id: "cluster-count",
-        type: "symbol",
-        source: "poi_rank_sorted_clicks",
-        filter: ["has", "point_count"],
-        layout: {
-            "text-field": ["to-number", ["get", "count"], {}],
-            "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-            "text-size": 12,
-        },
-    })
-
-    map.addLayer({
-        id: "unclustered-point",
+        id: "poi_rank_sorted_clicks_unclustered",
         type: "circle",
         source: "poi_rank_sorted_clicks",
         filter: ["!", ["has", "point_count"]],
@@ -125,7 +144,43 @@ map.on("load", function () {
             "circle-radius": ["+", 5, ["*", 2, ["sqrt", ["to-number", ["get", "count"]]]]],
         },
     })
+
+    map.addLayer({
+        id: "poi_rank_sorted_clicks_timeframe_clustered",
+        type: "circle",
+        source: "poi_rank_sorted_clicks_timeframe",
+
+        paint: {
+            "circle-opacity": 0.55,
+            "circle-color": ["step", ["get", "point_count"], "red", 50, "red", 100, "red"],
+            "circle-radius": ["step", ["get", "point_count"], 20, 50, 30, 100, 40],
+        },
+    })
+
+    map.addLayer({
+        id: "poi_rank_sorted_clicks_unclustered",
+        type: "circle",
+        source: "poi_rank_sorted_clicks",
+        filter: ["!", ["has", "point_count"]],
+        paint: {
+            "circle-opacity": 0.55,
+            "circle-color": "lightpurple",
+            "circle-radius": ["+", 5, ["*", 2, ["sqrt", ["to-number", ["get", "count"]]]]],
+        },
+    })
 })
+
+// map.addLayer({
+//     id: "poi_rank_sorted_clicks_clustered",
+//     type: "symbol",
+//     source: "poi_rank_sorted_clicks",
+//     filter: ["has", "point_count"],
+//     layout: {
+//         "text-field": ["to-number", ["get", "count"], {}],
+//         "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+//         "text-size": 12,
+//     },
+// })
 
 map.on("load", function () {
     // Add the control geocoder to the map.
@@ -191,7 +246,7 @@ map.on("load", function () {
         closeOnClick: false,
     })
 
-    map.on("mouseenter", "unclustered-point", function (e) {
+    map.on("mouseenter", "poi_rank_sorted_clicks_unclustered", function (e) {
         map.getCanvas().style.cursor = "pointer" // Change the cursor style as a UI indicator.
 
         var coordinates = e.features[0].geometry.coordinates.slice()
@@ -243,7 +298,7 @@ map.on("load", function () {
                 .addTo(map)
         }
     })
-    map.on("mouseleave", "unclustered-point", function () {
+    map.on("mouseleave", "poi_rank_sorted_clicks_unclustered", function () {
         map.getCanvas().style.cursor = ""
         popup.remove()
     })
@@ -261,9 +316,9 @@ map.on("load", function () {
 map.on("idle", function () {
     // If these two layers have been added to the style,
     // add the toggle buttons.
-    if (map.getLayer("poi1")) {
+    if (map.getLayer("poi_rank_sorted_clicks_clustered")) {
         // Enumerate ids of the layers.
-        var toggleableLayerIds = ["poi1"]
+        var toggleableLayerIds = ["poi_rank_sorted_clicks_clustered"]
         // Set up the corresponding toggle button for each layer.
         for (var i = 0; i < toggleableLayerIds.length; i++) {
             var id = toggleableLayerIds[i]
@@ -298,9 +353,9 @@ map.on("idle", function () {
         }
     }
 
-    if (map.getLayer("poiallclicks")) {
+    if (map.getLayer("poi_all_clicks_clustered")) {
         // Enumerate ids of the layers.
-        var toggleableLayerIds = ["poiallclicks"]
+        var toggleableLayerIds = ["poi_all_clicks_clustered"]
         // Set up the corresponding toggle button for each layer.
         for (var i = 0; i < toggleableLayerIds.length; i++) {
             var id = toggleableLayerIds[i]
