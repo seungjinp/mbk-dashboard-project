@@ -6,26 +6,13 @@ var map = new mapboxgl.Map({
     zoom: 7, // starting zoom
 })
 
-var dates = Array.from({ length: 31 }, (_, index) => index + 1)
-var datevalue = ""
-
-function filterBy(date) {
-    var filters = ["==", "date", date]
-    datevalue = dates[date] - 1
-
-    map.setFilter("poi_all_clicks_clustered", filters)
-    map.setFilter("poi_all_clicks_unclustered", filters)
-    console.log(datevalue)
-    document.getElementById("date").textContent = "Date: June " + datevalue.toString(10)
-}
-console.log(datevalue)
 map.resize()
+var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_poiclicks_ranked"
 
-var url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
-
+var url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_poiclicks_ranked_2"
 map.on("load", function () {
     window.setInterval(function () {
-        Promise.all([fetch(url2)])
+        Promise.all([fetch(url), fetch(url2)])
             .then(function (responses) {
                 // Get a JSON object from each of the responses
                 return Promise.all(
@@ -35,28 +22,12 @@ map.on("load", function () {
                 )
             })
             .then(function (data) {
-                var poi_all_clicks = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
+                var poi_clicks_sortedby_counts = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
 
-                poi_all_clicks.features = poi_all_clicks.features.map(function (d) {
-                    d.properties.date = new Date(d.properties.clickTimes).getDate()
+                var poi_clicks_sortedby_counts_timeframe = GeoJSON.parse(data[1], { Point: ["Latitude", "Longitude"] })
 
-                    const counts = poi_all_clicks.features.reduce((accumulatedCounts, feature) => {
-                        const alert = feature.properties.poiName
-
-                        if (!alert) return accumulatedCounts
-                        if (!accumulatedCounts[alert]) accumulatedCounts[alert] = 0
-
-                        if (d.properties.date == datevalue) accumulatedCounts[alert]++
-
-                        return accumulatedCounts
-                    }, {})
-
-                    d.properties.count = counts[d.properties.poiName]
-
-                    return d
-                })
-
-                map.getSource("poi_all_clicks").setData(poi_all_clicks)
+                map.getSource("poi_rank_sorted_clicks").setData(poi_clicks_sortedby_counts)
+                map.getSource("poi_rank_sorted_clicks_timeframe").setData(poi_clicks_sortedby_counts_timeframe)
             })
             .catch(function (error) {
                 // if there's an error, log it
@@ -65,53 +36,117 @@ map.on("load", function () {
     }, 2000)
 
     // add map sources
+    map.addSource("poi_rank_sorted_clicks", {
+        type: "geojson",
+        data: url,
+        cluster: true,
+        clusterMaxZoom: 10, // Max zoom to cluster points on
+        clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
+    })
 
-    map.addSource("poi_all_clicks", {
+    map.addSource("poi_rank_sorted_clicks_timeframe", {
         type: "geojson",
         data: url2,
         cluster: true,
-        clusterMaxZoom: 7, // Max zoom to cluster points on
+        clusterMaxZoom: 10, // Max zoom to cluster points on
         clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
     })
 
     // add map layers
-    map.addLayer({
-        id: "poi_all_clicks_clustered",
-        type: "circle",
-        source: "poi_all_clicks",
-        filter: ["has", "point_count"],
+    //layer for all clicks sorted
 
+    map.addLayer({
+        id: "poi_rank_sorted_clicks_clustered",
+        type: "circle",
+        source: "poi_rank_sorted_clicks",
+        layout: {
+            visibility: "visible",
+        },
+        filter: ["has", "point_count"],
         paint: {
-            "circle-opacity": 0.75,
-            "circle-color": ["step", ["to-number", ["get", "point_count"]], "#51bbd6", 2, "#f1f075", 3, "#f28cb1"],
-            "circle-radius": ["step", ["to-number", ["get", "point_count"]], 20, 2, 30, 3, 40],
+            "circle-opacity": 0.65,
+            "circle-color": ["interpolate", ["linear"], ["to-number", ["get", "point_count"]], 0, "#b3e5fc", 10, "#03A9F4", 100, "#01579B"],
+            "circle-radius": ["step", ["to-number", ["get", "point_count"]], 10, 5, 20, 10, 30, 20, 35, 40, 40, 50, 60, 80, 70, 120, 90, 150, 100],
         },
     })
 
     map.addLayer({
-        id: "poi_all_clicks_unclustered",
+        id: "poi_rank_sorted_clicks_unclustered",
         type: "circle",
-        source: "poi_all_clicks",
+        source: "poi_rank_sorted_clicks",
+        layout: {
+            visibility: "visible",
+        },
         filter: ["!", ["has", "point_count"]],
         paint: {
-            "circle-opacity": 0.75,
-            "circle-color": "coral",
-            "circle-radius": ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]],
+            "circle-opacity": 0.65,
+            "circle-color": "#59a5d8",
+            "circle-radius": ["+", 5, ["*", 2, ["sqrt", ["to-number", ["get", "count"]]]]],
+        },
+    })
+
+    map.addLayer({
+        id: "poi_rank_sorted_clicks_clustered_textlabel",
+        type: "symbol",
+        source: "poi_rank_sorted_clicks",
+        filter: ["has", "point_count"],
+        layout: {
+            visibility: "visible",
+            "text-field": "{point_count_abbreviated}",
+            "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+            "text-size": 12,
+        },
+        paint: {
+            "text-color": "white",
+        },
+    })
+
+    //layers for recent timeframe
+    map.addLayer({
+        id: "poi_rank_sorted_clicks_timeframe_clustered",
+        type: "circle",
+        source: "poi_rank_sorted_clicks_timeframe",
+        layout: {
+            visibility: "none",
+        },
+        paint: {
+            "circle-opacity": 0.65,
+            "circle-color": ["interpolate", ["linear"], ["to-number", ["get", "point_count"]], 0, "#b3e5fc", 10, "#03A9F4", 100, "#01579B"],
+            "circle-radius": ["step", ["to-number", ["get", "point_count"]], 10, 5, 20, 10, 30, 20, 35, 40, 40, 50, 60, 80, 70, 120, 90, 150, 100],
+        },
+    })
+
+    map.addLayer({
+        id: "poi_rank_sorted_clicks_timeframe_unclustered",
+        type: "circle",
+        source: "poi_rank_sorted_clicks_timeframe",
+        layout: {
+            visibility: "none",
+        },
+        filter: ["!", ["has", "point_count"]],
+        paint: {
+            "circle-opacity": 0.65,
+            "circle-color": "#59a5d8",
+            "circle-radius": ["+", 5, ["*", 2, ["sqrt", ["to-number", ["get", "count"]]]]],
+        },
+    })
+
+    map.addLayer({
+        id: "poi_rank_sorted_clicks_timeframe_clustered_textlabel",
+        type: "symbol",
+        source: "poi_rank_sorted_clicks_timeframe",
+        filter: ["has", "point_count"],
+        layout: {
+            visibility: "none",
+            "text-field": "{point_count_abbreviated}",
+            "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+            "text-size": 12,
+        },
+        paint: {
+            "text-color": "white",
         },
     })
 })
-
-// map.addLayer({
-//     id: "poi_rank_sorted_clicks_clustered",
-//     type: "symbol",
-//     source: "poi_rank_sorted_clicks",
-//     filter: ["has", "point_count"],
-//     layout: {
-//         "text-field": ["to-number", ["get", "count"], {}],
-//         "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-//         "text-size": 12,
-//     },
-// })
 
 map.on("load", function () {
     // Add the control geocoder to the map.
@@ -177,7 +212,7 @@ map.on("load", function () {
         closeOnClick: false,
     })
 
-    map.on("mouseenter", "poi_all_clicks_unclustered", function (e) {
+    map.on("mouseenter", "poi_rank_sorted_clicks_unclustered", function (e) {
         map.getCanvas().style.cursor = "pointer" // Change the cursor style as a UI indicator.
 
         var coordinates = e.features[0].geometry.coordinates.slice()
@@ -229,17 +264,9 @@ map.on("load", function () {
                 .addTo(map)
         }
     })
-    map.on("mouseleave", "poi_rank_all_clicks_unclustered", function () {
+    map.on("mouseleave", "poi_rank_sorted_clicks_unclustered", function () {
         map.getCanvas().style.cursor = ""
         popup.remove()
-    })
-
-    filterBy(0)
-
-    document.getElementById("slider").addEventListener("input", function (e) {
-        var date = parseInt(e.target.value, 10)
-
-        filterBy(dates[date])
     })
 })
 
@@ -247,9 +274,9 @@ map.on("load", function () {
 map.on("idle", function () {
     // If these two layers have been added to the style,
     // add the toggle buttons.
-    if (map.getLayer("poi_all_clicks_clustered")) {
+    if (map.getLayer("poi_rank_sorted_clicks_clustered")) {
         // Enumerate ids of the layers.
-        var toggleableLayerIds = ["poi_all_clicks_clustered"]
+        var toggleableLayerIds = ["poi_rank_sorted_clicks_clustered"]
         // Set up the corresponding toggle button for each layer.
         for (var i = 0; i < toggleableLayerIds.length; i++) {
             var id = toggleableLayerIds[i]
@@ -258,60 +285,34 @@ map.on("idle", function () {
                 var link = document.createElement("a")
                 link.id = id
                 link.href = "#"
-                link.textContent = "Turn ON/OFF All Points"
-                link.className = "active"
+                link.textContent = "Show Recent 1 Day"
+                link.className = "inactive"
                 // Show or hide layer when the toggle is clicked.
                 link.onclick = function (e) {
                     var clickedLayer = this.id
                     e.preventDefault()
                     e.stopPropagation()
 
-                    var visibility = map.getLayoutProperty(clickedLayer, "visibility")
+                    var visibility = map.getLayoutProperty("poi_rank_sorted_clicks_clustered", "visibility")
 
                     // Toggle layer visibility by changing the layout object's visibility property.
-                    if (visibility === "visible") {
-                        map.setLayoutProperty(clickedLayer, "visibility", "none")
+                    if (visibility === "none") {
+                        map.setLayoutProperty("poi_rank_sorted_clicks_clustered", "visibility", "visible")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_unclustered", "visibility", "visible")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_clustered_textlabel", "visibility", "visible")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_timeframe_clustered", "visibility", "none")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_timeframe_unclustered", "visibility", "none")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_timeframe_clustered_textlabel", "visibility", "none")
+
                         this.className = ""
                     } else {
                         this.className = "active"
-                        map.setLayoutProperty(clickedLayer, "visibility", "visible")
-                    }
-                }
-
-                var layers = document.getElementById("menu")
-                layers.appendChild(link)
-            }
-        }
-    }
-
-    if (map.getLayer("poi_all_clicks_unclustered")) {
-        // Enumerate ids of the layers.
-        var toggleableLayerIds = ["poi_all_clicks_unclustered"]
-        // Set up the corresponding toggle button for each layer.
-        for (var i = 0; i < toggleableLayerIds.length; i++) {
-            var id = toggleableLayerIds[i]
-            if (!document.getElementById(id)) {
-                // Create a link.
-                var link = document.createElement("a")
-                link.id = id
-                link.href = "#"
-                link.textContent = "Turn ON/OFF Time-Based Points"
-                link.className = "active"
-                // Show or hide layer when the toggle is clicked.
-                link.onclick = function (e) {
-                    var clickedLayer = this.id
-                    e.preventDefault()
-                    e.stopPropagation()
-
-                    var visibility = map.getLayoutProperty(clickedLayer, "visibility")
-
-                    // Toggle layer visibility by changing the layout object's visibility property.
-                    if (visibility === "visible") {
-                        map.setLayoutProperty(clickedLayer, "visibility", "none")
-                        this.className = ""
-                    } else {
-                        this.className = "active"
-                        map.setLayoutProperty(clickedLayer, "visibility", "visible")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_clustered", "visibility", "none")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_unclustered", "visibility", "none")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_clustered_textlabel", "visibility", "none")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_timeframe_clustered", "visibility", "visible")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_timeframe_unclustered", "visibility", "visible")
+                        map.setLayoutProperty("poi_rank_sorted_clicks_timeframe_clustered_textlabel", "visibility", "visible")
                     }
                 }
 

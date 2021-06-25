@@ -256,7 +256,7 @@ attempt to add time based slider  */
 
 /* attempt to add menu toggle  */
 #menu {
-    background: #404040;
+    background: #242526;
     position: absolute;
     z-index: 1;
     top: 250px;
@@ -289,11 +289,11 @@ attempt to add time based slider  */
     } */
 
 #menu a.active {
-    background-color: #242526;
+    background-color: #404040;
     color: #ffffff;
 }
 
-#menu a.active:hover {
+#menu :hover {
     background: #333333;
 }
 
