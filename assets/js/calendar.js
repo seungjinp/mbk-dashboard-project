@@ -5,25 +5,42 @@ var map = new mapboxgl.Map({
     center: [128, 36.5], // starting position [lng, lat]
     zoom: 7, // starting zoom
 })
-
-var dates = Array.from({ length: 31 }, (_, index) => index + 1)
-var datevalue = ""
-
-function filterBy(date) {
-    var filters = ["==", "Date", date]
-    datevalue = dates[date] - 1
-
-    map.setFilter("poi_all_clicks_points", filters)
-    map.setFilter("poi_all_clicks_heatmap", filters)
-
-    document.getElementById("date").textContent = "Date: June " + datevalue.toString(10)
+var start = moment().subtract(6, "days")
+var end = moment()
+var startyear, endyear, startmonth, endmonth, startdate, enddate
+function cb(start, end) {
+    $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"))
+    ;(startyear = moment($("#reportrange").data("daterangepicker").startDate).toDate().getFullYear()), (endyear = moment($("#reportrange").data("daterangepicker").endDate).toDate().getFullYear())
+    ;(startmonth = moment($("#reportrange").data("daterangepicker").startDate).toDate().getMonth() + 1),
+        (endmonth = moment($("#reportrange").data("daterangepicker").endDate).toDate().getMonth() + 1),
+        (startdate = moment($("#reportrange").data("daterangepicker").startDate).toDate().getDate()),
+        (enddate = moment($("#reportrange").data("daterangepicker").endDate).toDate().getDate())
 }
+
+$("#reportrange").daterangepicker(
+    {
+        startDate: start,
+        endDate: end,
+        ranges: {
+            Today: [moment(), moment()],
+            Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
+            "Last 7 Days": [moment().subtract(6, "days"), moment()],
+            "Last 30 Days": [moment().subtract(29, "days"), moment()],
+            "This Month": [moment().startOf("month"), moment().endOf("month")],
+            "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+        },
+    },
+    cb
+)
+
+cb(start, end)
 
 map.resize()
 
 var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
 
 map.on("load", function () {
+    var filterDate = ["==", ["number", ["get", "Date"]], 24]
     window.setInterval(function () {
         Promise.all([fetch(url)])
             .then(function (responses) {
@@ -38,7 +55,7 @@ map.on("load", function () {
                 var poi_all_clicks = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
 
                 var date_filtered_poi_all_clicks = poi_all_clicks.features.filter(function (feature) {
-                    return feature.properties.Date == datevalue
+                    return feature.properties.Date == startdate
                 })
 
                 var filtered_poi_all_click_collection = {
@@ -53,16 +70,16 @@ map.on("load", function () {
                         if (!alert) return accumulatedCounts
                         if (!accumulatedCounts[alert]) accumulatedCounts[alert] = 0
 
-                        if (d.properties.Date == datevalue) accumulatedCounts[alert]++
+                        if (d.properties.Date >= startdate) accumulatedCounts[alert]++
 
                         return accumulatedCounts
                     }, {})
 
                     d.properties.count = counts[d.properties.poiName]
-                    console.log(filtered_poi_all_click_collection)
+                    //console.log(filtered_poi_all_click_collection)
                     return d
                 })
-                console.log(filtered_poi_all_click_collection)
+                //  console.log(filtered_poi_all_click_collection)
                 map.getSource("poi_all_clicks").setData(filtered_poi_all_click_collection)
             })
             .catch(function (error) {
@@ -93,6 +110,7 @@ map.on("load", function () {
             "circle-color": ["interpolate", ["linear"], ["to-number", ["get", "count"]], 0, "#b3e5fc", 10, "#03A9F4", 20, "#01579B"],
             "circle-radius": ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]],
         },
+        filter: ["all", filterDate],
     })
 
     map.addLayer({
@@ -115,7 +133,43 @@ map.on("load", function () {
             // Transition from heatmap to circle layer by zoom level
             "heatmap-opacity": ["interpolate", ["linear"], ["zoom"], 7, 1, 15, 0],
         },
+        filter: ["all", filterDate],
     })
+
+    var start = moment().subtract(6, "days")
+    var end = moment()
+    var startyear, endyear, startmonth, endmonth, startdate, enddate
+    function cb(start, end) {
+        $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"))
+        ;(startyear = moment($("#reportrange").data("daterangepicker").startDate).toDate().getFullYear()), (endyear = moment($("#reportrange").data("daterangepicker").endDate).toDate().getFullYear())
+        ;(startmonth = moment($("#reportrange").data("daterangepicker").startDate).toDate().getMonth() + 1),
+            (endmonth = moment($("#reportrange").data("daterangepicker").endDate).toDate().getMonth() + 1),
+            (startdate = moment($("#reportrange").data("daterangepicker").startDate).toDate().getDate()),
+            (enddate = moment($("#reportrange").data("daterangepicker").endDate).toDate().getDate())
+        console.log(startyear, endyear, startmonth, endmonth, startdate, enddate)
+        filterDate = ["==", ["number", ["get", "Date"]], startdate]
+        map.setFilter("poi_all_clicks_heatmap", ["all", filterDate])
+        map.setFilter("poi_all_clicks_points", ["all", filterDate])
+        console.log(startyear, endyear, startmonth, endmonth, startdate, enddate)
+    }
+
+    $("#reportrange").daterangepicker(
+        {
+            startDate: start,
+            endDate: end,
+            ranges: {
+                Today: [moment(), moment()],
+                Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
+                "Last 7 Days": [moment().subtract(6, "days"), moment()],
+                "Last 30 Days": [moment().subtract(29, "days"), moment()],
+                "This Month": [moment().startOf("month"), moment().endOf("month")],
+                "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+            },
+        },
+        cb
+    )
+
+    cb(start, end)
 })
 
 map.on("load", function () {
@@ -238,13 +292,5 @@ map.on("load", function () {
     map.on("mouseleave", "poi_all_clicks_points", function () {
         map.getCanvas().style.cursor = ""
         popup.remove()
-    })
-
-    filterBy(0)
-
-    document.getElementById("slider").addEventListener("input", function (e) {
-        var date = parseInt(e.target.value, 10)
-
-        filterBy(dates[date])
     })
 })

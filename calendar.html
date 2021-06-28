@@ -16,6 +16,10 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
   <script
     src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 
 
@@ -33,16 +37,21 @@
     <li title="report"><a href="#" class="report">about</a></li>
   </ul>
 
+
+
   <div class="map-overlay top">
-    <div class="map-overlay-inner">
-      <h2>Filter by Time</h2>
-      <label id="date"></label>
-      <input id="slider" type="range" class="rs-range" min="0" max="31" step="1" value="0">
-      <div class="box-minmax">
-        <span>June 1st</span><span>June 30th</span>
+
+    <div class="form-group">
+      <label for="sel1">Date:</label>
+      <div id="reportrange"
+        style="width:400px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+        <i class="fa fa-caenddatear"></i>&nbsp;
+        <span></span>
       </div>
+
     </div>
   </div>
+
 
 
 

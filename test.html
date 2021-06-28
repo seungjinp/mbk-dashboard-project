@@ -1,21 +1,40 @@
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<!DOCTYPE html>
+<html>
 
-<div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-    <i class="fa fa-calendar"></i>&nbsp;
-    <span></span> <i class="fa fa-caret-down"></i>
-</div>
+<head>
+    <title>Title of the document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
 
-<script type="text/javascript">
-    $(function () {
+<body>
+    <div class="form-group">
+        <label for="sel1">Date:</label>
+        <div id="reportrange"
+            style="width:400px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+            <i class="fa fa-caenddatear"></i>&nbsp;
+            <span></span>
+        </div>
+    </div>
 
-        var start = moment().subtract(29, 'days');
+    <script>
+
+
+        var start = moment().subtract(6, 'days');
         var end = moment();
-
+        var startyear, endyear, startmonth, endmonth, startdate, enddate;
         function cb(start, end) {
             $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            startyear = moment($('#reportrange').data('daterangepicker').startDate).toDate().getFullYear(),
+                endyear = moment($('#reportrange').data('daterangepicker').endDate).toDate().getFullYear()
+            startmonth = moment($('#reportrange').data('daterangepicker').startDate).toDate().getMonth() + 1,
+                endmonth = moment($('#reportrange').data('daterangepicker').endDate).toDate().getMonth() + 1,
+                startdate = moment($('#reportrange').data('daterangepicker').startDate).toDate().getDate(),
+                enddate = moment($('#reportrange').data('daterangepicker').endDate).toDate().getDate();
+            console.log(startyear, endyear, startmonth, endmonth, startdate, enddate)
+
         }
 
         $('#reportrange').daterangepicker({
@@ -32,7 +51,11 @@
         }, cb);
 
         cb(start, end);
-        console.log(start);
 
-    });
-</script>
+
+
+
+    </script>
+</body>
+
+</html>
