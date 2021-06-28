@@ -24,7 +24,6 @@ map.resize()
 var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
 
 map.on("load", function () {
-    var filterHour = ["==", ["get", "Date"]]
     window.setInterval(function () {
         Promise.all([fetch(url)])
             .then(function (responses) {
@@ -38,8 +37,17 @@ map.on("load", function () {
             .then(function (data) {
                 var poi_all_clicks = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
 
-                poi_all_clicks.features = poi_all_clicks.features.map(function (d) {
-                    const counts = poi_all_clicks.features.reduce((accumulatedCounts, feature) => {
+                var date_filtered_poi_all_clicks = poi_all_clicks.features.filter(function (feature) {
+                    return feature.properties.Date == datevalue
+                })
+
+                var filtered_poi_all_click_collection = {
+                    type: "FeatureCollection",
+                    features: date_filtered_poi_all_clicks,
+                }
+                console.log(filtered_poi_all_click_collection)
+                filtered_poi_all_click_collection.features = filtered_poi_all_click_collection.features.map(function (d) {
+                    const counts = filtered_poi_all_click_collection.features.reduce((accumulatedCounts, feature) => {
                         const alert = feature.properties.poiName
 
                         if (!alert) return accumulatedCounts
@@ -51,17 +59,17 @@ map.on("load", function () {
                     }, {})
 
                     d.properties.count = counts[d.properties.poiName]
-
+                    console.log(filtered_poi_all_click_collection)
                     return d
                 })
-
-                map.getSource("poi_all_clicks").setData(poi_all_clicks)
+                console.log(filtered_poi_all_click_collection)
+                map.getSource("poi_all_clicks").setData(filtered_poi_all_click_collection)
             })
             .catch(function (error) {
                 // if there's an error, log it
                 console.log(error)
             })
-    }, 500)
+    }, 1000)
 
     // add map sources
 
@@ -78,8 +86,8 @@ map.on("load", function () {
         source: "poi_all_clicks",
 
         paint: {
-            "circle-opacity": ["interpolate", ["linear"], ["zoom"], 7, 0, 14, 1],
-            "circle-color": "white",
+            "circle-opacity": ["interpolate", ["linear"], ["zoom"], 7, 0, 14, 0.65],
+
             // "circle-stroke-color": "white",
             // "circle-stroke-width": 1,
             "circle-color": ["interpolate", ["linear"], ["to-number", ["get", "count"]], 0, "#b3e5fc", 10, "#03A9F4", 20, "#01579B"],
@@ -182,6 +190,7 @@ map.on("load", function () {
         var searchcounts = e.features[0].properties.count
         var uniquecars = e.features[0].properties.uniqueCars
         var avgdistance = e.features[0].properties.avgDistance
+        console.log(searchcounts)
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
