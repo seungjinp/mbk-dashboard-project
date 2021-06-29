@@ -5,16 +5,14 @@ var map = new mapboxgl.Map({
     center: [128, 36.5], // starting position [lng, lat]
     zoom: 7, // starting zoom
 })
+//initialize datepicker
 var start = moment().subtract(6, "days")
 var end = moment()
-var startyear, endyear, startmonth, endmonth, startdate, enddate
+var starttime, endtime
 function cb(start, end) {
     $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"))
-    ;(startyear = moment($("#reportrange").data("daterangepicker").startDate).toDate().getFullYear()), (endyear = moment($("#reportrange").data("daterangepicker").endDate).toDate().getFullYear())
-    ;(startmonth = moment($("#reportrange").data("daterangepicker").startDate).toDate().getMonth() + 1),
-        (endmonth = moment($("#reportrange").data("daterangepicker").endDate).toDate().getMonth() + 1),
-        (startdate = moment($("#reportrange").data("daterangepicker").startDate).toDate().getDate()),
-        (enddate = moment($("#reportrange").data("daterangepicker").endDate).toDate().getDate())
+    ;(starttime = moment($("#reportrange").data("daterangepicker").startDate).toDate().getTime()),
+        (endtime = moment($("#reportrange").data("daterangepicker").endDate).toDate().getTime())
 }
 
 $("#reportrange").daterangepicker(
@@ -40,7 +38,7 @@ map.resize()
 var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
 
 map.on("load", function () {
-    var filterDate = ["==", ["number", ["get", "Date"]], 24]
+    var filterDate = ["==", ["number", ["get", "Date"]], 0]
     window.setInterval(function () {
         Promise.all([fetch(url)])
             .then(function (responses) {
@@ -55,14 +53,14 @@ map.on("load", function () {
                 var poi_all_clicks = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
 
                 var date_filtered_poi_all_clicks = poi_all_clicks.features.filter(function (feature) {
-                    return feature.properties.Date == startdate
+                    if (feature.properties.clickTimes >= starttime && endtime >= feature.properties.clickTimes) return feature.properties.clickTimes
                 })
 
                 var filtered_poi_all_click_collection = {
                     type: "FeatureCollection",
                     features: date_filtered_poi_all_clicks,
                 }
-                console.log(filtered_poi_all_click_collection)
+
                 filtered_poi_all_click_collection.features = filtered_poi_all_click_collection.features.map(function (d) {
                     const counts = filtered_poi_all_click_collection.features.reduce((accumulatedCounts, feature) => {
                         const alert = feature.properties.poiName
@@ -70,23 +68,23 @@ map.on("load", function () {
                         if (!alert) return accumulatedCounts
                         if (!accumulatedCounts[alert]) accumulatedCounts[alert] = 0
 
-                        if (d.properties.Date >= startdate) accumulatedCounts[alert]++
+                        if (feature.properties.clickTimes >= starttime && endtime >= feature.properties.clickTimes) accumulatedCounts[alert]++
 
                         return accumulatedCounts
                     }, {})
 
                     d.properties.count = counts[d.properties.poiName]
-                    //console.log(filtered_poi_all_click_collection)
+                    console.log(filtered_poi_all_click_collection)
                     return d
                 })
-                //  console.log(filtered_poi_all_click_collection)
+                // console.log(filtered_poi_all_click_collection)
                 map.getSource("poi_all_clicks").setData(filtered_poi_all_click_collection)
             })
             .catch(function (error) {
                 // if there's an error, log it
                 console.log(error)
             })
-    }, 1000)
+    }, 2000)
 
     // add map sources
 
@@ -127,7 +125,23 @@ map.on("load", function () {
             // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
             // Begin color ramp at 0-stop with a 0-transparancy color
             // to create a blur-like effect.
-            "heatmap-color": ["interpolate", ["linear"], ["heatmap-density"], 0, "rgba(33,102,172,0)", 0.2, "rgb(103,169,207)", 0.4, "rgb(209,229,240)", 0.6, "rgb(253,219,199)", 0.8, "rgb(239,138,98)", 1, "rgb(178,24,43)"],
+            "heatmap-color": [
+                "interpolate",
+                ["linear"],
+                ["heatmap-density"],
+                0,
+                "rgba(33,102,172,0)",
+                0.2,
+                "rgb(103,169,207)",
+                0.4,
+                "rgb(209,229,240)",
+                0.6,
+                "rgb(253,219,199)",
+                0.8,
+                "rgb(239,138,98)",
+                1,
+                "rgb(178,24,43)",
+            ],
             // Adjust the heatmap radius by zoom level
             "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 0, 2, 7, ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]]],
             // Transition from heatmap to circle layer by zoom level
@@ -138,19 +152,16 @@ map.on("load", function () {
 
     var start = moment().subtract(6, "days")
     var end = moment()
-    var startyear, endyear, startmonth, endmonth, startdate, enddate
+
     function cb(start, end) {
         $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"))
-        ;(startyear = moment($("#reportrange").data("daterangepicker").startDate).toDate().getFullYear()), (endyear = moment($("#reportrange").data("daterangepicker").endDate).toDate().getFullYear())
-        ;(startmonth = moment($("#reportrange").data("daterangepicker").startDate).toDate().getMonth() + 1),
-            (endmonth = moment($("#reportrange").data("daterangepicker").endDate).toDate().getMonth() + 1),
-            (startdate = moment($("#reportrange").data("daterangepicker").startDate).toDate().getDate()),
-            (enddate = moment($("#reportrange").data("daterangepicker").endDate).toDate().getDate())
-        console.log(startyear, endyear, startmonth, endmonth, startdate, enddate)
-        filterDate = ["==", ["number", ["get", "Date"]], startdate]
+        ;(starttime = moment($("#reportrange").data("daterangepicker").startDate).toDate().getTime()),
+            (endtime = moment($("#reportrange").data("daterangepicker").endDate).toDate().getTime())
+
+        filterDate = ["all", [">=", ["get", "clickTimes"], starttime], ["<=", ["get", "clickTimes"], endtime]]
+
         map.setFilter("poi_all_clicks_heatmap", ["all", filterDate])
         map.setFilter("poi_all_clicks_points", ["all", filterDate])
-        console.log(startyear, endyear, startmonth, endmonth, startdate, enddate)
     }
 
     $("#reportrange").daterangepicker(
@@ -242,9 +253,7 @@ map.on("load", function () {
         var coordinates = e.features[0].geometry.coordinates.slice()
         var description = e.features[0].properties.poiName
         var searchcounts = e.features[0].properties.count
-        var uniquecars = e.features[0].properties.uniqueCars
-        var avgdistance = e.features[0].properties.avgDistance
-        console.log(searchcounts)
+        var mapfeaturetype = e.features[0].properties.mapFeatureType
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
@@ -258,7 +267,7 @@ map.on("load", function () {
         popup
             .setLngLat(coordinates)
             .setMaxWidth("1000px")
-            .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "Number of Unique Vehicles: " + uniquecars + "<br>" + "Average Distance from POI: " + avgdistance + "km")
+            .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "POI Category: " + mapfeaturetype)
             .addTo(map)
 
         //change popup content based on langauge button clicked
@@ -267,7 +276,7 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "Number of Unique Vehicles: " + uniquecars + "<br>" + "Average Distance from POI: " + avgdistance + "km")
+                .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "POI Category: " + mapfeaturetype)
                 .addTo(map)
         }
 
@@ -276,7 +285,7 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI 이름: " + description + "<br>" + "누적 검색 횟수: " + searchcounts + "<br>" + "검색한 차량 숫자: " + uniquecars + "<br>" + "POI 평균 거리: " + avgdistance + "km")
+                .setHTML("POI 이름: " + description + "<br>" + "누적 검색 횟수: " + searchcounts + "<br>" + "POI 카테고리: " + mapfeaturetype)
                 .addTo(map)
         }
 
@@ -285,7 +294,16 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI Name: " + description + "<br>" + "Gesamtanzahl der Suchanfragen: " + searchcounts + "<br>" + "Anzahl einzigartiger Fahrzeuge: " + uniquecars + "<br>" + "Durchschnittliche Entfernung vom POI: " + avgdistance + "km")
+                .setHTML(
+                    "POI Name: " +
+                        description +
+                        "<br>" +
+                        "Gesamtanzahl der Suchanfragen: " +
+                        searchcounts +
+                        "<br>" +
+                        "POI Kategorie: " +
+                        mapfeaturetype
+                )
                 .addTo(map)
         }
     })
