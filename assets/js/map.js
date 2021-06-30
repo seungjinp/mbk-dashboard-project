@@ -28,6 +28,7 @@ map.on("load", function () {
 
                 map.getSource("poi_rank_sorted_clicks").setData(poi_clicks_sortedby_counts)
                 map.getSource("poi_rank_sorted_clicks_timeframe").setData(poi_clicks_sortedby_counts_timeframe)
+                console.log(poi_clicks_sortedby_counts)
             })
             .catch(function (error) {
                 // if there's an error, log it
@@ -233,7 +234,20 @@ map.on("load", function () {
         popup
             .setLngLat(coordinates)
             .setMaxWidth("1000px")
-            .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "Number of Unique Vehicles: " + uniquecars + "<br>" + "Average Distance from POI: " + avgdistance + "km")
+            .setHTML(
+                "POI Name: " +
+                    description +
+                    "<br>" +
+                    "Total Search Counts: " +
+                    searchcounts +
+                    "<br>" +
+                    "Number of Unique Vehicles: " +
+                    uniquecars +
+                    "<br>" +
+                    "Average Distance from POI: " +
+                    avgdistance +
+                    "km"
+            )
             .addTo(map)
 
         //change popup content based on langauge button clicked
@@ -242,7 +256,20 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "Number of Unique Vehicles: " + uniquecars + "<br>" + "Average Distance from POI: " + avgdistance + "km")
+                .setHTML(
+                    "POI Name: " +
+                        description +
+                        "<br>" +
+                        "Total Search Counts: " +
+                        searchcounts +
+                        "<br>" +
+                        "Number of Unique Vehicles: " +
+                        uniquecars +
+                        "<br>" +
+                        "Average Distance from POI: " +
+                        avgdistance +
+                        "km"
+                )
                 .addTo(map)
         }
 
@@ -251,7 +278,20 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI 이름: " + description + "<br>" + "누적 검색 횟수: " + searchcounts + "<br>" + "검색한 차량 숫자: " + uniquecars + "<br>" + "POI 평균 거리: " + avgdistance + "km")
+                .setHTML(
+                    "POI 이름: " +
+                        description +
+                        "<br>" +
+                        "누적 검색 횟수: " +
+                        searchcounts +
+                        "<br>" +
+                        "검색한 차량 숫자: " +
+                        uniquecars +
+                        "<br>" +
+                        "POI 평균 거리: " +
+                        avgdistance +
+                        "km"
+                )
                 .addTo(map)
         }
 
@@ -260,7 +300,20 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI Name: " + description + "<br>" + "Gesamtanzahl der Suchanfragen: " + searchcounts + "<br>" + "Anzahl einzigartiger Fahrzeuge: " + uniquecars + "<br>" + "Durchschnittliche Entfernung vom POI: " + avgdistance + "km")
+                .setHTML(
+                    "POI Name: " +
+                        description +
+                        "<br>" +
+                        "Gesamtanzahl der Suchanfragen: " +
+                        searchcounts +
+                        "<br>" +
+                        "Anzahl einzigartiger Fahrzeuge: " +
+                        uniquecars +
+                        "<br>" +
+                        "Durchschnittliche Entfernung vom POI: " +
+                        avgdistance +
+                        "km"
+                )
                 .addTo(map)
         }
     })
@@ -290,7 +343,20 @@ map.on("load", function () {
         popup
             .setLngLat(coordinates)
             .setMaxWidth("1000px")
-            .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "Number of Unique Vehicles: " + uniquecars + "<br>" + "Average Distance from POI: " + avgdistance + "km")
+            .setHTML(
+                "POI Name: " +
+                    description +
+                    "<br>" +
+                    "Total Search Counts: " +
+                    searchcounts +
+                    "<br>" +
+                    "Number of Unique Vehicles: " +
+                    uniquecars +
+                    "<br>" +
+                    "Average Distance from POI: " +
+                    avgdistance +
+                    "km"
+            )
             .addTo(map)
 
         //change popup content based on langauge button clicked
@@ -299,7 +365,20 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI Name: " + description + "<br>" + "Total Search Counts: " + searchcounts + "<br>" + "Number of Unique Vehicles: " + uniquecars + "<br>" + "Average Distance from POI: " + avgdistance + "km")
+                .setHTML(
+                    "POI Name: " +
+                        description +
+                        "<br>" +
+                        "Total Search Counts: " +
+                        searchcounts +
+                        "<br>" +
+                        "Number of Unique Vehicles: " +
+                        uniquecars +
+                        "<br>" +
+                        "Average Distance from POI: " +
+                        avgdistance +
+                        "km"
+                )
                 .addTo(map)
         }
 
@@ -308,7 +387,20 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI 이름: " + description + "<br>" + "누적 검색 횟수: " + searchcounts + "<br>" + "검색한 차량 숫자: " + uniquecars + "<br>" + "POI 평균 거리: " + avgdistance + "km")
+                .setHTML(
+                    "POI 이름: " +
+                        description +
+                        "<br>" +
+                        "누적 검색 횟수: " +
+                        searchcounts +
+                        "<br>" +
+                        "검색한 차량 숫자: " +
+                        uniquecars +
+                        "<br>" +
+                        "POI 평균 거리: " +
+                        avgdistance +
+                        "km"
+                )
                 .addTo(map)
         }
 
@@ -317,7 +409,20 @@ map.on("load", function () {
             popup
                 .setLngLat(coordinates)
                 .setMaxWidth("1000px")
-                .setHTML("POI Name: " + description + "<br>" + "Gesamtanzahl der Suchanfragen: " + searchcounts + "<br>" + "Anzahl einzigartiger Fahrzeuge: " + uniquecars + "<br>" + "Durchschnittliche Entfernung vom POI: " + avgdistance + "km")
+                .setHTML(
+                    "POI Name: " +
+                        description +
+                        "<br>" +
+                        "Gesamtanzahl der Suchanfragen: " +
+                        searchcounts +
+                        "<br>" +
+                        "Anzahl einzigartiger Fahrzeuge: " +
+                        uniquecars +
+                        "<br>" +
+                        "Durchschnittliche Entfernung vom POI: " +
+                        avgdistance +
+                        "km"
+                )
                 .addTo(map)
         }
     })

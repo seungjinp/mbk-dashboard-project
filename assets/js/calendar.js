@@ -36,11 +36,12 @@ cb(start, end)
 map.resize()
 
 var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks"
+var url2 = "./cardata.json"
 
 map.on("load", function () {
     var filterDate = ["==", ["number", ["get", "Date"]], 0]
     window.setInterval(function () {
-        Promise.all([fetch(url)])
+        Promise.all([fetch(url), fetch(url2)])
             .then(function (responses) {
                 // Get a JSON object from each of the responses
                 return Promise.all(
@@ -51,6 +52,8 @@ map.on("load", function () {
             })
             .then(function (data) {
                 var poi_all_clicks = GeoJSON.parse(data[0], { Point: ["Latitude", "Longitude"] })
+                var car_routes = GeoJSON.parse(data[1], { LineString: "Route" })
+                console.log(car_routes)
 
                 var date_filtered_poi_all_clicks = poi_all_clicks.features.filter(function (feature) {
                     if (feature.properties.clickTimes >= starttime && endtime >= feature.properties.clickTimes) return feature.properties.clickTimes
@@ -74,11 +77,13 @@ map.on("load", function () {
                     }, {})
 
                     d.properties.count = counts[d.properties.poiName]
-                    console.log(filtered_poi_all_click_collection)
+
                     return d
                 })
-                // console.log(filtered_poi_all_click_collection)
+                console.log(filtered_poi_all_click_collection)
                 map.getSource("poi_all_clicks").setData(filtered_poi_all_click_collection)
+                // console.log(car_routes)
+                map.getSource("car_routes").setData(car_routes)
             })
             .catch(function (error) {
                 // if there's an error, log it
@@ -93,7 +98,26 @@ map.on("load", function () {
         data: url,
     })
 
+    map.addSource("car_routes", {
+        type: "geojson",
+        data: url2,
+    })
+
     // add map layers
+    //linestring attempt
+    map.addLayer({
+        id: "route",
+        type: "line",
+        source: "car_routes",
+        layout: {
+            "line-cap": "round",
+        },
+        paint: {
+            "line-color": "white",
+            "line-width": 0.8,
+            "line-opacity": 0.5,
+        },
+    })
 
     map.addLayer({
         id: "poi_all_clicks_points",
