@@ -3,15 +3,15 @@ var map = new mapboxgl.Map({
     container: "map", // container id
     style: "mapbox://styles/mapbox/dark-v10", // style URL
     center: [128, 36.5], // starting position [lng, lat]
-    zoom: 7, // starting zoom
+    zoom: 6, // starting zoom
 })
 //initialize datepicker
 
 
 map.resize()
 
-var url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks?starttime=1625122929000&endtime=1625814129000"
-var url2
+
+var url
 var start = moment().subtract(6, "days")
 var end = moment()
 var starttime, endtime
@@ -22,8 +22,8 @@ function cb(start, end) {
     $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"));
     starttime = moment($("#reportrange").data("daterangepicker").startDate).toDate().getTime(),
         endtime = moment($("#reportrange").data("daterangepicker").endDate).toDate().getTime()
-    url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks?starttime=" + starttime + "&endtime=" + endtime
-    console.log(url2)
+    url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks?starttime=" + starttime + "&endtime=" + endtime
+    console.log(url)
 
 }
 
@@ -50,13 +50,18 @@ cb(start, end)
 
 
 // var url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks?starttime=" + starttime + "&endtime=" + endtime
-console.log(url2)
+console.log(url)
 
 
 map.on("load", function () {
 
     window.setInterval(function () {
-        Promise.all([fetch(url2)])
+        Promise.all([fetch(url, {
+                headers: {
+                    Accept: "text/plain",
+                    Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibWZzZGV0YWlscyIsImlzcyI6ImFyYW5nb2RiIiwiaWF0IjoxNjI1ODA0NTA5LCJleHAiOjE2MjgzOTY1MDl9.kBo3hQnq_WOyBWBaOL22SQSOjEnKexmG_qNV2VeoTkA"
+                }
+            })])
             .then(function (responses) {
                 // Get a JSON object from each of the responses
                 return Promise.all(
@@ -104,81 +109,120 @@ map.on("load", function () {
 
     map.addSource("poi_all_clicks", {
         type: "geojson",
-        data: url2,
+        data: url,
+        cluster: true,
+        clusterMaxZoom: 14, // Max zoom to cluster points on
+        clusterRadius: 50
     })
 
 
 
     // add map layers
     //linestring attempt
-
-
     map.addLayer({
-        id: "poi_all_clicks_points",
-        type: "circle",
-        source: "poi_all_clicks",
-
+        id: 'clusters',
+        type: 'circle',
+        source: 'poi_all_clicks',
+        filter: ['has', 'point_count'],
         paint: {
-            "circle-opacity": ["interpolate", ["linear"],
-                ["zoom"], 7, 0, 14, 0.65
-            ],
-
-            // "circle-stroke-color": "white",
-            // "circle-stroke-width": 1,
+            "circle-opacity": 0.65,
             "circle-color": ["interpolate", ["linear"],
-                ["to-number", ["get", "count"]], 0, "#b3e5fc", 10, "#03A9F4", 20, "#01579B"
+                ["to-number", ["get", "point_count"]], 0, "#b3e5fc", 10, "#03A9F4", 100, "#01579B"
             ],
-            "circle-radius": ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]],
+            "circle-radius": ["step", ["to-number", ["get", "point_count"]], 10, 5, 20, 10, 30, 20, 35, 40, 40, 50, 60, 80, 70, 120, 90, 150, 100],
         },
-
-    })
+    });
 
     map.addLayer({
-        id: "poi_all_clicks_heatmap",
-        type: "heatmap",
-        source: "poi_all_clicks",
-        maxzoom: 10,
-        paint: {
-            // Increase the heatmap weight based on frequency and property magnitude
-            "heatmap-weight": ["interpolate", ["linear"],
-                ["get", "count"], 0, 0, 6, 1
-            ],
-            // Increase the heatmap color weight weight by zoom level
-            // heatmap-intensity is a multiplier on top of heatmap-weight
-            "heatmap-intensity": ["interpolate", ["linear"],
-                ["zoom"], 0, 1, 15, 3
-            ],
-            // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
-            // Begin color ramp at 0-stop with a 0-transparancy color
-            // to create a blur-like effect.
-            "heatmap-color": [
-                "interpolate",
-                ["linear"],
-                ["heatmap-density"],
-                0,
-                "rgba(33,102,172,0)",
-                0.2,
-                "rgb(103,169,207)",
-                0.4,
-                "rgb(209,229,240)",
-                0.6,
-                "rgb(253,219,199)",
-                0.8,
-                "rgb(239,138,98)",
-                1,
-                "rgb(178,24,43)",
-            ],
-            // Adjust the heatmap radius by zoom level
-            "heatmap-radius": ["interpolate", ["linear"],
-                ["zoom"], 0, 2, 7, ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]]
-            ],
-            // Transition from heatmap to circle layer by zoom level
-            "heatmap-opacity": ["interpolate", ["linear"],
-                ["zoom"], 7, 1, 15, 0
-            ],
-        },
+        id: 'cluster-count',
+        type: 'symbol',
+        source: 'poi_all_clicks',
+        filter: ['has', 'point_count'],
+        layout: {
+            'text-field': '{point_count_abbreviated}',
+            'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+            'text-size': 12
+        }
+    });
 
-    })
+    map.addLayer({
+        id: 'unclustered-point',
+        type: 'circle',
+        source: 'poi_all_clicks',
+        filter: ['!', ['has', 'point_count']],
+        paint: {
+            "circle-opacity": 0.65,
+            "circle-color": "#59a5d8",
+            "circle-radius": ["+", 5, ["*", 2, ["sqrt", ["to-number", ["get", "count"]]]]],
+        },
+    });
+
+    // map.addLayer({
+    //     id: "poi_all_clicks_points",
+    //     type: "circle",
+    //     source: "poi_all_clicks",
+
+    //     paint: {
+    //         "circle-opacity": ["interpolate", ["linear"],
+    //             ["zoom"], 7, 0, 25, 0.65
+    //         ],
+
+    //         // "circle-stroke-color": "white",
+    //         // "circle-stroke-width": 1,
+    //         "circle-color": ["interpolate", ["linear"],
+    //             ["to-number", ["get", "count"]], 0, "#b3e5fc", 10, "#03A9F4", 20, "#01579B"
+    //         ],
+    //         "circle-radius": ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]],
+    //     },
+
+    // })
+
+    // map.addLayer({
+    //     id: "poi_all_clicks_heatmap",
+    //     type: "heatmap",
+    //     source: "poi_all_clicks",
+    //     maxzoom: 10,
+    //     paint: {
+    //         // Increase the heatmap weight based on frequency and property magnitude
+    //         "heatmap-weight": ["interpolate", ["linear"],
+    //             ["get", "count"], 0, 0, 3, 1
+    //         ],
+    //         // Increase the heatmap color weight weight by zoom level
+    //         // heatmap-intensity is a multiplier on top of heatmap-weight
+    //         "heatmap-intensity": ["interpolate", ["linear"],
+    //             ["zoom"], 0, 1, 25, 3
+    //         ],
+    //         // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
+    //         // Begin color ramp at 0-stop with a 0-transparancy color
+    //         // to create a blur-like effect.
+    //         "heatmap-color": [
+    //             "interpolate",
+    //             ["linear"],
+    //             ["heatmap-density"],
+    //             0,
+    //             "rgba(33,102,172,0)",
+    //             0.2,
+    //             "rgb(103,169,207)",
+    //             0.4,
+    //             "rgb(209,229,240)",
+    //             0.6,
+    //             "rgb(253,219,199)",
+    //             0.8,
+    //             "rgb(239,138,98)",
+    //             1,
+    //             "rgb(178,24,43)",
+    //         ],
+    //         // Adjust the heatmap radius by zoom level
+    //         "heatmap-radius": ["interpolate", ["linear"],
+    //             ["zoom"], 0, 2, 7, ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]]
+    //         ],
+    //         // Transition from heatmap to circle layer by zoom level
+    //         "heatmap-opacity": ["interpolate", ["linear"],
+    //             ["zoom"], 7, 1, 25, 0
+    //         ],
+    //     },
+
+    // })
 
 
 })
@@ -216,10 +260,7 @@ map.on("load", function () {
     kobutton.onclick = function () {
         language = "ko"
     }
-    var debutton = document.getElementById("button-de")
-    debutton.onclick = function () {
-        language = "de"
-    }
+
 
     // Use setLayoutProperty to set the value of a layout property in a style layer.
     // The three arguments are the id of the layer, the name of the layout property,
@@ -289,23 +330,8 @@ map.on("load", function () {
                 .addTo(map)
         }
 
-        //popup content for DE
-        if (language === "de") {
-            popup
-                .setLngLat(coordinates)
-                .setMaxWidth("1000px")
-                .setHTML(
-                    "POI Name: " +
-                    description +
-                    "<br>" +
-                    "Gesamtanzahl der Suchanfragen: " +
-                    searchcounts +
-                    "<br>" +
-                    "POI Kategorie: " +
-                    mapfeaturetype
-                )
-                .addTo(map)
-        }
+
+
     })
     map.on("mouseleave", "poi_all_clicks_points", function () {
         map.getCanvas().style.cursor = ""
