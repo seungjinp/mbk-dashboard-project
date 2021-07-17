@@ -1,7 +1,7 @@
 mapboxgl.accessToken = "pk.eyJ1Ijoic3A4MjciLCJhIjoiY2tweXRpdGViMGIyYzJvcW9iMXE0N3h2eiJ9.98Ql8-AvCBlvtNWC4g-NSQ"
 var map = new mapboxgl.Map({
     container: "map", // container id
-    style: "mapbox://styles/mapbox/light-v10", // style URL
+    style: "mapbox://styles/mapbox/dark-v10", // style URL
     center: [128, 36.5], // starting position [lng, lat]
     zoom: 6.5, // starting zoom
 })
@@ -10,21 +10,10 @@ var map = new mapboxgl.Map({
 
 
 var url
-var start = moment().startOf('hour').subtract(6, 'hour')
-var end = moment().startOf('hour')
+var start = moment().subtract(6, 'hour')
+var end = moment()
 var starttime, endtime, collection_name
-// var layerList = document.getElementById('menu');
-// var inputs = layerList.getElementsByTagName('input');
 
-// //dark / light mode
-// function switchLayer(layer) {
-//     var layerId = layer.target.id;
-//     map.setStyle('mapbox://styles/mapbox/' + layerId);
-// }
-
-// for (var i = 0; i < inputs.length; i++) {
-//     inputs[i].onclick = switchLayer;
-// }
 
 //initialize datepicker and set database url with appropriate parameters
 function cb(start, end) {
@@ -61,6 +50,7 @@ cb(start, end)
 //fetch database url and add source to the map
 function addSource() {
     window.setInterval(function () {
+
         var dropdown_value = document.getElementById("slct");
         var collection_name = dropdown_value.options[dropdown_value.selectedIndex].text;
 

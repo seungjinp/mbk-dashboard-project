@@ -50,7 +50,7 @@ body {
   outline: none;
   overflow: hidden;
   box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, 0.2);
-
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,13 +58,13 @@ body {
   cursor: pointer;
   width: 10%;
   padding: 8px;
-  border-radius: 5px;
+
   margin: 5px 0px 20px 20px;
 
   font-size: 16px;
   text-align: center;
-  color: rgb(0, 0, 0);
-  background: #f6f6f4;
+  color: white;
+  background: #2f2f2f;
 
   font-family: "roboto", sans-serif;
   font-weight: 400;
@@ -77,7 +77,7 @@ body {
   top: 0;
   height: 490%;
   width: 200%;
-  background: #e7e7e7;
+  background: #3b3b3b;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
@@ -95,47 +95,21 @@ body {
 }
 
 #reportrange {
-  color: black;
+  color: white;
   width: 20vw;
-  background: #f6f6f4;
-  box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, 0.2);
+  background: #2f2f2f;
   border-radius: 3px;
+  box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, 0.2);
+
   cursor: pointer;
   padding: 10px 10px;
 }
 
-.legend {
-  background-color: #242526;
-  border-radius: 3px;
-  bottom: 30px;
-  box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, 0.2);
-  color: white;
-  font: 16px "roboto", sans-serif;
-  padding: 10px;
-  position: absolute;
-  right: 10px;
-  z-index: 1;
-}
-
-.legend h4 {
-  margin: 0 0 10px;
-}
-
-.legend div span {
-  border-radius: 50%;
-  display: inline-block;
-  height: 10px;
-  margin-right: 5px;
-  width: 10px;
-}
-
-/* 
-attempt to add time based slider  */
 .map-overlay {
   text-align: center;
   align-items: center;
   font-family: "roboto", sans-serif;
-  color: black;
+  color: white;
   font-weight: 400;
   font-size: 14px;
   position: absolute;
@@ -150,7 +124,7 @@ attempt to add time based slider  */
   text-align: center;
   align-items: center;
   font-family: "roboto", sans-serif;
-  color: rgb(0, 0, 0);
+  color: white;
   font-weight: 400;
   font-size: 14px;
   position: absolute;
@@ -163,7 +137,7 @@ attempt to add time based slider  */
 }
 
 .map-overlay .map-overlay-inner {
-  background-color: #242526;
+  background-color: #222222;
   box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, 0.2);
   border-radius: 8px;
   padding: 10px;
@@ -171,7 +145,7 @@ attempt to add time based slider  */
 }
 
 .map-overlay-bottom .map-overlay-inner {
-  background-color: #242526;
+  background-color: #222222;
   box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, 0.2);
   border-radius: 8px;
   padding: 10px;
@@ -204,7 +178,7 @@ select {
   outline: 0;
   box-shadow: none;
   border: 0 !important;
-  background: #f6f6f4;
+  background: #2f2f2f;
   background-image: none;
 }
 /* Remove IE arrow */
@@ -218,16 +192,17 @@ select::-ms-expand {
   width: 10vw;
   height: 3em;
   line-height: 3;
-  background: #ffffff;
+  background: #6e6e6e;
   overflow: hidden;
   border-radius: 0.25em;
   margin-left: 0;
   margin-bottom: 1.5%;
 }
-select {
+
+#slct {
   flex: 1;
   padding: 0 2.5em;
-
+  color: white;
   cursor: pointer;
 }
 /* Arrow */
@@ -237,7 +212,7 @@ select {
   top: 0;
   right: 0;
   padding: 0 1em;
-  background: #e7e7e7;
+  background: #858585;
   cursor: pointer;
   pointer-events: none;
   -webkit-transition: 0.25s all ease;
@@ -246,13 +221,13 @@ select {
 }
 /* Transition */
 .select:hover::after {
-  color: #4d79d8;
+  color: #ee9624;
 }
 
 /*** Table Styles **/
 
 .table-fill {
-  background: white;
+  background: #2f2f2f;
   border-radius: 3px;
   border-collapse: collapse;
   height: 200px;
@@ -266,9 +241,9 @@ select {
 
 .table-fill th {
   color: #d5dde5;
-  background: #1b1e24;
+  background: #2f2f2f;
   border-bottom: 1px solid #c5c5c5;
-  border-right: 1px solid #343a45;
+  border-right: 1px solid #c5c5c5;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -288,11 +263,9 @@ select {
 }
 
 .table-fill tr {
-  border-top: 1px solid #c1c3d1;
-  border-bottom: 1px solid #c1c3d1;
-  color: #666b85;
+  color: white;
   font-size: 12px;
-
+  border-bottom: 1px solid #c5c5c5;
   font-weight: normal;
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
@@ -306,7 +279,7 @@ select {
 }
 
 .table-fill tr:nth-child(odd) td {
-  background: #ebebeb;
+  background: #2f2f2f;
 }
 
 .table-fill tr:last-child td:first-child {
@@ -318,14 +291,14 @@ select {
 }
 
 .table-fill td {
-  background: #ffffff;
+  background: #4b4b4b;
   padding: 5px;
   text-align: center;
   vertical-align: middle;
   font-weight: 300;
   font-size: 12px;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #c1c3d1;
+  border-right: 1px solid #c5c5c5;
 }
 
 .table-fill td:last-child {
