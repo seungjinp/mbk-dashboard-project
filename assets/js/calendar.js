@@ -1,60 +1,66 @@
 mapboxgl.accessToken = "pk.eyJ1Ijoic3A4MjciLCJhIjoiY2tweXRpdGViMGIyYzJvcW9iMXE0N3h2eiJ9.98Ql8-AvCBlvtNWC4g-NSQ"
 var map = new mapboxgl.Map({
     container: "map", // container id
-    style: "mapbox://styles/mapbox/dark-v10", // style URL
+    style: "mapbox://styles/mapbox/light-v10", // style URL
     center: [128, 36.5], // starting position [lng, lat]
-    zoom: 6, // starting zoom
+    zoom: 6.5, // starting zoom
 })
-//initialize datepicker
 
 
-map.resize()
 
 
 var url
-var start = moment().subtract(6, "days")
-var end = moment()
-var starttime, endtime
+var start = moment().startOf('hour').subtract(6, 'hour')
+var end = moment().startOf('hour')
+var starttime, endtime, collection_name
+// var layerList = document.getElementById('menu');
+// var inputs = layerList.getElementsByTagName('input');
 
+// //dark / light mode
+// function switchLayer(layer) {
+//     var layerId = layer.target.id;
+//     map.setStyle('mapbox://styles/mapbox/' + layerId);
+// }
 
+// for (var i = 0; i < inputs.length; i++) {
+//     inputs[i].onclick = switchLayer;
+// }
 
+//initialize datepicker and set database url with appropriate parameters
 function cb(start, end) {
-    $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"));
+    $("#reportrange span").html(start.format('YYYY/M/DD hh:mm A') + " - " + end.format('YYYY/M/DD hh:mm A'));
     starttime = moment($("#reportrange").data("daterangepicker").startDate).toDate().getTime(),
         endtime = moment($("#reportrange").data("daterangepicker").endDate).toDate().getTime()
-    url = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks?starttime=" + starttime + "&endtime=" + endtime
+
+    url = "https://52.231.189.216:8529/_db/mfsdetails/visualization/kor_poiclicks?starttime=" + starttime + "&endtime=" + endtime + "&collection_name=prod"
     console.log(url)
 
 }
 
 $("#reportrange").daterangepicker({
+        timePicker: true,
         startDate: start,
         endDate: end,
         ranges: {
-            Today: [moment(), moment()],
-            Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
+            "Last 1 Hour": [moment().subtract(1, "hours"), moment()],
+            "Last 12 Hours": [moment().subtract(12, "hours"), moment()],
+            "Last 24 Hours": [moment().subtract(24, "hours"), moment()],
             "Last 7 Days": [moment().subtract(6, "days"), moment()],
-            "Last 30 Days": [moment().subtract(29, "days"), moment()],
             "This Month": [moment().startOf("month"), moment().endOf("month")],
             "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
         },
+        locale: {
+            format: 'M/DD hh:mm A'
+        }
     },
     cb
 )
 
 cb(start, end)
-// var startDate = $('#reportrange').data('daterangepicker').startDate._d;
-// var endDate = $('#reportrange').data('daterangepicker').endDate._d;
-// console.log(startDate)
 
 
-
-// var url2 = "https://52.231.189.216:8529/_db/mfsdetails/mfsdetails/kor_nonprod_all_poiclicks?starttime=" + starttime + "&endtime=" + endtime
-console.log(url)
-
-
-map.on("load", function () {
-
+//fetch database url and add source to the map
+function addSource() {
     window.setInterval(function () {
         Promise.all([fetch(url, {
                 headers: {
@@ -71,65 +77,59 @@ map.on("load", function () {
                 )
             })
             .then(function (data) {
-                var poi_all_clicks = GeoJSON.parse(data[0], {
-                    Point: ["Latitude", "Longitude"]
-                })
-
-
-
-
-                poi_all_clicks.features = poi_all_clicks.features.map(function (d) {
-                    const counts = poi_all_clicks.features.reduce((accumulatedCounts, feature) => {
-                        const alert = feature.properties.poiName
-
-                        if (!alert) return accumulatedCounts
-                        if (!accumulatedCounts[alert]) accumulatedCounts[alert] = 0
-
-                        accumulatedCounts[alert]++
-
-                        return accumulatedCounts
-                    }, {})
-
-                    d.properties.count = counts[d.properties.poiName]
-
-                    return d
-                })
+                //geojson formation
+                var poi_all_clicks = {
+                    "type": "FeatureCollection",
+                    "features": []
+                }
+                poi_all_clicks.features = data[0]
                 console.log(poi_all_clicks)
 
-                map.getSource("poi_all_clicks").setData(poi_all_clicks)
 
+                var res = Object.keys(poi_all_clicks.features).reduce((acc, elem) => {
+                    acc[elem] = poi_all_clicks.features[elem].properties.count;
+                    return acc;
+                }, {});
+
+
+                const totalcounts = Object.values(res).reduce((a, b) => a + b, 0)
+                console.log(totalcounts);
+                document.getElementById("legend").innerHTML = "Total POI Clicks: " + totalcounts;
+                map.getSource("poi_all_clicks").setData(poi_all_clicks)
             })
             .catch(function (error) {
-                // if there's an error, log it
                 console.log(error)
             })
-    }, 2000)
-
-    // add map sources
+    }, 5000)
 
     map.addSource("poi_all_clicks", {
         type: "geojson",
         data: url,
         cluster: true,
-        clusterMaxZoom: 14, // Max zoom to cluster points on
-        clusterRadius: 50
+        clusterMaxZoom: 11,
+        clusterMinPoints: 5,
+        clusterRadius: 70
     })
+}
 
-
-
-    // add map layers
-    //linestring attempt
+//add data visualization layers to the map
+function addLayer() {
     map.addLayer({
         id: 'clusters',
         type: 'circle',
         source: 'poi_all_clicks',
         filter: ['has', 'point_count'],
         paint: {
-            "circle-opacity": 0.65,
-            "circle-color": ["interpolate", ["linear"],
-                ["to-number", ["get", "point_count"]], 0, "#b3e5fc", 10, "#03A9F4", 100, "#01579B"
-            ],
-            "circle-radius": ["step", ["to-number", ["get", "point_count"]], 10, 5, 20, 10, 30, 20, 35, 40, 40, 50, 60, 80, 70, 120, 90, 150, 100],
+            "circle-opacity": 0.6,
+            "circle-stroke-width": 0.8,
+            "circle-stroke-color": "#005FD0",
+            "circle-color": "#4DABFF",
+            'circle-radius': [
+                "interpolate", ["linear"],
+                ["zoom"],
+                0, 0,
+                20, ["*", 10, ["sqrt", ['get', 'point_count']]]
+            ]
         },
     });
 
@@ -140,7 +140,7 @@ map.on("load", function () {
         filter: ['has', 'point_count'],
         layout: {
             'text-field': '{point_count_abbreviated}',
-            'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
             'text-size': 12
         }
     });
@@ -151,81 +151,28 @@ map.on("load", function () {
         source: 'poi_all_clicks',
         filter: ['!', ['has', 'point_count']],
         paint: {
+            "circle-stroke-width": 0.8,
+            "circle-stroke-color": "#005FD0",
             "circle-opacity": 0.65,
-            "circle-color": "#59a5d8",
-            "circle-radius": ["+", 5, ["*", 2, ["sqrt", ["to-number", ["get", "count"]]]]],
+            "circle-color": "#4DABFF",
+            "circle-radius": [
+                "interpolate", ["linear"],
+                ["zoom"],
+                0, 0,
+                20, ["*", 10, ["sqrt", ['get', 'count']]]
+            ],
         },
     });
 
-    // map.addLayer({
-    //     id: "poi_all_clicks_points",
-    //     type: "circle",
-    //     source: "poi_all_clicks",
+}
 
-    //     paint: {
-    //         "circle-opacity": ["interpolate", ["linear"],
-    //             ["zoom"], 7, 0, 25, 0.65
-    //         ],
+map.on("style.load", function () {
 
-    //         // "circle-stroke-color": "white",
-    //         // "circle-stroke-width": 1,
-    //         "circle-color": ["interpolate", ["linear"],
-    //             ["to-number", ["get", "count"]], 0, "#b3e5fc", 10, "#03A9F4", 20, "#01579B"
-    //         ],
-    //         "circle-radius": ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]],
-    //     },
-
-    // })
-
-    // map.addLayer({
-    //     id: "poi_all_clicks_heatmap",
-    //     type: "heatmap",
-    //     source: "poi_all_clicks",
-    //     maxzoom: 10,
-    //     paint: {
-    //         // Increase the heatmap weight based on frequency and property magnitude
-    //         "heatmap-weight": ["interpolate", ["linear"],
-    //             ["get", "count"], 0, 0, 3, 1
-    //         ],
-    //         // Increase the heatmap color weight weight by zoom level
-    //         // heatmap-intensity is a multiplier on top of heatmap-weight
-    //         "heatmap-intensity": ["interpolate", ["linear"],
-    //             ["zoom"], 0, 1, 25, 3
-    //         ],
-    //         // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
-    //         // Begin color ramp at 0-stop with a 0-transparancy color
-    //         // to create a blur-like effect.
-    //         "heatmap-color": [
-    //             "interpolate",
-    //             ["linear"],
-    //             ["heatmap-density"],
-    //             0,
-    //             "rgba(33,102,172,0)",
-    //             0.2,
-    //             "rgb(103,169,207)",
-    //             0.4,
-    //             "rgb(209,229,240)",
-    //             0.6,
-    //             "rgb(253,219,199)",
-    //             0.8,
-    //             "rgb(239,138,98)",
-    //             1,
-    //             "rgb(178,24,43)",
-    //         ],
-    //         // Adjust the heatmap radius by zoom level
-    //         "heatmap-radius": ["interpolate", ["linear"],
-    //             ["zoom"], 0, 2, 7, ["+", 5, ["*", 5, ["sqrt", ["to-number", ["get", "count"]]]]]
-    //         ],
-    //         // Transition from heatmap to circle layer by zoom level
-    //         "heatmap-opacity": ["interpolate", ["linear"],
-    //             ["zoom"], 7, 1, 25, 0
-    //         ],
-    //     },
-
-    // })
-
+    addSource();
+    addLayer();
 
 })
+
 
 map.on("load", function () {
     // Add the control geocoder to the map.
@@ -260,8 +207,6 @@ map.on("load", function () {
     kobutton.onclick = function () {
         language = "ko"
     }
-
-
     // Use setLayoutProperty to set the value of a layout property in a style layer.
     // The three arguments are the id of the layer, the name of the layout property,
     // and the new property value.
@@ -288,7 +233,7 @@ map.on("load", function () {
         closeOnClick: false,
     })
 
-    map.on("mouseenter", "poi_all_clicks_points", function (e) {
+    map.on("mouseenter", "unclustered-point", function (e) {
         map.getCanvas().style.cursor = "pointer" // Change the cursor style as a UI indicator.
 
         var coordinates = e.features[0].geometry.coordinates.slice()
@@ -329,12 +274,10 @@ map.on("load", function () {
                 .setHTML("POI 이름: " + description + "<br>" + "누적 검색 횟수: " + searchcounts + "<br>" + "POI 카테고리: " + mapfeaturetype)
                 .addTo(map)
         }
-
-
-
     })
-    map.on("mouseleave", "poi_all_clicks_points", function () {
+    map.on("mouseleave", "unclustered-point", function () {
         map.getCanvas().style.cursor = ""
         popup.remove()
     })
+
 })
