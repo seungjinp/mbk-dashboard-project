@@ -36,25 +36,27 @@
 
   <div class="map-overlay top">
 
-    <div class="form-group">
-      <div id="collection_buttons">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-      </div>
-      <input id="output" type="text">
-      <div id="legend">
-
-      </div>
 
 
-      <div id="reportrange">
-        <i class="fa fa-caenddatear"></i>&nbsp;
-        <span></span>
-      </div>
+    <div class="select">
+      <select name="slct" id="slct">
+        <option disabled>Select Database</option>
+        <option selected value="1">prod</option>
+        <option value="2">nonprod</option>
 
+      </select>
     </div>
+
+
+    <div id="reportrange">
+      <i class="fa fa-caenddatear"></i>&nbsp;
+      <span></span>
+    </div>
+
   </div>
+
+
+
 
 
 
@@ -76,38 +78,9 @@
 
   <div class="map-overlay-bottom">
 
-    <!-- <div class="normal-container" id="menu">
-      <div class="mode-container">
-        <div class="toggle-container">
-          <form class="toggle-design">
+    <table id="table" class="table-fill">
 
-            <input id="light-v10" name="rtoggle" type="radio" checked="checked" />
-            <input id="dark-v10" name="rtoggle" type="radio" />
-            <label for="light-v10" class="mode-label mode-label-light-v10">Light</label>
-            <div class="toggle-circle"></div>
-            <div class="toggle-rating-pill"></div>
-            <label for="dark-v10" class="mode-label mode-label-dark-v10">Dark</label>
-
-          </form>
-        </div>
-      </div>
-    </div> -->
-
-
-
-    <!-- <label>
-      <input class="toggle-checkbox" type="checkbox">
-      <div class="toggle-slot">
-        <div class="sun-icon-wrapper">
-          <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
-        </div>
-        <div class="toggle-button"></div>
-        <div class="moon-icon-wrapper">
-          <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
-        </div>
-      </div>
-    </label> -->
-
+    </table>
 
   </div>
 

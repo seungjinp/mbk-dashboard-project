@@ -32,8 +32,7 @@ function cb(start, end) {
     starttime = moment($("#reportrange").data("daterangepicker").startDate).toDate().getTime(),
         endtime = moment($("#reportrange").data("daterangepicker").endDate).toDate().getTime()
 
-    url = "https://52.231.189.216:8529/_db/mfsdetails/visualization/kor_poiclicks?starttime=" + starttime + "&endtime=" + endtime + "&collection_name=prod"
-    console.log(url)
+
 
 }
 
@@ -62,6 +61,10 @@ cb(start, end)
 //fetch database url and add source to the map
 function addSource() {
     window.setInterval(function () {
+        var dropdown_value = document.getElementById("slct");
+        var collection_name = dropdown_value.options[dropdown_value.selectedIndex].text;
+
+        url = "https://52.231.189.216:8529/_db/mfsdetails/visualization/kor_poiclicks?starttime=" + starttime + "&endtime=" + endtime + "&collection_name=" + collection_name
         Promise.all([fetch(url, {
                 headers: {
                     Accept: "text/plain",
@@ -83,7 +86,7 @@ function addSource() {
                     "features": []
                 }
                 poi_all_clicks.features = data[0]
-                console.log(poi_all_clicks)
+                map.getSource("poi_all_clicks").setData(poi_all_clicks)
 
 
                 var res = Object.keys(poi_all_clicks.features).reduce((acc, elem) => {
@@ -93,14 +96,37 @@ function addSource() {
 
 
                 const totalcounts = Object.values(res).reduce((a, b) => a + b, 0)
-                console.log(totalcounts);
-                document.getElementById("legend").innerHTML = "Total POI Clicks: " + totalcounts;
-                map.getSource("poi_all_clicks").setData(poi_all_clicks)
+
+
+
+                table = document.getElementById('table');
+
+
+                table.innerHTML =
+                    '<thead><tr><th class text-center>POI Name</th> <th class text-center>Click Counts</tr> </thead>' +
+                    '<tbody class="table-hover"><tr><td class=text-center>' +
+                    'Total' + '</td><td class=test-left>' +
+                    totalcounts + '</td></tr>' +
+                    '<tr><td class=text-center>' +
+                    poi_all_clicks.features[0].properties.poiName + '</td><td class=test-left>' +
+                    poi_all_clicks.features[0].properties.count + '</td></tr>' +
+                    '<tr><td class=text-center>' +
+                    poi_all_clicks.features[1].properties.poiName + '</td><td class=test-left>' +
+                    poi_all_clicks.features[1].properties.count + '</td></tr>' +
+                    '<tr><td class=text-center>' +
+                    poi_all_clicks.features[2].properties.poiName + '</td><td class=test-left>' +
+                    poi_all_clicks.features[2].properties.count + '</td></tr>' +
+                    '<tr><td class=text-center>' +
+                    poi_all_clicks.features[3].properties.poiName + '</td><td class=test-left>' +
+                    poi_all_clicks.features[3].properties.count + '</td></tr></tbody>';
+
+
             })
             .catch(function (error) {
                 console.log(error)
             })
     }, 5000)
+
 
     map.addSource("poi_all_clicks", {
         type: "geojson",
@@ -141,7 +167,7 @@ function addLayer() {
         layout: {
             'text-field': '{point_count_abbreviated}',
             'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-size': 12
+            'text-size': 11
         }
     });
 
