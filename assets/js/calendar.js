@@ -9,10 +9,10 @@ var map = new mapboxgl.Map({
 
 
 
-var url
+
 var start = moment().subtract(6, 'hour')
-var end = moment()
-var starttime, endtime, collection_name
+var end = moment().add(6, 'hour')
+var starttime, endtime, collection_name, url
 
 
 //initialize datepicker and set database url with appropriate parameters
@@ -24,7 +24,6 @@ function cb(start, end) {
 
 
 }
-
 $("#reportrange").daterangepicker({
         timePicker: true,
         startDate: start,
@@ -43,13 +42,15 @@ $("#reportrange").daterangepicker({
     },
     cb
 )
-
 cb(start, end)
+
+
 
 
 //fetch database url and add source to the map
 function addSource() {
     window.setInterval(function () {
+
 
         var dropdown_value = document.getElementById("slct");
         var collection_name = dropdown_value.options[dropdown_value.selectedIndex].text;
