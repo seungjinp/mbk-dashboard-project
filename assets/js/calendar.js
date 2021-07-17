@@ -50,6 +50,9 @@ cb(start, end)
 //fetch database url and add source to the map
 function addSource() {
     window.setInterval(function () {
+        start = moment().subtract(6, 'hour')
+        end = moment()
+        cb(start, end)
 
 
         var dropdown_value = document.getElementById("slct");
