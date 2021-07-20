@@ -57,8 +57,8 @@ function addSource() {
 
         var dropdown_value = document.getElementById("slct");
         var collection_name = dropdown_value.options[dropdown_value.selectedIndex].text;
-
-        url = "https://52.231.189.216:8529/_db/mfsdetails/visualization/kor_poiclicks?starttime=" + starttime + "&endtime=" + endtime + "&collection_name=" + collection_name
+        //   url = "https://52.231.189.216:8529/_db/mfsdetails/visualization/onboard_poiclicks?starttime=1625633076000&endtime=1626237876000&env=prod&country=kor"
+        url = "https://52.231.189.216:8529/_db/mfsdetails/visualization/onboard_poiclicks?starttime=" + starttime + "&endtime=" + endtime + "&env=" + collection_name + "&country=kor"
         Promise.all([fetch(url, {
                 headers: {
                     Accept: "text/plain",
@@ -81,6 +81,7 @@ function addSource() {
                 }
                 poi_all_clicks.features = data[0]
                 map.getSource("poi_all_clicks").setData(poi_all_clicks)
+                console.log(poi_all_clicks)
 
 
                 var res = Object.keys(poi_all_clicks.features).reduce((acc, elem) => {
